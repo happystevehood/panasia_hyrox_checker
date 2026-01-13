@@ -61,7 +61,7 @@
   },
   {
     "name": "Singapore Apr '26 ",
-    "on_sale": false,
+    "on_sale": true,
     "url": "https://hyrox.com/event/hyrox-singapore/",
     "email_to": "happychildhood@yahoo.com"
   },
@@ -85,7 +85,7 @@
   },
   {
     "name": "Hong Kong May '26",
-    "on_sale": false,
+    "on_sale": true,
     "url": "https://hyrox.com/event/hyrox-hong-kong2026/",
     "email_to": "happychildhood@yahoo.com, abrahimlailymarlisa@gmail.com"
   },
