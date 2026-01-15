@@ -1,0 +1,87 @@
+{
+  "General": {
+    "found": true,
+    "details": [
+      {
+        "name": "HYROX DOUBLES MEN | Friday",
+        "status": "Available"
+      },
+      {
+        "name": "HYROX DOUBLES MEN | Sunday",
+        "status": "Available"
+      },
+      {
+        "name": "HYROX DOUBLES MIXED | Friday",
+        "status": "Available"
+      },
+      {
+        "name": "HYROX DOUBLES MIXED | Saturday",
+        "status": "Available"
+      },
+      {
+        "name": "HYROX DOUBLES WOMEN | Friday",
+        "status": "Available"
+      },
+      {
+        "name": "HYROX DOUBLES WOMEN | Sunday",
+        "status": "Available"
+      },
+      {
+        "name": "HYROX MEN | Friday",
+        "status": "Available"
+      },
+      {
+        "name": "HYROX MEN | Saturday",
+        "status": "Available"
+      },
+      {
+        "name": "HYROX MENS CORPORATE RELAY | Friday",
+        "status": "Available"
+      },
+      {
+        "name": "HYROX MENS RELAY | Sunday",
+        "status": "Available"
+      },
+      {
+        "name": "HYROX MIXED CORPORATE RELAY | Friday",
+        "status": "Available"
+      },
+      {
+        "name": "HYROX MIXED RELAY | Sunday",
+        "status": "Available"
+      },
+      {
+        "name": "HYROX PRO DOUBLES MEN | Saturday",
+        "status": "Available"
+      },
+      {
+        "name": "HYROX PRO DOUBLES WOMEN | Saturday",
+        "status": "Available"
+      },
+      {
+        "name": "HYROX PRO MEN | Saturday",
+        "status": "Available"
+      },
+      {
+        "name": "HYROX PRO WOMEN | Saturday",
+        "status": "Available"
+      },
+      {
+        "name": "HYROX WOMEN | Friday",
+        "status": "Available"
+      },
+      {
+        "name": "HYROX WOMEN | Sunday",
+        "status": "Available"
+      },
+      {
+        "name": "HYROX WOMENS CORPORATE RELAY | Friday",
+        "status": "Available"
+      },
+      {
+        "name": "HYROX WOMENS RELAY | Sunday",
+        "status": "Available"
+      }
+    ]
+  }
+}

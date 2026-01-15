@@ -3,8 +3,8 @@
     "found": true,
     "details": [
       {
-        "name": "HYROX DOUBLES MEN | SATURDAY",
-        "status": "Sold out"
+        "name": "HYROX DOUBLES MEN | FRIDAY",
+        "status": "Available"
       },
       {
         "name": "HYROX DOUBLES MEN | SUNDAY",
@@ -12,15 +12,15 @@
       },
       {
         "name": "HYROX DOUBLES MIXED | SATURDAY",
-        "status": "Sold out"
+        "status": "Available"
       },
       {
         "name": "HYROX DOUBLES MIXED | SUNDAY",
         "status": "Available"
       },
       {
-        "name": "HYROX DOUBLES WOMEN | SATURDAY",
-        "status": "Sold out"
+        "name": "HYROX DOUBLES WOMEN | FRIDAY",
+        "status": "Available"
       },
       {
         "name": "HYROX DOUBLES WOMEN | SUNDAY",
@@ -28,19 +28,27 @@
       },
       {
         "name": "HYROX MEN | SATURDAY",
-        "status": "Sold out"
+        "status": "Available"
       },
       {
         "name": "HYROX MEN | SUNDAY",
         "status": "Available"
       },
       {
-        "name": "HYROX MENS RELAY | SATURDAY",
+        "name": "HYROX MENS CORPORATE RELAY | FRIDAY",
         "status": "Available"
       },
       {
-        "name": "HYROX MIXED RELAY | SATURDAY",
-        "status": "Sold out"
+        "name": "HYROX MENS RELAY | FRIDAY",
+        "status": "Available"
+      },
+      {
+        "name": "HYROX MIXED CORPORATE RELAY | FRIDAY",
+        "status": "Available"
+      },
+      {
+        "name": "HYROX MIXED RELAY | FRIDAY",
+        "status": "Available"
       },
       {
         "name": "HYROX PRO DOUBLES MEN | SATURDAY",
@@ -52,14 +60,14 @@
       },
       {
         "name": "HYROX PRO MEN | SATURDAY",
-        "status": "Sold out"
+        "status": "Available"
       },
       {
         "name": "HYROX PRO WOMEN | SATURDAY",
         "status": "Available"
       },
       {
-        "name": "HYROX WOMEN | SATURDAY",
+        "name": "HYROX WOMEN | FRIDAY",
         "status": "Available"
       },
       {
@@ -67,7 +75,11 @@
         "status": "Available"
       },
       {
-        "name": "HYROX WOMENS RELAY | SATURDAY",
+        "name": "HYROX WOMENS CORPORATE RELAY | FRIDAY",
+        "status": "Available"
+      },
+      {
+        "name": "HYROX WOMENS RELAY | FRIDAY",
         "status": "Available"
       }
     ]
