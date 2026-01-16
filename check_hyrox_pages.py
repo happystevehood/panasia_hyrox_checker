@@ -23,7 +23,18 @@ import pytz
 TICKET_DETAILS_CONFIG = "config.json"
 ON_SALE_CONFIG = "onsale_config.json"
 MATRIX_STATE_FILE = "matrix_last_state.json"
+MATRIX_CHANGES_FILE = "matrix_intermediate_changes.json" # NEW: Stores changes between matrix runs
 MATRIX_OUTPUT_FILE = "availability_matrix.png"
+
+# Global Matrix Categories (Used for logging changes mapping)
+DISPLAY_CATEGORIES = [
+    "HYROX PRO WOMEN", "HYROX PRO MEN", "HYROX WOMEN", "HYROX MEN",
+    "HYROX PRO DOUBLES WOMEN", "HYROX PRO DOUBLES MEN",
+    "HYROX DOUBLES WOMEN", "HYROX DOUBLES MIXED", "HYROX DOUBLES MEN",
+    "HYROX WOMENS RELAY", "HYROX MENS RELAY", "HYROX MIXED RELAY"
+]
+# Sorted by length to ensure "HYROX PRO MEN" matches before "HYROX MEN"
+MATCHING_CATEGORIES = sorted(DISPLAY_CATEGORIES, key=len, reverse=True)
 
 # --- HELPER FUNCTIONS ---
 def setup_driver(headless=True):
@@ -80,6 +91,48 @@ def clean_checkout_url(url):
     except:
         return url
 
+# --- NEW: INTERMEDIATE CHANGE LOGGING ---
+def log_intermediate_changes(site_name, changed_tickets):
+    """
+    Records categories that changed into a persistent file.
+    This allows the Matrix to show an 'X' even if status flipped back.
+    """
+    if not changed_tickets: return
+
+    # Load existing log
+    try:
+        with open(MATRIX_CHANGES_FILE, 'r') as f:
+            changes_data = json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        changes_data = {}
+
+    if site_name not in changes_data:
+        changes_data[site_name] = []
+
+    # Map ticket names (e.g. "HYROX MEN | FRIDAY") to Matrix Categories (e.g. "HYROX MEN")
+    categories_to_flag = set()
+    for ticket_name in changed_tickets:
+        norm_name = _normalize_for_matrix(ticket_name)
+        for cat in MATCHING_CATEGORIES:
+            if _normalize_for_matrix(cat) in norm_name:
+                categories_to_flag.add(cat)
+                break
+    
+    # Update file
+    updated = False
+    for cat in categories_to_flag:
+        if cat not in changes_data[site_name]:
+            changes_data[site_name].append(cat)
+            updated = True
+
+    if updated:
+        try:
+            with open(MATRIX_CHANGES_FILE, 'w') as f:
+                json.dump(changes_data, f, indent=2)
+            print(f"  > Logged intermediate changes for matrix: {list(categories_to_flag)}")
+        except Exception as e:
+            print(f"  ! Failed to save intermediate changes: {e}")
+
 # --- HTML GENERATOR ---
 def generate_diff_html(site_config, prev_status, curr_status):
     url = site_config['url']
@@ -107,9 +160,11 @@ def generate_diff_html(site_config, prev_status, curr_status):
     """
     
     changes_found = False
+    changed_ticket_names = [] # List to track specifically what changed for logging
     
     for t_name in all_ticket_names:
         p_status = prev_map.get(t_name, "N/A")
+        
         if t_name in curr_map:
             c_status = curr_map[t_name]
         else:
@@ -120,6 +175,8 @@ def generate_diff_html(site_config, prev_status, curr_status):
         
         if c_status != p_status:
             changes_found = True
+            changed_ticket_names.append(t_name)
+            
             if c_status.lower() == "available":
                 row_style = "background-color: #d4edda;"
                 status_style = "color: #155724; font-weight: bold;"
@@ -148,7 +205,8 @@ def generate_diff_html(site_config, prev_status, curr_status):
     </html>
     """.format(datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
     
-    return html if changes_found else None
+    # Return tuple: (HTML, List of changed names)
+    return (html, changed_ticket_names) if changes_found else (None, [])
 
 # --- COOKIE HANDLING ---
 def handle_cookies(driver):
@@ -356,10 +414,9 @@ def execute_checkout_scraping(driver, checkout_url, site_config):
         return {"change_detected": False}
 
     all_tickets = []
+    
     sale_ended_elements = driver.find_elements(By.CLASS_NAME, "fallback-box")
-    sale_ended_text = "sale has ended" in driver.page_source.lower()
     sale_ended_flag = False
-
     if sale_ended_elements:
          for box in sale_ended_elements:
              if box.is_displayed() and "sale has ended" in box.text.lower():
@@ -387,7 +444,13 @@ def execute_checkout_scraping(driver, checkout_url, site_config):
     except: previous_status = {}
 
     if previous_status != current_status and current_status["General"]["found"]:
-        html_body = generate_diff_html(site_config, previous_status, current_status)
+        # Generate HTML and get list of changed items
+        html_body, changed_tickets = generate_diff_html(site_config, previous_status, current_status)
+        
+        # Log changes for the persistent matrix
+        if changed_tickets:
+            log_intermediate_changes(site_config['name'], changed_tickets)
+        
         if html_body:
             print(f"  > CHANGE DETECTED!")
             with open(status_file, 'w', encoding='utf-8') as f: 
@@ -508,7 +571,7 @@ def _process_hyrox_event_page_india(site_config, driver):
         print("  ! Failed to extract India checkout URL.")
         return {"change_detected": False}
 
-# --- ON SALE CHECKER (RESTORED) ---
+# --- ON SALE CHECKER ---
 def process_on_sale_site(site_config, driver):
     name = site_config['name']
     url = site_config['url']
@@ -520,7 +583,6 @@ def process_on_sale_site(site_config, driver):
     
     try:
         src = driver.page_source.lower()
-        # Simple check for keywords
         if "buy tickets" in src or "register now" in src or "get tickets" in src:
             print("  > ON SALE DETECTED!")
             site_config['on_sale'] = True
@@ -547,18 +609,9 @@ def process_ticket_details_site(site_config, driver):
         print(f"  ! Unexpected error: {e}")
         return {"change_detected": False}
 
-# --- MATRIX GENERATION ---
+# --- MATRIX GENERATION (UPDATED FOR INTERMEDIATE CHANGES) ---
 def generate_availability_matrix():
     print("Generating matrix...")
-    DISPLAY_CATEGORIES = [
-        "HYROX PRO WOMEN", "HYROX PRO MEN", "HYROX WOMEN", "HYROX MEN",
-        "HYROX PRO DOUBLES WOMEN", "HYROX PRO DOUBLES MEN",
-        "HYROX DOUBLES WOMEN", "HYROX DOUBLES MIXED", "HYROX DOUBLES MEN",
-        "HYROX WOMENS RELAY", "HYROX MENS RELAY", "HYROX MIXED RELAY"
-    ]
-    MATCHING_CATEGORIES = sorted(DISPLAY_CATEGORIES, key=len, reverse=True)
-    CELL_SIZE = 40; COL_HEADER_HEIGHT = 150; ROW_HEADER_WIDTH = 250; PADDING = 20
-    FONT_SIZE = 14; AVAILABLE_COLOR = "#77DD77"; UNAVAILABLE_COLOR = "#FF6961"
     
     try:
         with open(TICKET_DETAILS_CONFIG, 'r') as f: config = json.load(f)
@@ -568,6 +621,11 @@ def generate_availability_matrix():
     try:
         with open(MATRIX_STATE_FILE, 'r') as f: prev_matrix = json.load(f)
     except: prev_matrix = {}
+
+    # Load Intermediate Changes
+    try:
+        with open(MATRIX_CHANGES_FILE, 'r') as f: intermediate_changes = json.load(f)
+    except: intermediate_changes = {}
 
     site_names = [s['name'] for s in sites]
     curr_matrix = {n: {c: False for c in DISPLAY_CATEGORIES} for n in site_names}
@@ -588,13 +646,21 @@ def generate_availability_matrix():
                             break
         except: pass
 
+    # DRAWING
+    CELL_SIZE = 40; COL_HEADER_HEIGHT = 150; ROW_HEADER_WIDTH = 250; PADDING = 20
+    FONT_SIZE = 14; AVAILABLE_COLOR = "#77DD77"; UNAVAILABLE_COLOR = "#FF6961"
+    GRID_COLOR = "#D3D3D3"; TEXT_COLOR = "#000000"; BG_COLOR = "#FFFFFF"
+
     w = ROW_HEADER_WIDTH + (len(site_names) * CELL_SIZE) + PADDING * 2
     h = COL_HEADER_HEIGHT + (len(DISPLAY_CATEGORIES) * CELL_SIZE) + PADDING * 2
     
     try: font = ImageFont.truetype("arial.ttf", FONT_SIZE)
     except: font = ImageFont.load_default()
-    
-    img = Image.new('RGB', (w, h), "#FFFFFF")
+    cross_font = font # Simple fallback, could use larger if arial available
+    try: cross_font = ImageFont.truetype("arialbd.ttf", FONT_SIZE + 4)
+    except: pass
+
+    img = Image.new('RGB', (w, h), BG_COLOR)
     draw = ImageDraw.Draw(img)
 
     for i, name in enumerate(site_names):
@@ -604,34 +670,53 @@ def generate_availability_matrix():
         d = ImageDraw.Draw(txt)
         d.text((0, 0), name, font=font, fill=255)
         r_txt = txt.rotate(90, expand=1)
-        img.paste("#000000", (int(x - r_txt.size[0]/2), int(y - r_txt.size[1])), r_txt)
+        img.paste(TEXT_COLOR, (int(x - r_txt.size[0]/2), int(y - r_txt.size[1])), r_txt)
 
     for i, cat in enumerate(DISPLAY_CATEGORIES):
-        draw.text((PADDING, COL_HEADER_HEIGHT + (i * CELL_SIZE) + 20 + PADDING), cat, font=font, fill="black", anchor="lm")
+        draw.text((PADDING, COL_HEADER_HEIGHT + (i * CELL_SIZE) + 20 + PADDING), cat, font=font, fill=TEXT_COLOR, anchor="lm")
         
     for r, cat in enumerate(DISPLAY_CATEGORIES):
         y1 = COL_HEADER_HEIGHT + (r * CELL_SIZE) + PADDING
+        y2 = y1 + CELL_SIZE
         for c, name in enumerate(site_names):
             x1 = ROW_HEADER_WIDTH + (c * CELL_SIZE) + PADDING
+            x2 = x1 + CELL_SIZE
+            
             avail = curr_matrix.get(name, {}).get(cat, False)
             color = AVAILABLE_COLOR if avail else UNAVAILABLE_COLOR
-            draw.rectangle([x1, y1, x1+CELL_SIZE, y1+CELL_SIZE], fill=color, outline="#D3D3D3")
-            if avail != prev_matrix.get(name, {}).get(cat, False):
-                draw.text((x1+20, y1+20), "X", font=font, fill="black", anchor="mm")
+            draw.rectangle([x1, y1, x2, y2], fill=color, outline=GRID_COLOR)
+            
+            # CHECK FOR CHANGES (vs Last Matrix OR Intermediate)
+            prev_avail = prev_matrix.get(name, {}).get(cat, False)
+            
+            # Did it change since last matrix run?
+            status_changed = avail != prev_avail
+            
+            # Was it flagged in intermediate runs?
+            was_flagged = cat in intermediate_changes.get(name, [])
+            
+            if status_changed or was_flagged:
+                draw.text((x1 + CELL_SIZE/2, y1 + CELL_SIZE/2), "X", font=cross_font, fill=TEXT_COLOR, anchor="mm")
 
     try:
         ts = datetime.now(pytz.timezone('Asia/Kuala_Lumpur')).strftime("%y:%m:%d %H:%M MST")
-        draw.text((w - PADDING, PADDING), ts, font=font, fill="black", anchor="ra")
+        draw.text((w - PADDING, PADDING), ts, font=font, fill=TEXT_COLOR, anchor="ra")
     except: pass
     
     img.save(MATRIX_OUTPUT_FILE)
     print(f"Matrix saved to {MATRIX_OUTPUT_FILE}")
     
+    # Save new state
     if curr_matrix != prev_matrix:
         with open(MATRIX_STATE_FILE, 'w') as f: json.dump(curr_matrix, f, indent=2)
-        set_github_output('matrix_changed', 'true')
-    else:
-        set_github_output('matrix_changed', 'false')
+    
+    # Clear intermediate changes after successful matrix generation
+    try:
+        with open(MATRIX_CHANGES_FILE, 'w') as f: json.dump({}, f)
+        print("  > Intermediate changes cleared.")
+    except: pass
+    
+    set_github_output('matrix_changed', 'true') # Always upload artifact
 
 def email_matrix():
     mail_user = os.getenv('MAIL_USERNAME'); mail_pass = os.getenv('MAIL_PASSWORD')
@@ -652,7 +737,7 @@ def main(headless=True):
     
     driver = setup_driver(headless)
     
-    # 1. Check On Sale (Restored Loop)
+    # 1. On Sale Checks
     try:
         with open(ON_SALE_CONFIG, 'r') as f: on_sale_sites = json.load(f)
         os_updated = False
@@ -670,10 +755,9 @@ def main(headless=True):
         
         if os_updated:
             with open(ON_SALE_CONFIG, 'w') as f: json.dump(on_sale_sites, f, indent=2)
-            
     except: pass
 
-    # 2. Check Detailed Tickets
+    # 2. Ticket Checks
     try:
         with open(TICKET_DETAILS_CONFIG, 'r') as f: sites = json.load(f)["sites"]
         
