@@ -53,7 +53,7 @@
     "HYROX DOUBLES MEN": false,
     "HYROX WOMENS RELAY": true,
     "HYROX MENS RELAY": true,
-    "HYROX MIXED RELAY": true
+    "HYROX MIXED RELAY": false
   },
   "Beijing Mar '26": {
     "HYROX PRO WOMEN": true,
@@ -135,7 +135,7 @@
     "HYROX DOUBLES WOMEN": true,
     "HYROX DOUBLES MIXED": true,
     "HYROX DOUBLES MEN": true,
-    "HYROX WOMENS RELAY": true,
+    "HYROX WOMENS RELAY": false,
     "HYROX MENS RELAY": true,
     "HYROX MIXED RELAY": true
   },
