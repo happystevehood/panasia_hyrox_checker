@@ -9,13 +9,17 @@
     "HYROX PRO DOUBLES WOMEN"
   ],
   "Brisbane APAC Apr '26": [
-    "HYROX DOUBLES MEN"
+    "HYROX DOUBLES MEN",
+    "HYROX DOUBLES MIXED"
   ],
   "Taipei Feb '26": [
     "HYROX MEN",
     "HYROX WOMEN"
   ],
   "Hong Kong May '26": [
-    "HYROX WOMENS RELAY"
+    "HYROX WOMENS RELAY",
+    "HYROX MIXED RELAY",
+    "HYROX MENS RELAY",
+    "HYROX DOUBLES MEN"
   ]
 }
