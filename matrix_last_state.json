@@ -95,7 +95,7 @@
     "HYROX DOUBLES MEN": false,
     "HYROX WOMENS RELAY": true,
     "HYROX MENS RELAY": false,
-    "HYROX MIXED RELAY": false
+    "HYROX MIXED RELAY": true
   },
   "Brisbane APAC Apr '26": {
     "HYROX PRO WOMEN": false,
@@ -136,8 +136,8 @@
     "HYROX DOUBLES MIXED": true,
     "HYROX DOUBLES MEN": true,
     "HYROX WOMENS RELAY": false,
-    "HYROX MENS RELAY": true,
-    "HYROX MIXED RELAY": true
+    "HYROX MENS RELAY": false,
+    "HYROX MIXED RELAY": false
   },
   "Incheon May '26": {
     "HYROX PRO WOMEN": false,
