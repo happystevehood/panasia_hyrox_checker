@@ -23,12 +23,10 @@ jobs:
       - name: Install Python dependencies
         run: pip install selenium Pillow pytz
 
-      # --- CHANGE 1: Add an 'id' to this step ---
       - name: Generate Matrix Image (with change detection)
         id: generate_matrix
         run: python -u check_hyrox_pages.py --matrix
       
-      # --- CHANGE 2: Add an 'if' condition to this step ---
       - name: Email the Matrix Image
         if: steps.generate_matrix.outputs.matrix_changed == 'true'
         env:
@@ -36,15 +34,17 @@ jobs:
           MAIL_PASSWORD: ${{ secrets.MAIL_PASSWORD }}
         run: python -u check_hyrox_pages.py --email-matrix
 
-      # This commit step is now also implicitly conditional, as the python script
-      # will only update the state file if a change is detected.
-      - name: Commit and push matrix state file
+      - name: Commit and push matrix state files
         run: |
-          if [[ `git status --porcelain matrix_last_state.json` ]]; then
+          # Check if any of the 3 matrix-related files have changed
+          if [[ `git status --porcelain matrix_last_state.json matrix_intermediate_changes.json availability_matrix.png` ]]; then
             git config --global user.name 'github-actions[bot]'
             git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-            git add matrix_last_state.json
-            git commit -m "Update daily matrix state"
+            
+            # Add the state file, the intermediate log (to clear it), and the image
+            git add matrix_last_state.json matrix_intermediate_changes.json availability_matrix.png
+            
+            git commit -m "Update daily matrix state and clear intermediate logs"
             git push
           else
             echo "No changes to matrix state. Nothing to commit."
