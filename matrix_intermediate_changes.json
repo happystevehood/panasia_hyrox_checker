@@ -1,1 +1,22 @@
-{}
+{
+  "Auckland Jan '26": [
+    "HYROX MEN",
+    "HYROX DOUBLES MEN",
+    "HYROX MENS RELAY",
+    "HYROX PRO WOMEN",
+    "HYROX PRO MEN",
+    "HYROX DOUBLES WOMEN",
+    "HYROX WOMEN",
+    "HYROX PRO DOUBLES WOMEN",
+    "HYROX WOMENS RELAY",
+    "HYROX DOUBLES MIXED"
+  ],
+  "Taipei Feb '26": [
+    "HYROX MEN",
+    "HYROX DOUBLES MIXED"
+  ],
+  "Bangkok Mar '26": [
+    "HYROX MEN",
+    "HYROX DOUBLES MIXED"
+  ]
+}
