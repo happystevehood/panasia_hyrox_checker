@@ -72,7 +72,7 @@
   "Brisbane APAC Apr '26": {
     "HYROX PRO WOMEN": false,
     "HYROX PRO MEN": false,
-    "HYROX WOMEN": false,
+    "HYROX WOMEN": true,
     "HYROX MEN": false,
     "HYROX PRO DOUBLES WOMEN": false,
     "HYROX PRO DOUBLES MEN": false,
