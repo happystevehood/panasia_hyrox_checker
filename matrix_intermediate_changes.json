@@ -3,7 +3,8 @@
     "HYROX DOUBLES MEN",
     "HYROX MEN",
     "HYROX DOUBLES WOMEN",
-    "HYROX DOUBLES MIXED"
+    "HYROX DOUBLES MIXED",
+    "HYROX WOMEN"
   ],
   "Brisbane APAC Apr '26": [
     "HYROX DOUBLES WOMEN"
@@ -13,6 +14,7 @@
   ],
   "Taipei Feb '26": [
     "HYROX PRO WOMEN",
-    "HYROX PRO DOUBLES MEN"
+    "HYROX PRO DOUBLES MEN",
+    "HYROX PRO MEN"
   ]
 }
