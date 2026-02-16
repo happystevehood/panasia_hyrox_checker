@@ -14,10 +14,10 @@
     "HYROX MIXED RELAY": false
   },
   "Bangkok Mar '26": {
-    "HYROX PRO WOMEN": true,
+    "HYROX PRO WOMEN": false,
     "HYROX PRO MEN": true,
     "HYROX WOMEN": true,
-    "HYROX MEN": true,
+    "HYROX MEN": false,
     "HYROX PRO DOUBLES WOMEN": false,
     "HYROX PRO DOUBLES MEN": true,
     "HYROX DOUBLES WOMEN": false,
@@ -77,7 +77,7 @@
     "HYROX PRO DOUBLES WOMEN": false,
     "HYROX PRO DOUBLES MEN": false,
     "HYROX DOUBLES WOMEN": false,
-    "HYROX DOUBLES MIXED": true,
+    "HYROX DOUBLES MIXED": false,
     "HYROX DOUBLES MEN": false,
     "HYROX WOMENS RELAY": false,
     "HYROX MENS RELAY": false,
@@ -99,8 +99,8 @@
   },
   "Wuhan Apr '26": {
     "HYROX PRO WOMEN": true,
-    "HYROX PRO MEN": true,
-    "HYROX WOMEN": true,
+    "HYROX PRO MEN": false,
+    "HYROX WOMEN": false,
     "HYROX MEN": false,
     "HYROX PRO DOUBLES WOMEN": false,
     "HYROX PRO DOUBLES MEN": false,
@@ -118,7 +118,7 @@
     "HYROX MEN": false,
     "HYROX PRO DOUBLES WOMEN": false,
     "HYROX PRO DOUBLES MEN": true,
-    "HYROX DOUBLES WOMEN": true,
+    "HYROX DOUBLES WOMEN": false,
     "HYROX DOUBLES MIXED": true,
     "HYROX DOUBLES MEN": false,
     "HYROX WOMENS RELAY": false,
@@ -137,6 +137,6 @@
     "HYROX DOUBLES MEN": true,
     "HYROX WOMENS RELAY": false,
     "HYROX MENS RELAY": true,
-    "HYROX MIXED RELAY": true
+    "HYROX MIXED RELAY": false
   }
 }
