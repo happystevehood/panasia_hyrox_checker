@@ -1,7 +1,9 @@
 {
   "Bangkok Mar '26": [
     "HYROX PRO WOMEN",
-    "HYROX MEN"
+    "HYROX MEN",
+    "HYROX MENS RELAY",
+    "HYROX PRO DOUBLES WOMEN"
   ],
   "Brisbane APAC Apr '26": [
     "HYROX DOUBLES MIXED",
@@ -12,6 +14,7 @@
   ],
   "Taipei Feb '26": [
     "HYROX MEN",
-    "HYROX MENS RELAY"
+    "HYROX MENS RELAY",
+    "HYROX PRO MEN"
   ]
 }
