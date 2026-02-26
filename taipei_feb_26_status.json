@@ -1,27 +1,6 @@
 {
   "General": {
     "found": true,
-    "details": [
-      {
-        "name": "HYROX DOUBLES MEN | SUNDAY",
-        "status": "Available"
-      },
-      {
-        "name": "HYROX DOUBLES MIXED | SUNDAY",
-        "status": "Available"
-      },
-      {
-        "name": "HYROX DOUBLES WOMEN | SUNDAY",
-        "status": "Available"
-      },
-      {
-        "name": "HYROX MEN | SUNDAY",
-        "status": "Available"
-      },
-      {
-        "name": "HYROX WOMEN | SUNDAY",
-        "status": "Available"
-      }
-    ]
+    "details": []
   }
 }
