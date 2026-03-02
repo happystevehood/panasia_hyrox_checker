@@ -1,7 +1,7 @@
 {
   "Bangkok Mar '26": {
     "HYROX PRO WOMEN": false,
-    "HYROX PRO MEN": true,
+    "HYROX PRO MEN": false,
     "HYROX WOMEN": false,
     "HYROX MEN": true,
     "HYROX PRO DOUBLES WOMEN": false,
@@ -103,7 +103,7 @@
     "HYROX WOMEN": true,
     "HYROX MEN": false,
     "HYROX PRO DOUBLES WOMEN": false,
-    "HYROX PRO DOUBLES MEN": true,
+    "HYROX PRO DOUBLES MEN": false,
     "HYROX DOUBLES WOMEN": false,
     "HYROX DOUBLES MIXED": false,
     "HYROX DOUBLES MEN": false,
