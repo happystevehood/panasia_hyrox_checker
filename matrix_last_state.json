@@ -85,7 +85,7 @@
   },
   "Wuhan Apr '26": {
     "HYROX PRO WOMEN": true,
-    "HYROX PRO MEN": false,
+    "HYROX PRO MEN": true,
     "HYROX WOMEN": false,
     "HYROX MEN": false,
     "HYROX PRO DOUBLES WOMEN": false,
