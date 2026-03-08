@@ -84,7 +84,7 @@
     "HYROX MIXED RELAY": false
   },
   "Wuhan Apr '26": {
-    "HYROX PRO WOMEN": true,
+    "HYROX PRO WOMEN": false,
     "HYROX PRO MEN": false,
     "HYROX WOMEN": false,
     "HYROX MEN": false,
@@ -106,7 +106,7 @@
     "HYROX PRO DOUBLES MEN": false,
     "HYROX DOUBLES WOMEN": true,
     "HYROX DOUBLES MIXED": true,
-    "HYROX DOUBLES MEN": true,
+    "HYROX DOUBLES MEN": false,
     "HYROX WOMENS RELAY": false,
     "HYROX MENS RELAY": false,
     "HYROX MIXED RELAY": false
