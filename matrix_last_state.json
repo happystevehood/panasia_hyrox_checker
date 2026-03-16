@@ -1,31 +1,31 @@
 {
   "Bangkok Mar '26": {
-    "HYROX PRO WOMEN": false,
-    "HYROX PRO MEN": false,
-    "HYROX WOMEN": false,
-    "HYROX MEN": true,
-    "HYROX PRO DOUBLES WOMEN": false,
-    "HYROX PRO DOUBLES MEN": true,
-    "HYROX DOUBLES WOMEN": false,
-    "HYROX DOUBLES MIXED": false,
-    "HYROX DOUBLES MEN": false,
-    "HYROX WOMENS RELAY": true,
-    "HYROX MENS RELAY": false,
-    "HYROX MIXED RELAY": false
-  },
-  "Beijing Mar '26": {
     "HYROX PRO WOMEN": true,
     "HYROX PRO MEN": true,
     "HYROX WOMEN": true,
     "HYROX MEN": true,
     "HYROX PRO DOUBLES WOMEN": true,
-    "HYROX PRO DOUBLES MEN": true,
+    "HYROX PRO DOUBLES MEN": false,
     "HYROX DOUBLES WOMEN": true,
     "HYROX DOUBLES MIXED": true,
     "HYROX DOUBLES MEN": true,
     "HYROX WOMENS RELAY": true,
-    "HYROX MENS RELAY": true,
-    "HYROX MIXED RELAY": true
+    "HYROX MENS RELAY": false,
+    "HYROX MIXED RELAY": false
+  },
+  "Beijing Mar '26": {
+    "HYROX PRO WOMEN": false,
+    "HYROX PRO MEN": false,
+    "HYROX WOMEN": false,
+    "HYROX MEN": false,
+    "HYROX PRO DOUBLES WOMEN": false,
+    "HYROX PRO DOUBLES MEN": false,
+    "HYROX DOUBLES WOMEN": false,
+    "HYROX DOUBLES MIXED": false,
+    "HYROX DOUBLES MEN": false,
+    "HYROX WOMENS RELAY": false,
+    "HYROX MENS RELAY": false,
+    "HYROX MIXED RELAY": false
   },
   "Singapore Apr '26 ": {
     "HYROX PRO WOMEN": true,
@@ -39,7 +39,7 @@
     "HYROX DOUBLES MEN": true,
     "HYROX WOMENS RELAY": true,
     "HYROX MENS RELAY": true,
-    "HYROX MIXED RELAY": true
+    "HYROX MIXED RELAY": false
   },
   "Bengalaru Apr '26": {
     "HYROX PRO WOMEN": false,
@@ -84,7 +84,7 @@
     "HYROX MIXED RELAY": false
   },
   "Wuhan Apr '26": {
-    "HYROX PRO WOMEN": true,
+    "HYROX PRO WOMEN": false,
     "HYROX PRO MEN": false,
     "HYROX WOMEN": false,
     "HYROX MEN": false,
@@ -92,7 +92,7 @@
     "HYROX PRO DOUBLES MEN": false,
     "HYROX DOUBLES WOMEN": false,
     "HYROX DOUBLES MIXED": true,
-    "HYROX DOUBLES MEN": true,
+    "HYROX DOUBLES MEN": false,
     "HYROX WOMENS RELAY": true,
     "HYROX MENS RELAY": true,
     "HYROX MIXED RELAY": true
