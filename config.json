@@ -2,14 +2,6 @@
   "matrix_email_to": "happychildhood@yahoo.com",
   "sites": [
     {
-      "name": "Bangkok Mar '26",
-      "site_type": "hyrox_event_page",
-      "url": "https://hyrox.com/event/hyrox-bangkok/",
-      "status_file": "bangkok_mar_26_status.json",
-      "email_to": "happychildhood@yahoo.com",
-      "exclude_prefixes" : ["CHARITY", "ELITE SPECTATOR", "SPECTATOR", "Spectator", "HYROX ADAPTIVE"]
-    },
-    {
       "name": "Singapore Apr '26 ",
       "site_type": "hyrox_event_page",
       "url": "https://hyrox.com/event/hyrox-singapore/",
