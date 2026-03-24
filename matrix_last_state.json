@@ -70,7 +70,7 @@
     "HYROX MIXED RELAY": true
   },
   "Hong Kong May '26": {
-    "HYROX PRO WOMEN": true,
+    "HYROX PRO WOMEN": false,
     "HYROX PRO MEN": false,
     "HYROX WOMEN": true,
     "HYROX MEN": true,
@@ -93,7 +93,7 @@
     "HYROX DOUBLES WOMEN": true,
     "HYROX DOUBLES MIXED": true,
     "HYROX DOUBLES MEN": true,
-    "HYROX WOMENS RELAY": false,
+    "HYROX WOMENS RELAY": true,
     "HYROX MENS RELAY": true,
     "HYROX MIXED RELAY": false
   },
