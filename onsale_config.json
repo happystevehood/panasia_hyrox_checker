@@ -109,7 +109,7 @@
   },
   {
     "name": "Sydney Jul '26",
-    "on_sale": false,
+    "on_sale": true,
     "url": "https://hyrox.com/event/hyrox-sydney/",
     "email_to": "happychildhood@yahoo.com"
   },
@@ -143,13 +143,12 @@
     "url": "https://hyrox.com/event/hyrox-mumbai/",
     "email_to": "happychildhood@yahoo.com"
   },
-
   {
     "name": "Shanghai Oct '26",
     "on_sale": false,
     "url": "https://hyrox.com/event/hyrox-shanghai-1031/",
     "email_to": "happychildhood@yahoo.com"
-  },  
+  },
   {
     "name": "Seoul Nov '26",
     "on_sale": false,
