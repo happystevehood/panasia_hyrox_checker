@@ -34,8 +34,8 @@
     "HYROX MEN": false,
     "HYROX PRO DOUBLES WOMEN": false,
     "HYROX PRO DOUBLES MEN": false,
-    "HYROX DOUBLES WOMEN": true,
-    "HYROX DOUBLES MIXED": true,
+    "HYROX DOUBLES WOMEN": false,
+    "HYROX DOUBLES MIXED": false,
     "HYROX DOUBLES MEN": false,
     "HYROX WOMENS RELAY": false,
     "HYROX MENS RELAY": false,
@@ -59,7 +59,7 @@
     "HYROX PRO WOMEN": false,
     "HYROX PRO MEN": false,
     "HYROX WOMEN": true,
-    "HYROX MEN": false,
+    "HYROX MEN": true,
     "HYROX PRO DOUBLES WOMEN": false,
     "HYROX PRO DOUBLES MEN": false,
     "HYROX DOUBLES WOMEN": true,
@@ -80,7 +80,7 @@
     "HYROX DOUBLES MIXED": true,
     "HYROX DOUBLES MEN": true,
     "HYROX WOMENS RELAY": false,
-    "HYROX MENS RELAY": true,
+    "HYROX MENS RELAY": false,
     "HYROX MIXED RELAY": false
   },
   "Shanghai May '26": {
@@ -106,7 +106,7 @@
     "HYROX PRO DOUBLES MEN": true,
     "HYROX DOUBLES WOMEN": true,
     "HYROX DOUBLES MIXED": true,
-    "HYROX DOUBLES MEN": true,
+    "HYROX DOUBLES MEN": false,
     "HYROX WOMENS RELAY": true,
     "HYROX MENS RELAY": true,
     "HYROX MIXED RELAY": true
