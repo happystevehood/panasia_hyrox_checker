@@ -1,19 +1,6 @@
 {
   "General": {
     "found": true,
-    "details": [
-      {
-        "name": "HYROX DOUBLES MEN | Monday",
-        "status": "Sold out"
-      },
-      {
-        "name": "HYROX DOUBLES MIXED | Monday",
-        "status": "Available"
-      },
-      {
-        "name": "HYROX DOUBLES WOMEN | Monday",
-        "status": "Available"
-      }
-    ]
+    "details": []
   }
 }
