@@ -38,14 +38,23 @@ MATCHING_CATEGORIES = sorted(DISPLAY_CATEGORIES, key=len, reverse=True)
 
 # --- HELPER FUNCTIONS ---
 def setup_driver(headless=True):
+    print(f"DEBUG: Headless mode is {headless}")
     chrome_options = Options()
+    
     if headless:
-        chrome_options.add_argument("--headless")
+        chrome_options.add_argument("--headless=new")
+    else:
+        # VISIBLE MODE SETTINGS
+        chrome_options.add_argument("--start-maximized")
+        chrome_options.add_experimental_option("excludeSwitches", ["enable-automation"])
+        chrome_options.add_experimental_option('useAutomationExtension', False)
+
     chrome_options.add_argument("--no-sandbox")
     chrome_options.add_argument("--disable-dev-shm-usage")
-    chrome_options.add_argument("--window-size=1920,1080")
-    chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
-    chrome_options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36")
+    # Disable GPU and Sandbox to help drawing on Windows/Anaconda
+    chrome_options.add_argument("--disable-gpu")
+    chrome_options.add_argument("--remote-debugging-port=9222") 
+    
     service = Service()
     return webdriver.Chrome(service=service, options=chrome_options)
 
@@ -90,6 +99,20 @@ def clean_checkout_url(url):
         return clean
     except:
         return url
+
+def reset_driver_state(driver):
+    """Ensures the driver is focused on a single, clean window before the next site."""
+    try:
+        # 1. Close all windows/tabs except the first one
+        while len(driver.window_handles) > 1:
+            driver.switch_to.window(driver.window_handles[-1])
+            driver.close()
+        # 2. Switch back to the main window
+        driver.switch_to.window(driver.window_handles[0])
+        # 3. Exit any iframes or shadow DOM contexts
+        driver.switch_to.default_content()
+    except:
+        pass
 
 # --- NEW: INTERMEDIATE CHANGE LOGGING ---
 def log_intermediate_changes(site_name, changed_tickets):
@@ -239,7 +262,6 @@ def handle_cookies(driver):
         time.sleep(0.5)
 
 # --- SHARED NAVIGATION ---
-
 def click_back_button(driver):
     try:
         xpath = "//button[.//svg[contains(@class, 'lucide-chevron-left')] or .//div[contains(text(), 'Back')]]"
@@ -248,6 +270,26 @@ def click_back_button(driver):
             if btn.is_displayed():
                 driver.execute_script("arguments[0].click();", btn)
                 return True
+    except: pass
+    return False
+
+
+def click_back_button_china(driver):
+    try:
+        # Targeted selectors for the Shanghai/Modern UI
+        selectors = [
+            "//button[contains(., 'Back to categories')]",
+            "//div[contains(text(), 'Back to categories')]",
+            "//button[contains(., '返回类别')]", 
+            "//div[contains(@class, 'vi-cursor-pointer')]//svg[contains(@class, 'lucide-chevron-left')]"
+        ]
+        for xpath in selectors:
+            btns = driver.find_elements(By.XPATH, xpath)
+            for btn in btns:
+                if btn.is_displayed():
+                    driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", btn)
+                    driver.execute_script("arguments[0].click();", btn)
+                    return True
     except: pass
     return False
 
@@ -391,6 +433,147 @@ def traverse_menu(driver, exclude_prefixes, depth=0):
 
     return found_tickets
 
+def traverse_menu_china(driver, exclude_prefixes, depth=0):
+    """Specialized traversal for Shanghai/China using the 'Back to categories' flow."""
+    print(f"    [China Depth {depth}] Checking view...")
+    found_tickets = []
+    
+    # Wait for the view to load (either tickets or category links)
+    try:
+        WebDriverWait(driver, 10).until(
+            lambda d: d.find_elements(By.CLASS_NAME, "ticket-type") or 
+                      d.find_elements(By.CSS_SELECTOR, "a.vi-rounded-lg")
+        )
+    except TimeoutException:
+        return []
+
+    # 1. Scrape tickets at this level
+    tickets_here = scrape_current_view(driver, exclude_prefixes)
+    if tickets_here:
+        print(f"    [China Depth {depth}] Found {len(tickets_here)} tickets.")
+        found_tickets.extend(tickets_here)
+
+    # 2. Handle Folders/Categories
+    potential_folders = driver.find_elements(By.CSS_SELECTOR, "a.vi-rounded-lg")
+    folder_names = []
+    for f in potential_folders:
+        try:
+            # The folder name is inside a div with class vi-font-medium
+            text_el = f.find_element(By.CLASS_NAME, "vi-font-medium")
+            raw = text_el.text.strip()
+            if raw and not any(x in raw.lower() for x in ["available", "select", "sold out"]):
+                folder_names.append(raw)
+        except: continue
+            
+    folder_names = list(dict.fromkeys(folder_names))
+
+    if folder_names and depth == 0:
+        print(f"    [China Depth 0] Folders to process: {folder_names}")
+
+    for opt_text in folder_names:
+        if any(normalize_text(opt_text).lower().startswith(p.lower()) for p in exclude_prefixes):
+            continue
+
+        print(f"    [China Depth {depth}] Clicking category: {opt_text}")
+        
+        try:
+            # Click category
+            target_xpath = f"//a[.//div[normalize-space()='{opt_text}']]"
+            target = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, target_xpath)))
+            driver.execute_script("arguments[0].click();", target)
+            time.sleep(2) 
+            
+            # Recurse
+            found_tickets.extend(traverse_menu_china(driver, exclude_prefixes, depth + 1))
+            
+            # GO BACK using the CHINA SPECIFIC function
+            print(f"    [China Depth {depth}] Navigating back from {opt_text}...")
+            if not click_back_button_china(driver):
+                driver.execute_script("window.history.go(-1)")
+            
+            # Wait for restoration
+            WebDriverWait(driver, 10).until(
+                EC.presence_of_element_located((By.CSS_SELECTOR, "a.vi-rounded-lg"))
+            )
+            time.sleep(1.5)
+            
+        except Exception as e:
+            print(f"    ! Error in {opt_text}: {e}")
+
+    return found_tickets
+
+def _process_hyrox_event_page_china(site_config, driver):
+    print(f"  > [China Flow] Loading: {site_config['url']}")
+    driver.get(site_config['url'])
+    handle_cookies(driver)
+    
+    checkout_url = None
+
+    try:
+        # 1. Click main button (aria-label matches your HTML)
+        buy_btn = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((By.CSS_SELECTOR, "button[aria-label='Buy Tickets here']"))
+        )
+        driver.execute_script("arguments[0].click();", buy_btn)
+        print("    > Step 1: Clicked 'Buy Tickets here'")
+
+        # 2. Click "Athlete Tickets" in the resulting popup
+        # Note: Your HTML shows this as an <a> tag with span class "w-btn-label"
+        athlete_btn = WebDriverWait(driver, 10).until(
+            EC.element_to_be_clickable((By.XPATH, "//a[.//span[contains(text(), 'Athlete Tickets')]]"))
+        )
+        driver.execute_script("arguments[0].click();", athlete_btn)
+        print("    > Step 2: Clicked 'Athlete Tickets'")
+
+        # 3. Extract the URL from the <object id="sellmodal-anchor">
+        # We loop because it takes a moment for the 'data' attribute to populate
+        print("    > Step 3: Waiting for checkout anchor...")
+        for _ in range(10):
+            anchors = driver.find_elements(By.ID, "sellmodal-anchor")
+            if anchors:
+                raw_url = anchors[0].get_attribute("data")
+                if raw_url and "checkout" in raw_url:
+                    checkout_url = clean_checkout_url(raw_url)
+                    break
+            time.sleep(1)
+
+    except Exception as e:
+        print(f"    ! Extraction Error: {e}")
+
+    if checkout_url:
+        print(f"  > Processing China Checkout: {checkout_url[:60]}...")
+        driver.get(checkout_url)
+        handle_cookies(driver)
+        # CRITICAL: Wait for the internal app to boot before starting traversal
+        time.sleep(5) 
+        
+        all_tickets = traverse_menu_china(driver, site_config.get("exclude_prefixes", []))
+        
+        # Format results for the main script
+        current_status = {"General": {"found": True, "details": []}}
+        if all_tickets:
+            unique = {t['name']:t for t in all_tickets}.values()
+            current_status["General"]["details"] = sorted(list(unique), key=lambda x: x['name'])
+        
+        # Load prev and compare (matches your existing logic)
+        status_file = site_config['status_file']
+        try:
+            with open(status_file, 'r', encoding='utf-8') as f: previous_status = json.load(f)
+        except: previous_status = {}
+
+        if previous_status != current_status:
+            html_body, changed_tickets = generate_diff_html(site_config, previous_status, current_status)
+            if changed_tickets:
+                log_intermediate_changes(site_config['name'], changed_tickets)
+            if html_body:
+                with open(status_file, 'w', encoding='utf-8') as f: 
+                    json.dump(current_status, f, indent=2, ensure_ascii=False)
+                return {"change_detected": True, "site_config": site_config, "html_body": html_body}
+        
+        return {"change_detected": False}
+    else:
+        print("  ! Failed to extract China checkout URL.")
+        return {"change_detected": False}
 def execute_checkout_scraping(driver, checkout_url, site_config):
     print(f"  > Clean Checkout URL: {checkout_url[:60]}...")
     driver.get(checkout_url)
@@ -513,8 +696,11 @@ def _process_hyrox_event_page(site_config, driver):
 
 def _process_hyrox_event_page_india(site_config, driver):
     print(f"  > [India Flow] Loading event page...")
+    driver.switch_to.default_content() # Ensure we aren't stuck in a Shanghai iframe
     driver.get(site_config['url'])
     handle_cookies(driver)
+    time.sleep(3) # India site needs a bit more time for the 'Book Now' button to render
+    
     checkout_url = None
     try:
         keywords = ["buy ticket", "register", "get ticket", "book now", "tickets"]
@@ -596,12 +782,16 @@ def process_ticket_details_site(site_config, driver):
     name = site_config['name']
     site_type = site_config.get("site_type", "hyrox_event_page")
     
+    reset_driver_state(driver)
+    
     print(f"\n--- Processing: {name} (Type: {site_type}) ---")
     try:
         if site_type == "hyrox_event_page":
             return _process_hyrox_event_page(site_config, driver)
         elif site_type == "hyrox_event_page_india":
             return _process_hyrox_event_page_india(site_config, driver)
+        elif site_type == "hyrox_event_page_china":  # <--- ADD THIS
+            return _process_hyrox_event_page_china(site_config, driver)
         else:
             print(f"  ! Unknown site_type: {site_type}")
             return {"change_detected": False}
@@ -772,14 +962,18 @@ def main(headless=True):
                         send_email(subject, html_body, res['site_config']['email_to'], mail_user, mail_pass)
             except Exception as e:
                 print(f"Error processing {s['name']}: {e}")
-                
+               
     except Exception as e: print(f"Fatal Error: {e}")
+    
     finally:
+        if not headless:
+            input("Debug Mode: Press Enter to close the browser and exit...")
         driver.quit()
         
     if change: set_github_output('changes_detected', 'true')
 
 if __name__ == "__main__":
+    print(f"System Arguments received: {sys.argv}") # This will tell us why it failed
     is_headless = "--visible" not in sys.argv
     if "--matrix" in sys.argv: generate_availability_matrix()
     elif "--email-matrix" in sys.argv: email_matrix()
