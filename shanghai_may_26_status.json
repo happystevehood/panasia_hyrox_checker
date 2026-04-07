@@ -3,7 +3,35 @@
     "found": true,
     "details": [
       {
+        "name": "HYROX DOUBLES MEN | Sunday",
+        "status": "Available"
+      },
+      {
+        "name": "HYROX DOUBLES MIXED | Saturday",
+        "status": "Available"
+      },
+      {
+        "name": "HYROX DOUBLES WOMEN | Sunday",
+        "status": "Available"
+      },
+      {
         "name": "HYROX MEN | Saturday",
+        "status": "Available"
+      },
+      {
+        "name": "HYROX MENS RELAY | Sunday",
+        "status": "Available"
+      },
+      {
+        "name": "HYROX MIXED RELAY | Sunday",
+        "status": "Available"
+      },
+      {
+        "name": "HYROX PRO DOUBLES MEN | Saturday",
+        "status": "Available"
+      },
+      {
+        "name": "HYROX PRO DOUBLES WOMEN | Saturday",
         "status": "Available"
       },
       {
@@ -16,6 +44,10 @@
       },
       {
         "name": "HYROX WOMEN | Sunday",
+        "status": "Available"
+      },
+      {
+        "name": "HYROX WOMENS RELAY | Sunday",
         "status": "Available"
       }
     ]
