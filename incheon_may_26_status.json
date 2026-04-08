@@ -16,7 +16,7 @@
       },
       {
         "name": "HYROX DOUBLES MIXED | SATURDAY",
-        "status": "Sold out"
+        "status": "Available"
       },
       {
         "name": "HYROX DOUBLES WOMEN | FRIDAY",
@@ -24,7 +24,7 @@
       },
       {
         "name": "HYROX DOUBLES WOMEN | SUNDAY",
-        "status": "Sold out"
+        "status": "Available"
       },
       {
         "name": "HYROX MEN | FRIDAY",
@@ -32,11 +32,11 @@
       },
       {
         "name": "HYROX MEN | SATURDAY",
-        "status": "Sold out"
+        "status": "Available"
       },
       {
         "name": "HYROX MENS RELAY | SUNDAY",
-        "status": "Sold out"
+        "status": "Available"
       },
       {
         "name": "HYROX MIXED RELAY | SUNDAY",
@@ -56,15 +56,15 @@
       },
       {
         "name": "HYROX PRO WOMEN | SATURDAY",
-        "status": "Sold out"
+        "status": "Available"
       },
       {
         "name": "HYROX WOMEN | FRIDAY",
-        "status": "Sold out"
+        "status": "Available"
       },
       {
         "name": "HYROX WOMEN | SUNDAY",
-        "status": "Sold out"
+        "status": "Available"
       },
       {
         "name": "HYROX WOMENS RELAY | SUNDAY",
