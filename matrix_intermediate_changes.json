@@ -17,7 +17,8 @@
     "HYROX MIXED RELAY"
   ],
   "Hong Kong May '26": [
-    "HYROX DOUBLES MEN"
+    "HYROX DOUBLES MEN",
+    "HYROX MEN"
   ],
   "Incheon May '26": [
     "HYROX MENS RELAY",
@@ -26,5 +27,8 @@
     "HYROX WOMEN",
     "HYROX DOUBLES WOMEN",
     "HYROX MEN"
+  ],
+  "Shanghai May '26": [
+    "HYROX PRO DOUBLES MEN"
   ]
 }
