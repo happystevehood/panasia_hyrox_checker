@@ -17,7 +17,6 @@
       "email_to": "happychildhood@yahoo.com",
       "exclude_prefixes" : ["CHARITY", "ELITE SPECTATOR", "SPECTATOR", "Spectator", "HYROX ADAPTIVE"]
     },
-
     {
       "name": "Shanghai May '26",
       "site_type": "hyrox_event_page_china",
@@ -26,13 +25,12 @@
       "email_to": "happychildhood@yahoo.com",
       "exclude_prefixes" : ["CHARITY", "ELITE SPECTATOR", "SPECTATOR", "Spectator", "HYROX ADAPTIVE"]
     },
-    
     {
       "name": "Jakarta June '26",
       "site_type": "hyrox_event_page",
       "url": "https://hyrox.com/event/hyrox-jakarta/",
       "status_file": "jakarta_june_26_status.json",
-      "email_to": "happychildhood@yahoo.com",
+      "email_to": "happychildhood@yahoo.com, panline.ng@gmail.com",
       "exclude_prefixes" : ["CHARITY", "ELITE SPECTATOR", "SPECTATOR", "Spectator", "HYROX ADAPTIVE"]
     },
     {
