@@ -48,6 +48,14 @@
       "status_file": "delhi_jul_26_status.json",
       "email_to": "happychildhood@yahoo.com",
       "exclude_prefixes" : ["CHARITY", "ELITE SPECTATOR", "SPECTATOR", "Spectator", "HYROX ADAPTIVE"]
+    },
+    {
+      "name": "Chiba Aug '26",
+      "site_type": "hyrox_event_page_india",
+      "url": "https://hyrox.com/event/hyrox-chiba/",
+      "status_file": "chiba_aug_26_status.json",
+      "email_to": "happychildhood@yahoo.com",
+      "exclude_prefixes" : ["CHARITY", "ELITE SPECTATOR", "SPECTATOR", "Spectator", "HYROX ADAPTIVE"]
     }
   ],
   
