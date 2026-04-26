@@ -81,7 +81,7 @@
     "HYROX DOUBLES MEN": true,
     "HYROX WOMENS RELAY": false,
     "HYROX MENS RELAY": false,
-    "HYROX MIXED RELAY": true
+    "HYROX MIXED RELAY": false
   },
   "Chiba Aug '26": {
     "HYROX PRO WOMEN": false,
