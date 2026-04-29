@@ -169,13 +169,13 @@
   },
   {
     "name": "Perth",
-    "on_sale": false,
+    "on_sale": true,
     "url": "https://hyrox.com/event/hyrox-perth/",
     "email_to": "happychildhood@yahoo.com"
   },
   {
     "name": "Bangkok",
-    "on_sale": false,
+    "on_sale": true,
     "url": "https://hyrox.com/event/hyrox-bangkok-2/",
     "email_to": "happychildhood@yahoo.com"
   }
