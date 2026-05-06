@@ -62,7 +62,7 @@
       "site_type": "hyrox_event_page",
       "url": "https://hyrox.com/event/hyrox-bangkok-2/",
       "status_file": "bangkok_aug_26_status.json",
-      "email_to": "happychildhood@yahoo.com",
+      "email_to": "happychildhood@yahoo.com, Jerikovanderwolf@gmail.com",
       "exclude_prefixes" : ["CHARITY", "ELITE SPECTATOR", "SPECTATOR", "Spectator", "HYROX ADAPTIVE"]
     },
     {
