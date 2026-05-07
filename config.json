@@ -42,6 +42,14 @@
       "exclude_prefixes" : ["CHARITY", "ELITE SPECTATOR", "SPECTATOR", "Spectator", "HYROX ADAPTIVE"]
     },
     {
+      "name": "Hangzhou Jul '26",
+      "site_type": "hyrox_event_page_china",
+      "url": "https://hyrox.com/event/hyrox-hangzhou/",
+      "status_file": "hangzhou_jul_26_status.json",
+      "email_to": "happychildhood@yahoo.com",
+      "exclude_prefixes" : ["CHARITY", "ELITE SPECTATOR", "SPECTATOR", "Spectator", "HYROX ADAPTIVE"]
+    },
+    {
       "name": "Delhi Jul '26",
       "site_type": "hyrox_event_page_india",
       "url": "https://india.hyrox.co.in/event/hyrox-delhi-season-26-27-xszluf",
