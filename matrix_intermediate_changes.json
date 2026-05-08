@@ -3,9 +3,16 @@
     "HYROX PRO MEN",
     "HYROX DOUBLES MIXED",
     "HYROX PRO DOUBLES MEN",
-    "HYROX WOMEN"
+    "HYROX WOMEN",
+    "HYROX PRO WOMEN",
+    "HYROX DOUBLES WOMEN",
+    "HYROX DOUBLES MEN"
   ],
   "Bangkok Aug '26": [
-    "HYROX WOMENS RELAY"
+    "HYROX WOMENS RELAY",
+    "HYROX DOUBLES WOMEN"
+  ],
+  "Sydney Jul '26": [
+    "HYROX DOUBLES WOMEN"
   ]
 }
