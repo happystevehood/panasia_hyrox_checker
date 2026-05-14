@@ -56,6 +56,14 @@
       "status_file": "perth_aug_26_status.json",
       "email_to": "happychildhood@yahoo.com",
       "exclude_prefixes" : ["CHARITY", "ELITE SPECTATOR", "SPECTATOR", "Spectator", "HYROX ADAPTIVE"]
+    },
+    {
+      "name": "Mumbai Sep '26",
+      "site_type": "hyrox_event_page_india",
+      "url": "https://india.hyrox.co.in/event/hyrox-mumbai-season-26-27-ze9qhw",
+      "status_file": "mumbai_sep_26_status.json",
+      "email_to": "happychildhood@yahoo.com",
+      "exclude_prefixes" : ["CHARITY", "ELITE SPECTATOR", "SPECTATOR", "Spectator", "HYROX ADAPTIVE"]
     }
 
   ],
