@@ -44,19 +44,29 @@ def setup_driver(headless=True):
     if headless:
         chrome_options.add_argument("--headless=new")
     else:
-        # VISIBLE MODE SETTINGS
         chrome_options.add_argument("--start-maximized")
         chrome_options.add_experimental_option("excludeSwitches", ["enable-automation"])
         chrome_options.add_experimental_option('useAutomationExtension', False)
 
+    # --- STABILITY FLAGS FOR GITHUB ACTIONS ---
     chrome_options.add_argument("--no-sandbox")
-    chrome_options.add_argument("--disable-dev-shm-usage")
-    # Disable GPU and Sandbox to help drawing on Windows/Anaconda
+    chrome_options.add_argument("--disable-dev-shm-usage") # Overcomes limited resource problems
     chrome_options.add_argument("--disable-gpu")
-    chrome_options.add_argument("--remote-debugging-port=9222") 
+    chrome_options.add_argument("--disable-extensions")
+    chrome_options.add_argument("--proxy-server='direct://'")
+    chrome_options.add_argument("--proxy-bypass-list=*")
+    chrome_options.add_argument("--blink-settings=imagesEnabled=false") # Speed up by not loading images
     
     service = Service()
-    return webdriver.Chrome(service=service, options=chrome_options)
+    driver = webdriver.Chrome(service=service, options=chrome_options)
+    
+    # --- TIMEOUTS ---
+    # This prevents the "Read timed out" by throwing a Selenium error 
+    # after 60s instead of letting the socket hang.
+    driver.set_page_load_timeout(60) 
+    driver.set_script_timeout(60)
+    
+    return driver
 
 def send_email(subject, html_body, recipient_email, mail_username, mail_password, attachment_path=None):
     if not recipient_email or not mail_username: return 
@@ -764,16 +774,19 @@ def process_on_sale_site(site_config, driver):
     if site_config.get('on_sale'): return {"change_detected": False}
     
     print(f"\n--- Checking On Sale: {name} ---")
-    driver.get(url)
-    handle_cookies(driver)
-    
     try:
+        driver.get(url)
+        handle_cookies(driver)
+        
         src = driver.page_source.lower()
         if "buy tickets" in src or "register now" in src or "get tickets" in src:
             print("  > ON SALE DETECTED!")
             site_config['on_sale'] = True
             return {"change_detected": True, "site_config": site_config}
-    except: pass
+    except TimeoutException:
+        print(f"  ! Timeout loading {name}. Skipping...")
+    except Exception as e: 
+        print(f"  ! Error checking OS {name}: {e}")
     
     return {"change_detected": False}
 
