@@ -1,9 +1,9 @@
 {
   "Jakarta June '26": {
-    "HYROX PRO WOMEN": true,
-    "HYROX PRO MEN": true,
+    "HYROX PRO WOMEN": false,
+    "HYROX PRO MEN": false,
     "HYROX WOMEN": false,
-    "HYROX MEN": true,
+    "HYROX MEN": false,
     "HYROX PRO DOUBLES WOMEN": true,
     "HYROX PRO DOUBLES MEN": true,
     "HYROX DOUBLES WOMEN": false,
@@ -15,7 +15,7 @@
   },
   "Sydney Jul '26": {
     "HYROX PRO WOMEN": false,
-    "HYROX PRO MEN": true,
+    "HYROX PRO MEN": false,
     "HYROX WOMEN": false,
     "HYROX MEN": true,
     "HYROX PRO DOUBLES WOMEN": false,
