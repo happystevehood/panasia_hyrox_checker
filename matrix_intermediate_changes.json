@@ -5,7 +5,8 @@
   "Sydney Jul '26": [
     "HYROX MEN",
     "HYROX WOMEN",
-    "HYROX PRO MEN"
+    "HYROX PRO MEN",
+    "HYROX PRO WOMEN"
   ],
   "Delhi Jul '26": [
     "HYROX PRO DOUBLES WOMEN"
@@ -13,5 +14,8 @@
   "Chiba Aug '26": [
     "HYROX MEN",
     "HYROX WOMEN"
+  ],
+  "Mumbai Sep '26": [
+    "HYROX DOUBLES WOMEN"
   ]
 }
