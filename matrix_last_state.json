@@ -19,12 +19,12 @@
     "HYROX WOMEN": false,
     "HYROX MEN": true,
     "HYROX PRO DOUBLES WOMEN": false,
-    "HYROX PRO DOUBLES MEN": false,
+    "HYROX PRO DOUBLES MEN": true,
     "HYROX DOUBLES WOMEN": true,
     "HYROX DOUBLES MIXED": true,
     "HYROX DOUBLES MEN": false,
     "HYROX WOMENS RELAY": false,
-    "HYROX MENS RELAY": true,
+    "HYROX MENS RELAY": false,
     "HYROX MIXED RELAY": false
   },
   "Hangzhou Jul '26": {
@@ -89,7 +89,7 @@
     "HYROX WOMEN": true,
     "HYROX MEN": false,
     "HYROX PRO DOUBLES WOMEN": true,
-    "HYROX PRO DOUBLES MEN": true,
+    "HYROX PRO DOUBLES MEN": false,
     "HYROX DOUBLES WOMEN": true,
     "HYROX DOUBLES MIXED": true,
     "HYROX DOUBLES MEN": true,
