@@ -64,7 +64,15 @@
       "status_file": "mumbai_sep_26_status.json",
       "email_to": "happychildhood@yahoo.com",
       "exclude_prefixes" : ["CHARITY", "ELITE SPECTATOR", "SPECTATOR", "Spectator", "HYROX ADAPTIVE"]
-    }
+    },
+    {
+      "name": "Seoul Nov '26",
+      "site_type": "hyrox_event_page",
+      "url": "https://hyrox.com/event/hyrox-seoul/",
+      "status_file": "seoul_nov_26_status.json",
+      "email_to": "happychildhood@yahoo.com",
+      "exclude_prefixes" : ["CHARITY", "ELITE SPECTATOR", "SPECTATOR", "Spectator", "HYROX ADAPTIVE"]
+    },
 
   ],
   
