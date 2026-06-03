@@ -169,7 +169,7 @@
   },
   {
     "name": "Singapore",
-    "on_sale": false,
+    "on_sale": true,
     "url": "https://hyrox.com/event/aia-hyrox-singapore/",
     "email_to": "happychildhood@yahoo.com"
   },
