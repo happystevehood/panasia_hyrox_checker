@@ -1,8 +1,26 @@
 {
   "Sydney Jul '26": [
-    "HYROX DOUBLES MEN"
+    "HYROX DOUBLES MEN",
+    "HYROX WOMEN",
+    "HYROX MEN",
+    "HYROX PRO MEN",
+    "HYROX PRO WOMEN"
   ],
   "Perth Aug '26": [
     "HYROX WOMEN"
+  ],
+  "Chengdu Aug '26": [
+    "HYROX MENS RELAY",
+    "HYROX PRO WOMEN",
+    "HYROX MEN",
+    "HYROX PRO MEN",
+    "HYROX WOMEN",
+    "HYROX DOUBLES MEN",
+    "HYROX WOMENS RELAY",
+    "HYROX DOUBLES MIXED",
+    "HYROX DOUBLES WOMEN",
+    "HYROX PRO DOUBLES MEN",
+    "HYROX MIXED RELAY",
+    "HYROX PRO DOUBLES WOMEN"
   ]
 }
