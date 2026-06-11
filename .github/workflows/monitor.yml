@@ -2,7 +2,10 @@ name: Check Hyrox Pages (Selenium)
 
 on:
   schedule:
-    - cron: '0 0,2,4,6,8,10,12 * * *'
+    #- cron: '0 0,2,4,6,8,10,12 * * *'
+    # - cron: '15,45 * * * *'
+    #runs at 37 minutes past the hour
+    - cron: '19,49 * * * *'
   workflow_dispatch:
 
 jobs:
