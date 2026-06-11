@@ -6,7 +6,7 @@ on:
     # - cron: '15,45 * * * *'
     #runs at 37 minutes past the hour
     #- cron: '19,49 * * * *'
-    - cron: '0 0 * * *' # Runs once a day at midnight UTC just in case
+    - cron: '29 0 * * *' # Runs once a day at midnight UTC just in case
   workflow_dispatch:
 
 jobs:
