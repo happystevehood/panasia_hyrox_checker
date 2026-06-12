@@ -1,108 +1,126 @@
 [
   {
     "name": "Seoul Nov '25",
+    "priority": "low",
     "on_sale": true,
     "url": "https://hyrox.com/event/hyrox-seoul/",
     "email_to": "happychildhood@yahoo.com"
   },
   {
     "name": "Shangahi Nov '25",
+    "priority": "low",
     "on_sale": true,
     "url": "https://hyrox.com/event/hyrox-shanghai/",
     "email_to": "happychildhood@yahoo.com"
   },
   {
     "name": "SG Nov '25",
+    "priority": "low",
     "on_sale": true,
     "url": "https://hyrox.com/event/hyrox-singapore-expo/",
     "email_to": "happychildhood@yahoo.com"
   },
   {
     "name": "Melbourne Dec '25",
+    "priority": "low",
     "on_sale": true,
     "url": "https://hyrox.com/event/hyrox-melbourne/",
     "email_to": "happychildhood@yahoo.com"
   },
   {
     "name": "Osaka Jan '26",
+    "priority": "low",
     "on_sale": true,
     "url": "https://hyrox.com/event/hyrox-osaka/",
     "email_to": "happychildhood@yahoo.com"
   },
   {
     "name": "Shenzhen Dec 25",
+    "priority": "low",
     "on_sale": true,
     "url": "https://hyrox.com/event/hyrox-shenzhen/",
     "email_to": "happychildhood@yahoo.com"
   },
   {
     "name": "Aukland Jan 26",
+    "priority": "low",
     "on_sale": true,
     "url": "https://hyrox.com/event/hyrox-auckland/",
     "email_to": "happychildhood@yahoo.com"
   },
   {
     "name": "Taipei Feb 26",
+    "priority": "low",
     "on_sale": true,
     "url": "https://hyrox.com/event/hyrox-taipei/",
     "email_to": "happychildhood@yahoo.com"
   },
   {
     "name": "Bangkok Mar '26",
+    "priority": "low",
     "on_sale": true,
     "url": "https://hyrox.com/event/hyrox-bangkok/",
     "email_to": "happychildhood@yahoo.com"
   },
   {
     "name": "Beijing Mar '26",
+    "priority": "low",
     "on_sale": true,
     "url": "https://hyrox.com/event/hyrox-beijing/",
     "email_to": "happychildhood@yahoo.com"
   },
   {
     "name": "Singapore Apr '26 ",
+    "priority": "low",
     "on_sale": true,
     "url": "https://hyrox.com/event/hyrox-singapore/",
     "email_to": "happychildhood@yahoo.com"
   },
   {
     "name": "APAC Brisbane Apr 26",
+    "priority": "low",
     "on_sale": true,
     "url": "https://hyrox.com/event/hyrox-apac-championships-brisbane/",
     "email_to": "happychildhood@yahoo.com"
   },
   {
     "name": "Brisbane Apr 26",
+    "priority": "low",
     "on_sale": true,
     "url": "https://hyrox.com/event/hyrox-brisbane/",
     "email_to": "happychildhood@yahoo.com"
   },
   {
     "name": "Bengaluru Apr '26",
+    "priority": "low",
     "on_sale": true,
     "url": "https://hyrox.com/event/hyrox-bengaluru/",
     "email_to": "happychildhood@yahoo.com"
   },
   {
     "name": "Hong Kong May '26",
+    "priority": "low",
     "on_sale": true,
     "url": "https://hyrox.com/event/hyrox-hong-kong2026/",
     "email_to": "happychildhood@yahoo.com, abrahimlailymarlisa@gmail.com"
   },
   {
     "name": "Incheon May '26",
+    "priority": "low",
     "on_sale": true,
     "url": "https://hyrox.com/event/hyrox-incheon/",
     "email_to": "happychildhood@yahoo.com"
   },
   {
     "name": "Shanghai May '26",
+    "priority": "low",
     "on_sale": true,
     "url": "https://hyrox.com/event/hyrox-shanghai/",
     "email_to": "happychildhood@yahoo.com"
   },
   {
     "name": "Jakarta June '26",
+    "priority": "low",
     "on_sale": true,
     "url": "https://hyrox.com/event/hyrox-jakarta/",
     "email_to": "happychildhood@yahoo.com"
@@ -115,66 +133,77 @@
   },
   {
     "name": "Hangzhou Jul '26",
+    "priority": "low",
     "on_sale": true,
     "url": "https://hyrox.com/event/hyrox-hangzhou/",
     "email_to": "happychildhood@yahoo.com"
   },
   {
     "name": "Chengdu Aug '26",
+    "priority": "low",
     "on_sale": true,
     "url": "https://hyrox.com/event/hyrox-chengdu/",
     "email_to": "happychildhood@yahoo.com"
   },
   {
     "name": "Chiba Aug '26",
+    "priority": "low",
     "on_sale": true,
     "url": "https://hyrox.com/event/hyrox-chiba/",
     "email_to": "happychildhood@yahoo.com"
   },
   {
     "name": "Shenzhen Aug '26",
+    "priority": "low",
     "on_sale": false,
     "url": "https://hyrox.com/event/hyrox-shenzhen/",
     "email_to": "happychildhood@yahoo.com"
   },
   {
     "name": "Mumbai Sept '26",
+    "priority": "low",
     "on_sale": true,
     "url": "https://hyrox.com/event/hyrox-mumbai/",
     "email_to": "happychildhood@yahoo.com"
   },
   {
     "name": "Shanghai Oct '26",
+    "priority": "low",
     "on_sale": false,
     "url": "https://hyrox.com/event/hyrox-shanghai-1031/",
     "email_to": "happychildhood@yahoo.com"
   },
   {
     "name": "Seoul Nov '26",
+    "priority": "low",
     "on_sale": true,
     "url": "https://hyrox.com/event/hyrox-seoul/",
     "email_to": "happychildhood@yahoo.com"
   },
   {
     "name": "Guangzhou Nov '26",
+    "priority": "low",
     "on_sale": false,
     "url": "https://hyrox.com/event/hyrox-guangzhou/",
     "email_to": "happychildhood@yahoo.com"
   },
   {
     "name": "Sanya Dec '26",
+    "priority": "low",
     "on_sale": false,
     "url": "https://hyrox.com/event/30454/",
     "email_to": "happychildhood@yahoo.com"
   },
   {
     "name": "Singapore",
+    "priority": "low",
     "on_sale": true,
     "url": "https://hyrox.com/event/aia-hyrox-singapore/",
     "email_to": "happychildhood@yahoo.com"
   },
   {
     "name": "Melbourne",
+    "priority": "low",
     "on_sale": false,
     "url": "https://hyrox.com/event/hyrox-melbourne/",
     "email_to": "happychildhood@yahoo.com"

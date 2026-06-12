@@ -934,7 +934,7 @@ def email_matrix():
     send_email(sub, body, rcpt, mail_user, mail_pass, MATRIX_OUTPUT_FILE)
 
 # --- MAIN ---
-def main(headless=True):
+def main(headless=True, target_priority=None): # Added target_priority argument):
     mail_user = os.getenv('MAIL_USERNAME'); mail_pass = os.getenv('MAIL_PASSWORD')
     change = False
     
@@ -945,6 +945,11 @@ def main(headless=True):
         with open(ON_SALE_CONFIG, 'r') as f: on_sale_sites = json.load(f)
         os_updated = False
         for s in on_sale_sites:
+            
+            # --- MINIMAL CHANGE: Filter by priority ---
+            if target_priority and s.get('priority', 'low').lower() != target_priority.lower():
+                continue
+            
             try:
                 res = process_on_sale_site(s, driver)
                 if res.get("change_detected"):
@@ -965,6 +970,11 @@ def main(headless=True):
         with open(TICKET_DETAILS_CONFIG, 'r') as f: sites = json.load(f)["sites"]
         
         for s in sites:
+            
+            # --- MINIMAL CHANGE: Filter by priority ---
+            if target_priority and s.get('priority', 'low').lower() != target_priority.lower():
+                continue
+            
             try:
                 res = process_ticket_details_site(s, driver)
                 if res.get("change_detected"):
@@ -986,8 +996,19 @@ def main(headless=True):
     if change: set_github_output('changes_detected', 'true')
 
 if __name__ == "__main__":
-    print(f"System Arguments received: {sys.argv}") # This will tell us why it failed
+    print(f"System Arguments received: {sys.argv}")
     is_headless = "--visible" not in sys.argv
-    if "--matrix" in sys.argv: generate_availability_matrix()
-    elif "--email-matrix" in sys.argv: email_matrix()
-    else: main(headless=is_headless)
+    
+    # --- MINIMAL CHANGE: Parse priority argument ---
+    priority_val = None
+    if "--priority" in sys.argv:
+        idx = sys.argv.index("--priority")
+        if idx + 1 < len(sys.argv):
+            priority_val = sys.argv[idx + 1]
+
+    if "--matrix" in sys.argv: 
+        generate_availability_matrix()
+    elif "--email-matrix" in sys.argv: 
+        email_matrix()
+    else: 
+        main(headless=is_headless, target_priority=priority_val)

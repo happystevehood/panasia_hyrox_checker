@@ -1,13 +1,21 @@
 name: Check Hyrox Pages (Selenium)
 
 on:
-  schedule:
-    #- cron: '0 0,2,4,6,8,10,12 * * *'
-    # - cron: '15,45 * * * *'
-    #runs at 37 minutes past the hour
-    #- cron: '19,49 * * * *'
-    - cron: '29 0 * * *' # Runs once a day at midnight UTC just in case
   workflow_dispatch:
+    inputs:
+      priority:
+        description: 'Priority level to run (high, medium, low, all)'
+        required: true
+        default: 'high'
+        type: choice
+        options:
+          - high
+          - medium
+          - low
+          - all
+  schedule:
+    # Backup: Runs everything once a day at 20:29 UTC
+    - cron: '29 20 * * *'   
 
 jobs:
   check_for_updates:
@@ -27,20 +35,28 @@ jobs:
         uses: browser-actions/setup-chrome@v1
       - name: Install Python dependencies
         run: pip install selenium Pillow pytz
+      
       - name: Run Python Selenium script
         id: run_script
-        # Pass secrets to the Python script as environment variables
         env:
           MAIL_USERNAME: ${{ secrets.MAIL_USERNAME }}
           MAIL_PASSWORD: ${{ secrets.MAIL_PASSWORD }}
-        run: python -u check_hyrox_pages.py # Use the new script name
+        run: |
+          # Use the priority from inputs if triggered via API/Manual, 
+          # otherwise default to "all" for the daily backup cron.
+          PRIORITY="${{ github.event.inputs.priority || 'all' }}"
+          
+          if [ "$PRIORITY" == "all" ]; then
+            python -u check_hyrox_pages.py
+          else
+            python -u check_hyrox_pages.py --priority $PRIORITY
+          fi
 
-      # This step now commits any and all updated .json status files
       - name: Commit and push status files
         if: steps.run_script.outputs.changes_detected == 'true'
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git add *.json
-          git commit -m "Update page status"
+          git commit -m "Update page status [Priority: ${{ github.event.inputs.priority || 'all' }}]"
           git push
