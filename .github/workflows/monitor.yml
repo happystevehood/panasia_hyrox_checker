@@ -14,8 +14,9 @@ on:
           - low
           - all
   schedule:
-    # Backup: Runs everything once a day at 20:29 UTC
-    - cron: '29 20 * * *'   
+    # Scripts triggered using cron-job.org
+    # Backup: Runs everything once a day at 20:07 UTC
+    - cron: '07 20 * * *'   
 
 jobs:
   check_for_updates:

@@ -18,3 +18,5 @@ To create a summary availability matrix do the following:
 but also need to setup secret email/password environment variables etc....
 >set  MAIL_USERNAME=
 >set  MAIL_PASSWORD=
+
+Scripts triggered using cron-job.org

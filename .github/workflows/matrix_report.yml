@@ -4,6 +4,7 @@ on:
   #schedule:
     # Runs once a day, late in the evening (e.g., 21:00 UTC)
     #- cron: '0 13 * * *'
+    #Scripts triggered using cron-job.org
   workflow_dispatch: # Allows manual runs
 
 jobs:
