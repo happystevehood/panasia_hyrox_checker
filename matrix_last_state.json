@@ -25,7 +25,7 @@
     "HYROX DOUBLES MEN": true,
     "HYROX WOMENS RELAY": true,
     "HYROX MENS RELAY": true,
-    "HYROX MIXED RELAY": false
+    "HYROX MIXED RELAY": true
   },
   "Hangzhou Jul '26": {
     "HYROX PRO WOMEN": false,
