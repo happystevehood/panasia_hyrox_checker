@@ -155,7 +155,7 @@
   {
     "name": "Shenzhen Aug '26",
     "priority": "low",
-    "on_sale": false,
+    "on_sale": true,
     "url": "https://hyrox.com/event/hyrox-shenzhen/",
     "email_to": "happychildhood@yahoo.com"
   },
