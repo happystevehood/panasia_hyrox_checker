@@ -15,7 +15,7 @@
   },
   "Sydney Jul '26": {
     "HYROX PRO WOMEN": false,
-    "HYROX PRO MEN": true,
+    "HYROX PRO MEN": false,
     "HYROX WOMEN": true,
     "HYROX MEN": true,
     "HYROX PRO DOUBLES WOMEN": true,
@@ -106,7 +106,7 @@
     "HYROX PRO DOUBLES MEN": false,
     "HYROX DOUBLES WOMEN": false,
     "HYROX DOUBLES MIXED": true,
-    "HYROX DOUBLES MEN": false,
+    "HYROX DOUBLES MEN": true,
     "HYROX WOMENS RELAY": true,
     "HYROX MENS RELAY": true,
     "HYROX MIXED RELAY": true
