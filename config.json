@@ -7,8 +7,8 @@
       "site_type": "hyrox_event_page",
       "url": "https://hyrox.com/event/hyrox-jakarta/",
       "status_file": "jakarta_june_26_status.json",
-      "email_to": "happychildhood@yahoo.com, panline.ng@gmail.com, donald_prk@hotmail.com, GyTaRAnGeL@gmail.com, mastersee010420@gmail.com",
-      "exclude_prefixes" : ["CHARITY", "ELITE SPECTATOR", "SPECTATOR", "Spectator", "HYROX ADAPTIVE"]
+      "email_to": "happychildhood@yahoo.com",
+      "exclude_prefixes" : ["CHARITY", "ELITE SPECTATOR", "HYROX ADAPTIVE"]
     },
     {
       "name": "Sydney Jul '26",
@@ -62,6 +62,15 @@
       "url": "https://hyrox.com/event/hyrox-bangkok-2/",
       "status_file": "bangkok_aug_26_status.json",
       "email_to": "happychildhood@yahoo.com, Jerikovanderwolf@gmail.com, GyTaRAnGeL@gmail.com",
+      "exclude_prefixes" : ["CHARITY", "ELITE SPECTATOR", "SPECTATOR", "Spectator", "HYROX ADAPTIVE"]
+    },
+    {
+      "name": "Shenzen Aug '26",
+      "priority": "medium",
+      "site_type": "hyrox_event_page_china",
+      "url": "https://hyrox.com/event/hyrox-shenzen/",
+      "status_file": "shenzen_aug_26_status.json",
+      "email_to": "happychildhood@yahoo.com",
       "exclude_prefixes" : ["CHARITY", "ELITE SPECTATOR", "SPECTATOR", "Spectator", "HYROX ADAPTIVE"]
     },
     {
