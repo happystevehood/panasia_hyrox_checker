@@ -89,6 +89,22 @@
       {
         "name": "HYROX WOMENS RELAY | Sunday",
         "status": "Sold out"
+      },
+      {
+        "name": "SPECTATOR | Friday",
+        "status": "Available"
+      },
+      {
+        "name": "SPECTATOR | Saturday",
+        "status": "Available"
+      },
+      {
+        "name": "SPECTATOR | Sunday",
+        "status": "Available"
+      },
+      {
+        "name": "SPECTATOR | Thursday",
+        "status": "Available"
       }
     ]
   }
