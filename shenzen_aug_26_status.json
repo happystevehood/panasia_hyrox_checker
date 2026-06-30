@@ -1,0 +1,23 @@
+{
+  "General": {
+    "found": true,
+    "details": [
+      {
+        "name": "HYROX MEN | Saturday",
+        "status": "Sold out"
+      },
+      {
+        "name": "HYROX PRO MEN | Saturday",
+        "status": "Sold out"
+      },
+      {
+        "name": "HYROX PRO WOMEN | Saturday",
+        "status": "Sold out"
+      },
+      {
+        "name": "HYROX WOMEN | Sunday",
+        "status": "Sold out"
+      }
+    ]
+  }
+}
