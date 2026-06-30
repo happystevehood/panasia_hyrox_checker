@@ -60,7 +60,7 @@
       },
       {
         "name": "HYROX WOMEN | Saturday",
-        "status": "Sold out"
+        "status": "Available"
       },
       {
         "name": "HYROX WOMEN | Thursday",
@@ -72,6 +72,22 @@
       },
       {
         "name": "RECOMMENDED",
+        "status": "Available"
+      },
+      {
+        "name": "SPECTATOR | Friday",
+        "status": "Available"
+      },
+      {
+        "name": "SPECTATOR | Saturday",
+        "status": "Available"
+      },
+      {
+        "name": "SPECTATOR | Sunday",
+        "status": "Available"
+      },
+      {
+        "name": "SPECTATOR | Thursday",
         "status": "Available"
       }
     ]
