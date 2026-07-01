@@ -5,6 +5,14 @@
       {
         "name": "HYROX WOMENS RELAY | Sunday",
         "status": "Sold out"
+      },
+      {
+        "name": "SPECTATOR | Saturday",
+        "status": "Sold out"
+      },
+      {
+        "name": "SPECTATOR | Sunday",
+        "status": "Sold out"
       }
     ]
   }

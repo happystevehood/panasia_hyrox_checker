@@ -2,7 +2,6 @@
   "matrix_email_to": "happychildhood@yahoo.com",
   "sites": [
 
-
     {
       "name": "Hangzhou Jul '26",
       "priority": "medium",
@@ -25,7 +24,7 @@
       "name": "Chengdu Aug '26",
       "priority": "medium",
       "site_type": "hyrox_event_page_india",
-      "url": "https://india.hyrox.co.in/event/hyrox-chengdu-season-26-27-ze9qhw",
+      "url": "https://china.hyrox.com/event/hyrox-chengdu-season-26-27-copy-2hh7x6",
       "status_file": "chengdu_aug_26_status.json",
       "email_to": "happychildhood@yahoo.com",
       "exclude_prefixes" : ["CHARITY", "ELITE SPECTATOR", "HYROX ADAPTIVE"]
@@ -47,9 +46,8 @@
       "url": "https://thailand.hyrox.com/event/hyrox-bangkok-season-26-27-3fhlh8",
       "status_file": "bangkok_aug_26_status.json",
       "email_to": "happychildhood@yahoo.com, Jerikovanderwolf@gmail.com, GyTaRAnGeL@gmail.com",
-      "exclude_prefixes" : ["CHARITY", "ELITE SPECTATOR", "HYROX ADAPTIVE"]
+      "exclude_prefixes" : ["CHARITY", "ELITE SPECTATOR", "HYROX ADAPTIVE", "RECOMMENDED", "Station 9 - The Official Afterparty"]
     },
-
     {
       "name": "Shenzen Aug '26",
       "priority": "medium",

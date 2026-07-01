@@ -273,14 +273,23 @@ def handle_cookies(driver):
 
 # --- SHARED NAVIGATION ---
 def click_back_button(driver):
-    try:
-        xpath = "//button[.//svg[contains(@class, 'lucide-chevron-left')] or .//div[contains(text(), 'Back')]]"
-        btns = driver.find_elements(By.XPATH, xpath)
-        for btn in btns:
-            if btn.is_displayed():
-                driver.execute_script("arguments[0].click();", btn)
-                return True
-    except: pass
+    back_selectors = [
+        "//button[contains(., 'Back to categories')]", # Hangzhou style
+        "//button[.//div[text()='Back']]", # Delhi style
+        "//button[.//svg[contains(@class, 'lucide-chevron-left')]]",
+        "//button[.//svg[contains(@class, 'fa-chevron-left')]]",
+        "//button[contains(., '返回类别')]",
+        "//button[contains(., 'Back')]"
+    ]
+    
+    for xpath in back_selectors:
+        try:
+            btns = driver.find_elements(By.XPATH, xpath)
+            for btn in btns:
+                if btn.is_enabled() and btn.is_displayed():
+                    driver.execute_script("arguments[0].click();", btn)
+                    return True
+        except: continue
     return False
 
 
@@ -320,128 +329,107 @@ def wait_for_view_restoration(driver, text_to_find):
 
 def scrape_current_view(driver, exclude_prefixes):
     tickets = []
+    # Check if there are any ticket containers
     rows = driver.find_elements(By.CLASS_NAME, "ticket-type")
-    
-    if rows:
-        try:
-            WebDriverWait(driver, 5).until(
-                EC.presence_of_element_located((By.CSS_SELECTOR, ".ticket-type button[aria-label^='Add']"))
-            )
-        except TimeoutException: pass
-        rows = driver.find_elements(By.CLASS_NAME, "ticket-type")
+    if not rows:
+        return []
 
     for row in rows:
         try:
-            try:
-                name_el = row.find_element(By.CLASS_NAME, "vi-font-semibold")
-                raw_name = name_el.text
-            except:
-                raw_name = row.text.split('\n')[0]
+            name = ""
+            for selector in [".vi-font-semibold", "p.vi-text", "div.vi-gap-2"]:
+                try:
+                    name_el = row.find_element(By.CSS_SELECTOR, selector)
+                    name = name_el.text.strip()
+                    if name: break
+                except: continue
             
-            name = normalize_text(raw_name)
+            if not name: name = row.text.split('\n')[0]
+            name = normalize_text(name)
             
-            if any(name.lower().startswith(p.lower()) for p in exclude_prefixes):
+            if not name or any(name.lower().startswith(p.lower()) for p in exclude_prefixes):
                 continue
-                
+            
+            # Status Logic
             status = "Sold out"
-            try:
-                add_btn = row.find_element(By.CSS_SELECTOR, "button[aria-label^='Add']")
-                if add_btn.is_displayed() and add_btn.is_enabled():
+            row_html = row.get_attribute("outerHTML").lower()
+            # If the row doesn't have the 'sold-out' class and has a button
+            if "sold-out" not in row.get_attribute("class"):
+                add_btns = row.find_elements(By.CSS_SELECTOR, "button[aria-label^='Add']")
+                if add_btns and add_btns[0].is_displayed():
                     status = "Available"
-            except NoSuchElementException: pass
             
             tickets.append({"name": name, "status": status})
         except: continue
     return tickets
-
 def traverse_menu(driver, exclude_prefixes, depth=0):
     found_tickets = []
     
-    try:
-        WebDriverWait(driver, 5).until(
-            lambda d: d.find_elements(By.CLASS_NAME, "card-list-item") or 
-                      d.find_elements(By.CLASS_NAME, "ticket-type") or
-                      d.find_elements(By.XPATH, "//a[contains(@class, 'vi-rounded-lg')]")
-        )
-    except TimeoutException: pass
-
+    # 1. Scrape tickets at current level
     tickets_here = scrape_current_view(driver, exclude_prefixes)
     if tickets_here:
-        print(f"    [Depth {depth}] Found {len(tickets_here)} tickets.")
-        return tickets_here
+        found_tickets.extend(tickets_here)
 
-    options = []
-    buttons = driver.find_elements(By.CLASS_NAME, "card-list-item")
-    if buttons:
-        options = buttons
-    else:
-        cat_links = driver.find_elements(By.XPATH, "//a[contains(@class, 'vi-rounded-lg')]")
-        options = cat_links
-
-    if not options: return []
-        
-    option_list = []
-    for o in options:
-        if not o.is_displayed(): continue
+    # 2. Identify Navigation Elements
+    navigation_elements = driver.find_elements(By.CSS_SELECTOR, "a.vi-rounded-lg, button.card-list-item, a.no-decoration")
+    
+    option_map = [] # Store (cleaned_name, original_element)
+    
+    for el in navigation_elements:
         try:
-            text_div = o.find_element(By.CLASS_NAME, "vi-font-medium")
-            raw = text_div.text
-        except:
-            raw = o.text.split('\n')[0]
+            # Try to find the specific title div (Hangzhou style)
+            # or the main text (Delhi style)
+            title_el = None
+            for selector in ["div.vi-text", "div.vi-font-medium", "span"]:
+                try:
+                    candidates = el.find_elements(By.CSS_SELECTOR, selector)
+                    if candidates:
+                        title_el = candidates[-1] # Usually the last one is the name
+                        break
+                except: continue
             
-        if raw and "Tickets available" not in raw and "Select" not in raw:
-            option_list.append(raw)
+            raw_text = title_el.text if title_el else el.text
             
-    option_list = list(dict.fromkeys(option_list))
+            # Scrub status labels from the string
+            clean_name = raw_text.replace("Sold out", "").replace("Tickets available", "")
+            clean_name = clean_name.replace("SOLD OUT", "").replace("TICKETS AVAILABLE", "").strip()
+            
+            if clean_name and clean_name not in ["Select", "Select…", "Back to categories"]:
+                option_map.append(clean_name)
+        except: continue
+    
+    option_list = list(dict.fromkeys(option_map))
 
+    # 3. Process Options
     for opt_text in option_list:
-        clean_opt_text = normalize_text(opt_text)
-        if any(clean_opt_text.lower().startswith(p.lower()) for p in exclude_prefixes):
-            print(f"    [Depth {depth}] Skipping excluded: {clean_opt_text}")
+        if any(normalize_text(opt_text).lower().startswith(p.lower()) for p in exclude_prefixes):
             continue
 
-        print(f"    [Depth {depth}] Clicking option: {clean_opt_text}")
+        print(f"    [Depth {depth}] Clicking: {opt_text}")
         
-        target = None
+        # Robust XPath: Finds the link/button that contains the cleaned text
+        xpath_selector = f"//*[(self::a or self::button) and (descendant-or-self::*[normalize-space()='{opt_text}'])]"
         
-        def is_match(element):
-            return clean_opt_text == normalize_text(element.text) and element.is_displayed()
+        try:
+            target = WebDriverWait(driver, 5).until(EC.element_to_be_clickable((By.XPATH, xpath_selector)))
+            driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", target)
+            time.sleep(0.5)
+            driver.execute_script("arguments[0].click();", target)
+            
+            time.sleep(2.5) # Wait for swap
+            found_tickets.extend(traverse_menu(driver, exclude_prefixes, depth + 1))
+            
+            print(f"    [Depth {depth}] Navigating back from {opt_text}...")
+            if not click_back_button(driver):
+                driver.execute_script("window.history.go(-1)")
+            time.sleep(1.5)
+            
+        except Exception as e:
+            print(f"    ! Error clicking {opt_text}")
 
-        fresh_btns = driver.find_elements(By.CLASS_NAME, "card-list-item")
-        for b in fresh_btns:
-            if is_match(b):
-                target = b
-                break
-        
-        if not target:
-            fresh_links = driver.find_elements(By.XPATH, "//a[contains(@class, 'vi-rounded-lg')]")
-            for l in fresh_links:
-                if is_match(l):
-                    target = l
-                    break
-        
-        if not target:
-             fresh_links = driver.find_elements(By.XPATH, "//a[contains(@class, 'vi-rounded-lg')]")
-             for l in fresh_links:
-                 if clean_opt_text in normalize_text(l.text) and l.is_displayed():
-                     target = l
-                     break
-
-        if target:
-            try:
-                driver.execute_script("arguments[0].click();", target)
-                time.sleep(1.0) 
-                
-                results = traverse_menu(driver, exclude_prefixes, depth + 1)
-                found_tickets.extend(results)
-                
-                if click_back_button(driver):
-                    wait_for_view_restoration(driver, opt_text)
-                
-            except Exception as e:
-                print(f"    ! Error clicking {clean_opt_text}: {e}")
-
-    return found_tickets
+    # Deduplicate
+    unique = {t['name']: t for t in found_tickets}.values()
+    return list(unique)
 
 def traverse_menu_china(driver, exclude_prefixes, depth=0):
     """Specialized traversal for Shanghai/China using the 'Back to categories' flow."""
@@ -620,6 +608,7 @@ def execute_checkout_scraping(driver, checkout_url, site_config):
         print("  > Detected 'Sale has ended'. Marking all tickets as Sold Out.")
     else:
         all_tickets = traverse_menu(driver, site_config.get("exclude_prefixes", []))
+        #all_tickets = traverse_menu_china(driver, site_config.get("exclude_prefixes", []))
 
     current_status = {"General": {"found": is_page_valid, "details": []}}
     
