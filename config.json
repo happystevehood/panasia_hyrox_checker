@@ -3,15 +3,6 @@
   "sites": [
 
     {
-      "name": "Hangzhou Jul '26",
-      "priority": "medium",
-      "site_type": "hyrox_event_page_india",
-      "url": "https://china.hyrox.com/event/hyrox-hangzhou-season-26-27-0bxk9i",
-      "status_file": "hangzhou_jul_26_status.json",
-      "email_to": "happychildhood@yahoo.com",
-      "exclude_prefixes" : ["CHARITY", "ELITE SPECTATOR", "HYROX ADAPTIVE"]
-    },
-    {
       "name": "Delhi Jul '26",
       "priority": "low",
       "site_type": "hyrox_event_page_india",
@@ -31,7 +22,7 @@
     },
     {
       "name": "Chiba Aug '26",
-      "priority": "medium",
+      "priority": "low",
       "site_type": "hyrox_event_page_india",
       "url": "https://japan.hyrox.com/event/hyrox-chiba-season-26-27-qzyubs",
       "status_file": "chiba_aug_26_status.json",
@@ -50,7 +41,7 @@
     },
     {
       "name": "Shenzen Aug '26",
-      "priority": "medium",
+      "priority": "high",
       "site_type": "hyrox_event_page_india",
       "url": "https://china.hyrox.com/event/hyrox-shenzhen-season-26-27-alvprr",
       "status_file": "shenzen_aug_26_status.json",
@@ -68,7 +59,7 @@
     },
     {
       "name": "Mumbai Sep '26",
-      "priority": "low",
+      "priority": "high",
       "site_type": "hyrox_event_page_india",
       "url": "https://india.hyrox.co.in/event/hyrox-mumbai-season-26-27-ze9qhw",
       "status_file": "mumbai_sep_26_status.json",
