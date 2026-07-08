@@ -13,7 +13,7 @@
     },
     {
       "name": "Chengdu Aug '26",
-      "priority": "medium",
+      "priority": "high",
       "site_type": "hyrox_event_page_india",
       "url": "https://china.hyrox.com/event/hyrox-chengdu-season-26-27-copy-2hh7x6",
       "status_file": "chengdu_aug_26_status.json",
@@ -68,7 +68,7 @@
     },
     {
       "name": "Seoul Nov '26",
-      "priority": "low",
+      "priority": "medium",
       "site_type": "hyrox_event_page_india",
       "url": "https://korea.hyrox.com/event/hyrox-seoul-season-26-27-vthaza",
       "status_file": "seoul_nov_26_status.json",
