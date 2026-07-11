@@ -32,7 +32,7 @@
     "HYROX PRO MEN": false,
     "HYROX WOMEN": false,
     "HYROX MEN": false,
-    "HYROX PRO DOUBLES WOMEN": false,
+    "HYROX PRO DOUBLES WOMEN": true,
     "HYROX PRO DOUBLES MEN": false,
     "HYROX DOUBLES WOMEN": false,
     "HYROX DOUBLES MIXED": false,
