@@ -83,6 +83,15 @@
       "status_file": "singapore_nov_26_status.json",
       "email_to": "happychildhood@yahoo.com, yiingls@gmail.com, pengjoon@gmail.com, timothytjahja8@gmail.com, neetalow@gmail.com, mikosu.stan@gmail.com, riaelagoreyes@gmail.com",
       "exclude_prefixes" : ["CHARITY", "ELITE SPECTATOR", "HYROX ADAPTIVE"]
+    },
+    {
+      "name": "Melbourne Dec '26",
+      "priority": "high",
+      "site_type": "hyrox_event_page_india",
+      "url": "https://australia.hyrox.com/event/hyrox-melbourne-season-26-27-zdo7te",
+      "status_file": "melbourne_dec_26_status.json",
+      "email_to": "happychildhood@yahoo.com",
+      "exclude_prefixes" : ["CHARITY", "ELITE SPECTATOR", "HYROX ADAPTIVE"]
     }
 
   ],
