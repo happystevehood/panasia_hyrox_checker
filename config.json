@@ -29,8 +29,7 @@
       "email_to": "happychildhood@yahoo.com, GyTaRAnGeL@gmail.com",
       "exclude_prefixes" : ["CHARITY", "ELITE SPECTATOR", "HYROX ADAPTIVE"]
     },
- 
-   {
+    {
       "name": "Bangkok Aug '26",
       "priority": "high",
       "site_type": "hyrox_event_page_india",
@@ -85,8 +84,17 @@
       "exclude_prefixes" : ["CHARITY", "ELITE SPECTATOR", "HYROX ADAPTIVE"]
     },
     {
+      "name": "Sanya Dec '26",
+      "priority": "low",
+      "site_type": "hyrox_event_page_india",
+      "url": "https://china.hyrox.com/event/hyrox-sanya-season-26-27-yart1h",
+      "status_file": "sanya_dec_26_status.json",
+      "email_to": "happychildhood@yahoo.com",
+      "exclude_prefixes" : ["CHARITY", "ELITE SPECTATOR", "HYROX ADAPTIVE"]
+    },
+    {
       "name": "Melbourne Dec '26",
-      "priority": "high",
+      "priority": "low",
       "site_type": "hyrox_event_page_india",
       "url": "https://australia.hyrox.com/event/hyrox-melbourne-season-26-27-zdo7te",
       "status_file": "melbourne_dec_26_status.json",
