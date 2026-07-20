@@ -24,15 +24,15 @@
       },
       {
         "name": "HYROX DOUBLES WOMEN | Friday",
-        "status": "Sold out"
-      },
-      {
-        "name": "HYROX DOUBLES WOMEN | Saturday",
         "status": "Available"
       },
       {
-        "name": "HYROX DOUBLES WOMEN | Sunday",
+        "name": "HYROX DOUBLES WOMEN | Saturday",
         "status": "Sold out"
+      },
+      {
+        "name": "HYROX DOUBLES WOMEN | Sunday",
+        "status": "Available"
       },
       {
         "name": "HYROX MEN | Friday",
