@@ -13,7 +13,7 @@
     },
     {
       "name": "Chengdu Aug '26",
-      "priority": "high",
+      "priority": "medium",
       "site_type": "hyrox_event_page_india",
       "url": "https://china.hyrox.com/event/hyrox-chengdu-season-26-27-copy-2hh7x6",
       "status_file": "chengdu_aug_26_status.json",
@@ -80,7 +80,7 @@
       "site_type": "hyrox_event_page_india",
       "url": "https://singapore.hyrox.com/event/hyrox-singapore-ii-season-26-27-j5w6t2",
       "status_file": "singapore_nov_26_status.json",
-      "email_to": "happychildhood@yahoo.com, yiingls@gmail.com, pengjoon@gmail.com, timothytjahja8@gmail.com, neetalow@gmail.com, mikosu.stan@gmail.com, riaelagoreyes@gmail.com",
+      "email_to": "happychildhood@yahoo.com, yiingls@gmail.com, pengjoon@gmail.com, timothytjahja8@gmail.com, neetalow@gmail.com, mikosu.stan@gmail.com, riaelagoreyes@gmail.com, abundancelau@gmail.com",
       "exclude_prefixes" : ["CHARITY", "ELITE SPECTATOR", "HYROX ADAPTIVE"]
     },
     {
@@ -100,8 +100,16 @@
       "status_file": "melbourne_dec_26_status.json",
       "email_to": "happychildhood@yahoo.com, Delithramohan@gmail.com",
       "exclude_prefixes" : ["CHARITY", "ELITE SPECTATOR", "HYROX ADAPTIVE"]
-    }
-
+    },
+    {
+      "name": "Kuala Lumpur Dec '26",
+      "priority": "medium",
+      "site_type": "hyrox_event_page_india",
+      "url": "https://malaysia.hyrox.com/event/hyrox-airasia-kuala-lumpur-season-26-27-gjo5z9",
+      "status_file": "kuala_lumpur_dec_26_status.json",
+      "email_to": "happychildhood@yahoo.com",
+      "exclude_prefixes" : ["CHARITY", "ELITE SPECTATOR", "HYROX ADAPTIVE"]
+   }
   ],
   
   "future_sites": [
