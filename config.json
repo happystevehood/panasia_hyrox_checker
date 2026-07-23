@@ -57,6 +57,15 @@
       "exclude_prefixes" : ["CHARITY", "ELITE SPECTATOR",  "HYROX ADAPTIVE"]
     },
     {
+      "name": "Beijing Sep '26",
+      "priority": "low",
+      "site_type": "hyrox_event_page_india",
+      "url": "https://china.hyrox.com/event/hyrox-beijing-season-26-27-7e3efj",
+      "status_file": "beijing_sep_26_status.json",
+      "email_to": "happychildhood@yahoo.com",
+      "exclude_prefixes" : ["CHARITY", "ELITE SPECTATOR",  "HYROX ADAPTIVE"]
+    },
+    {
       "name": "Mumbai Sep '26",
       "priority": "high",
       "site_type": "hyrox_event_page_india",
@@ -111,9 +120,8 @@
       "exclude_prefixes" : ["CHARITY", "ELITE SPECTATOR", "HYROX ADAPTIVE"]
    }
   ],
-  
-  "future_sites": [
 
+  "future_sites": [
     {
       "name": "Jakarta June '26",
       "priority": "high",
