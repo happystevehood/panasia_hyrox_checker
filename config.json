@@ -3,15 +3,6 @@
   "sites": [
 
     {
-      "name": "Delhi Jul '26",
-      "priority": "low",
-      "site_type": "hyrox_event_page_india",
-      "url": "https://india.hyrox.co.in/event/hyrox-delhi-season-26-27-xszluf",
-      "status_file": "delhi_jul_26_status.json",
-      "email_to": "happychildhood@yahoo.com",
-      "exclude_prefixes" : ["CHARITY", "ELITE SPECTATOR", "HYROX ADAPTIVE"]
-    },
-    {
       "name": "Chengdu Aug '26",
       "priority": "medium",
       "site_type": "hyrox_event_page_india",
