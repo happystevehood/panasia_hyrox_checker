@@ -9,8 +9,11 @@ To run python script only in VS code on my windows machine with miniconda
 >C:\Users\Steph\miniconda3\Scripts\activate.bat base
 >python check_hyrox_pages.py
 
+To check low priority, other priorityies available  medium and high
+>python check_hyrox_pages.py --priority low
+
 For debugging cand be helpful to see what chromium browser sees
->python check_hyrox_pages.py --visisble 
+>python check_hyrox_pages.py --visible 
 
 To create a summary availability matrix do the following:
 >python check_hyrox_pages.py --matrix

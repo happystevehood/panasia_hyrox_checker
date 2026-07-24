@@ -43,10 +43,20 @@ def setup_driver(headless=True):
     
     if headless:
         chrome_options.add_argument("--headless=new")
+        
+        # 1. Mask the bot identity with a real User-Agent
+        chrome_options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36")
+        # 2. Set a large window size so the "Buy Tickets" buttons aren't hidden by mobile layouts
+        chrome_options.add_argument("--window-size=1920,1080")
+        
     else:
         chrome_options.add_argument("--start-maximized")
         chrome_options.add_experimental_option("excludeSwitches", ["enable-automation"])
         chrome_options.add_experimental_option('useAutomationExtension', False)
+
+    # --- ADD THESE TWO LINES HERE ---
+    chrome_options.add_argument("--disable-webrtc")
+    chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
 
     # --- STABILITY FLAGS FOR GITHUB ACTIONS ---
     chrome_options.add_argument("--no-sandbox")
@@ -55,6 +65,8 @@ def setup_driver(headless=True):
     chrome_options.add_argument("--disable-extensions")
     chrome_options.add_argument("--proxy-server='direct://'")
     chrome_options.add_argument("--proxy-bypass-list=*")
+    
+    # Disabling images can sometimes break layout-heavy ticket buttons.
     chrome_options.add_argument("--blink-settings=imagesEnabled=false") # Speed up by not loading images
     
     service = Service()
@@ -70,20 +82,31 @@ def setup_driver(headless=True):
 
 def send_email(subject, html_body, recipient_email, mail_username, mail_password, attachment_path=None):
     if not recipient_email or not mail_username: return 
+    
+    # 1. Convert the string "email1, email2" into a Python list
+    recipient_list = [email.strip() for email in recipient_email.split(',')]
+
     msg = MIMEMultipart('alternative')
     msg['Subject'] = subject
     msg['From'] = f"Hyrox Monitor Bot <{mail_username}>"
-    msg['To'] = recipient_email
+    
+    # 2. Set a generic 'To' header so recipients see a clean "To" field
+    msg['To'] = "Hyrox Subscriber" 
+
     msg.attach(MIMEText(html_body, 'html'))
     if attachment_path and os.path.exists(attachment_path):
         with open(attachment_path, 'rb') as f:
             img = MIMEImage(f.read())
             img.add_header('Content-ID', '<matrix_image>')
+             # ADD THIS LINE:
+            img.add_header('Content-Disposition', 'attachment', filename=os.path.basename(attachment_path))
             msg.attach(img)
     try:
         with smtplib.SMTP_SSL('smtp.gmail.com', 465) as server:
             server.login(mail_username, mail_password)
-            server.send_message(msg)
+            # 3. Explicitly pass the recipient_list to the 'to_addrs' argument
+            # This handles the BCC logic at the protocol level
+            server.send_message(msg, from_addr=mail_username, to_addrs=recipient_list)
     except Exception as e: print(f"Error sending email: {e}")
 
 def normalize_text(text):
@@ -356,7 +379,8 @@ def scrape_current_view(driver, exclude_prefixes):
             # If the row doesn't have the 'sold-out' class and has a button
             if "sold-out" not in row.get_attribute("class"):
                 add_btns = row.find_elements(By.CSS_SELECTOR, "button[aria-label^='Add']")
-                if add_btns and add_btns[0].is_displayed():
+                # If the button is enabled and visible, in some cases the button is present but disabled
+                if add_btns and add_btns[0].is_displayed() and add_btns[0].is_enabled():
                     status = "Available"
             
             tickets.append({"name": name, "status": status})
@@ -917,9 +941,29 @@ def email_matrix():
         with open(TICKET_DETAILS_CONFIG, 'r') as f: rcpt = json.load(f).get("matrix_email_to")
     except: return
     
+    # Define time and 'now' locally so it's recognized
     mst = pytz.timezone('Asia/Kuala_Lumpur')
-    sub = f"Hyrox Matrix - {datetime.now(mst).strftime('%Y-%m-%d')}"
-    body = "<html><body><img src='cid:matrix_image'></body></html>"
+    now_dt = datetime.now(mst) 
+    
+    date_str = now_dt.strftime('%Y%m%d') # Example: 20240724
+    pretty_name = f"HyroxMonitorMatrix{date_str}.png"
+    
+    sub = f"Hyrox Matrix - {now_dt.strftime('%Y-%m-%d')}"
+    body = "<html><body><p>Attached is the latest availability matrix.</p><img src='cid:matrix_image'></body></html>"
+
+    # Temporary rename for the attachment
+    if os.path.exists(MATRIX_OUTPUT_FILE):
+        os.rename(MATRIX_OUTPUT_FILE, pretty_name)
+    
+    try:
+        send_email(sub, body, rcpt, mail_user, mail_pass, pretty_name)
+    except Exception as e:
+        print(f"Error in matrix email: {e}")
+    finally:
+        # Rename it back to the original name so the script stays consistent
+        if os.path.exists(pretty_name):
+            os.rename(pretty_name, MATRIX_OUTPUT_FILE)    
+    
     send_email(sub, body, rcpt, mail_user, mail_pass, MATRIX_OUTPUT_FILE)
 
 # --- MAIN ---
