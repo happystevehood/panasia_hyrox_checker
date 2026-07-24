@@ -8,7 +8,8 @@
     "HYROX DOUBLES WOMEN"
   ],
   "Perth Aug '26": [
-    "HYROX MEN"
+    "HYROX MEN",
+    "HYROX PRO WOMEN"
   ],
   "Melbourne Dec '26": [
     "HYROX MENS RELAY",
@@ -19,6 +20,9 @@
     "HYROX DOUBLES WOMEN",
     "HYROX DOUBLES MIXED",
     "HYROX MEN",
+    "HYROX WOMEN"
+  ],
+  "Chiba Aug '26": [
     "HYROX WOMEN"
   ]
 }
