@@ -964,7 +964,7 @@ def email_matrix():
         if os.path.exists(pretty_name):
             os.rename(pretty_name, MATRIX_OUTPUT_FILE)    
     
-    send_email(sub, body, rcpt, mail_user, mail_pass, MATRIX_OUTPUT_FILE)
+    #send_email(sub, body, rcpt, mail_user, mail_pass, MATRIX_OUTPUT_FILE)
 
 # --- MAIN ---
 def main(headless=True, target_priority=None): # Added target_priority argument):
