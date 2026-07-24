@@ -1,5 +1,4 @@
 [
-
   {
     "name": "Abu Dhabi '26",
     "priority": "low",
@@ -10,7 +9,7 @@
   {
     "name": "Beijing Sep '26",
     "priority": "low",
-    "on_sale": false,
+    "on_sale": true,
     "url": "https://hyrox.com/event/hyrox-beijing-0912/",
     "email_to": "happychildhood@yahoo.com"
   },
@@ -31,21 +30,21 @@
   {
     "name": "Sanya Dec '26",
     "priority": "low",
-    "on_sale": false,
+    "on_sale": true,
     "url": "https://hyrox.com/event/30454/",
     "email_to": "happychildhood@yahoo.com"
   },
   {
     "name": "Melbourne Dec '26",
     "priority": "low",
-    "on_sale": false,
+    "on_sale": true,
     "url": "https://hyrox.com/event/hyrox-melbourne/",
     "email_to": "happychildhood@yahoo.com"
   },
   {
     "name": "Kuala Lumpur '26",
     "priority": "low",
-    "on_sale": false,
+    "on_sale": true,
     "url": "https://hyrox.com/event/hyrox-kuala-lumpur/",
     "email_to": "happychildhood@yahoo.com"
   },
@@ -105,6 +104,4 @@
     "url": "https://hyrox.com/event/hyrox-incheon/",
     "email_to": "happychildhood@yahoo.com"
   }
-
-
 ]
