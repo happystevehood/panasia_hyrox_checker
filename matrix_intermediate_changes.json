@@ -3,7 +3,8 @@
     "HYROX WOMEN"
   ],
   "Beijing Sep '26": [
-    "HYROX PRO DOUBLES WOMEN"
+    "HYROX PRO DOUBLES WOMEN",
+    "HYROX DOUBLES WOMEN"
   ],
   "Sanya Dec '26": [
     "HYROX DOUBLES MEN"
@@ -14,5 +15,8 @@
   "Bangkok Aug '26": [
     "HYROX DOUBLES MIXED",
     "HYROX WOMEN"
+  ],
+  "Perth Aug '26": [
+    "HYROX MEN"
   ]
 }
