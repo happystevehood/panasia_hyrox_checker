@@ -50,7 +50,7 @@
     "HYROX PRO DOUBLES MEN": false,
     "HYROX DOUBLES WOMEN": true,
     "HYROX DOUBLES MIXED": false,
-    "HYROX DOUBLES MEN": true,
+    "HYROX DOUBLES MEN": false,
     "HYROX WOMENS RELAY": true,
     "HYROX MENS RELAY": false,
     "HYROX MIXED RELAY": true
