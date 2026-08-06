@@ -4,7 +4,7 @@
     "details": [
       {
         "name": "SPECTATOR | FRIDAY",
-        "status": "Sold out"
+        "status": "Available"
       },
       {
         "name": "SPECTATOR | SATURDAY",
@@ -12,10 +12,6 @@
       },
       {
         "name": "SPECTATOR | SUNDAY",
-        "status": "Available"
-      },
-      {
-        "name": "SPECTATOR | THURSDAY",
         "status": "Available"
       }
     ]
