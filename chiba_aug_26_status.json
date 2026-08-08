@@ -3,12 +3,8 @@
     "found": true,
     "details": [
       {
-        "name": "SPECTATOR | FRIDAY",
-        "status": "Available"
-      },
-      {
         "name": "SPECTATOR | SATURDAY",
-        "status": "Sold out"
+        "status": "Available"
       },
       {
         "name": "SPECTATOR | SUNDAY",
