@@ -596,6 +596,7 @@ def _process_hyrox_event_page_china(site_config, driver):
     else:
         print("  ! Failed to extract China checkout URL.")
         return {"change_detected": False}
+
 def execute_checkout_scraping(driver, checkout_url, site_config):
     print(f"  > Clean Checkout URL: {checkout_url[:60]}...")
     driver.get(checkout_url)
@@ -618,8 +619,15 @@ def execute_checkout_scraping(driver, checkout_url, site_config):
         driver.save_screenshot(f"debug_failed_load_{safe_name}.png")
         return {"change_detected": False}
 
+    # Load previous status early to compare
+    status_file = site_config['status_file']
+    try:
+        with open(status_file, 'r', encoding='utf-8') as f: 
+            previous_status = json.load(f)
+    except: 
+            previous_status = {}
+
     all_tickets = []
-    
     sale_ended_elements = driver.find_elements(By.CLASS_NAME, "fallback-box")
     sale_ended_flag = False
     if sale_ended_elements:
@@ -630,9 +638,26 @@ def execute_checkout_scraping(driver, checkout_url, site_config):
 
     if sale_ended_flag:
         print("  > Detected 'Sale has ended'. Marking all tickets as Sold Out.")
+        # If sale ended, we take previous tickets and mark them all sold out
+        prev_details = previous_status.get("General", {}).get("details", [])
+        for t in prev_details:
+            all_tickets.append({**t, "status": "Sold Out"})
     else:
         all_tickets = traverse_menu(driver, site_config.get("exclude_prefixes", []))
-        #all_tickets = traverse_menu_china(driver, site_config.get("exclude_prefixes", []))
+
+    # --- NEW LOGIC: RECONCILE MISSING TICKETS ---
+    # If the page loaded (is_page_valid) but a previously known ticket is missing from the scrape,
+    # it means it was removed from the site (Sold Out).
+    if is_page_valid and not sale_ended_flag:
+        current_names = {t['name'] for t in all_tickets}
+        prev_details = previous_status.get("General", {}).get("details", [])
+        for prev_t in prev_details:
+            if prev_t['name'] not in current_names:
+                # Add it back to the list but mark as Sold Out
+                sold_out_t = prev_t.copy()
+                sold_out_t['status'] = 'Sold Out'
+                all_tickets.append(sold_out_t)
+    # --------------------------------------------
 
     current_status = {"General": {"found": is_page_valid, "details": []}}
     
@@ -643,11 +668,6 @@ def execute_checkout_scraping(driver, checkout_url, site_config):
     else:
         if not sale_ended_flag:
             print("  > No tickets found (All categories excluded).")
-
-    status_file = site_config['status_file']
-    try:
-        with open(status_file, 'r', encoding='utf-8') as f: previous_status = json.load(f)
-    except: previous_status = {}
 
     if previous_status != current_status and current_status["General"]["found"]:
         # Generate HTML and get list of changed items

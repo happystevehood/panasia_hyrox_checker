@@ -2,15 +2,6 @@
   "matrix_email_to": "happychildhood@yahoo.com, dennisoh@gmail.com, deelynlui@gmail.com",
   "sites": [
     {
-      "name": "Chiba Aug '26",
-      "priority": "low",
-      "site_type": "hyrox_event_page_india",
-      "url": "https://japan.hyrox.com/event/hyrox-chiba-season-26-27-qzyubs",
-      "status_file": "chiba_aug_26_status.json",
-      "email_to": "happychildhood@yahoo.com, GyTaRAnGeL@gmail.com",
-      "exclude_prefixes" : ["CHARITY", "ELITE SPECTATOR", "HYROX ADAPTIVE"]
-    },
-    {
       "name": "Bangkok Aug '26",
       "priority": "medium",
       "site_type": "hyrox_event_page_india",
