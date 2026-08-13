@@ -3,21 +3,20 @@
   "sites": [
     {
       "name": "Bangkok Aug '26",
-      "priority": "medium",
+      "priority": "low",
       "site_type": "hyrox_event_page_india",
       "url": "https://thailand.hyrox.com/event/hyrox-bangkok-season-26-27-3fhlh8",
       "status_file": "bangkok_aug_26_status.json",
       "email_to": "happychildhood@yahoo.com, GyTaRAnGeL@gmail.com",
-      "exclude_prefixes" : ["CHARITY", "ELITE SPECTATOR", "HYROX ADAPTIVE", "RECOMMENDED", "Station 9 - The Official Afterparty"]
-    },
-    {
+      "exclude_prefixes" : ["CHARITY", "HYROX ADAPTIVE", "RECOMMENDED", "Station 9 - The Official Afterparty"]
+    },   {
       "name": "Shenzen Aug '26",
-      "priority": "medium",
+      "priority": "low",
       "site_type": "hyrox_event_page_india",
       "url": "https://china.hyrox.com/event/hyrox-shenzhen-season-26-27-alvprr",
       "status_file": "shenzen_aug_26_status.json",
       "email_to": "happychildhood@yahoo.com",
-      "exclude_prefixes" : ["CHARITY", "ELITE SPECTATOR", "HYROX ADAPTIVE"]
+      "exclude_prefixes" : ["CHARITY", "HYROX ADAPTIVE"]
     },
     {
       "name": "Perth Aug '26",
@@ -26,16 +25,16 @@
       "url": "https://australia.hyrox.com/event/hyrox-perth-season-26-27-puy2kq",
       "status_file": "perth_aug_26_status.json",
       "email_to": "happychildhood@yahoo.com",
-      "exclude_prefixes" : ["CHARITY", "ELITE SPECTATOR",  "HYROX ADAPTIVE"]
+      "exclude_prefixes" : ["CHARITY", "HYROX ADAPTIVE"]
     },
     {
       "name": "Beijing Sep '26",
-      "priority": "low",
+      "priority": "medium",
       "site_type": "hyrox_event_page_india",
       "url": "https://china.hyrox.com/event/hyrox-beijing-season-26-27-7e3efj",
       "status_file": "beijing_sep_26_status.json",
       "email_to": "happychildhood@yahoo.com",
-      "exclude_prefixes" : ["CHARITY", "ELITE SPECTATOR",  "HYROX ADAPTIVE"]
+      "exclude_prefixes" : ["CHARITY",  "HYROX ADAPTIVE"]
     },
     {
       "name": "Mumbai Sep '26",
@@ -44,7 +43,7 @@
       "url": "https://india.hyrox.co.in/event/hyrox-mumbai-season-26-27-ze9qhw",
       "status_file": "mumbai_sep_26_status.json",
       "email_to": "happychildhood@yahoo.com",
-      "exclude_prefixes" : ["CHARITY", "ELITE SPECTATOR",  "HYROX ADAPTIVE"]
+      "exclude_prefixes" : ["CHARITY", "HYROX ADAPTIVE"]
     },
     {
       "name": "Seoul Nov '26",
@@ -53,7 +52,7 @@
       "url": "https://korea.hyrox.com/event/hyrox-seoul-season-26-27-vthaza",
       "status_file": "seoul_nov_26_status.json",
       "email_to": "happychildhood@yahoo.com",
-      "exclude_prefixes" : ["CHARITY", "ELITE SPECTATOR", "SPECTATOR", "Spectator", "HYROX ADAPTIVE"]
+      "exclude_prefixes" : ["CHARITY", "HYROX ADAPTIVE"]
     },
     {
       "name": "Singapore Nov '26",
@@ -62,7 +61,7 @@
       "url": "https://singapore.hyrox.com/event/hyrox-singapore-ii-season-26-27-j5w6t2",
       "status_file": "singapore_nov_26_status.json",
       "email_to": "happychildhood@yahoo.com, yiingls@gmail.com, pengjoon@gmail.com, timothytjahja8@gmail.com, neetalow@gmail.com, mikosu.stan@gmail.com, riaelagoreyes@gmail.com, abundancelau@gmail.com, dr.izzathayazi@gmail.com, Wearethenutritionproject@gmail.com",
-      "exclude_prefixes" : ["CHARITY", "ELITE SPECTATOR", "HYROX ADAPTIVE"]
+      "exclude_prefixes" : ["CHARITY", "HYROX ADAPTIVE"]
     },
     {
       "name": "Sanya Dec '26",
@@ -71,7 +70,7 @@
       "url": "https://china.hyrox.com/event/hyrox-sanya-season-26-27-yart1h",
       "status_file": "sanya_dec_26_status.json",
       "email_to": "happychildhood@yahoo.com",
-      "exclude_prefixes" : ["CHARITY", "ELITE SPECTATOR", "HYROX ADAPTIVE"]
+      "exclude_prefixes" : ["CHARITY", "HYROX ADAPTIVE"]
     },
     {
       "name": "Melbourne Dec '26",
@@ -80,7 +79,7 @@
       "url": "https://australia.hyrox.com/event/hyrox-melbourne-season-26-27-zdo7te",
       "status_file": "melbourne_dec_26_status.json",
       "email_to": "happychildhood@yahoo.com, Delithramohan@gmail.com",
-      "exclude_prefixes" : ["CHARITY", "ELITE SPECTATOR", "HYROX ADAPTIVE"]
+      "exclude_prefixes" : ["CHARITY", "HYROX ADAPTIVE"]
     },
     {
       "name": "Kuala Lumpur Dec '26",
@@ -89,7 +88,7 @@
       "url": "https://malaysia.hyrox.com/event/hyrox-airasia-kuala-lumpur-season-26-27-gjo5z9",
       "status_file": "kuala_lumpur_dec_26_status.json",
       "email_to": "happychildhood@yahoo.com, mastersee010420@gmail.com, jasmine250597@gmail.com, rupschen@gmail.com, Lauracheah55@gmail.com, Yauchinyew@gmail.com, alvinchew1988@gmail.com, dennisoh@gmail.com, Cecelia.ho@gmail.com, Adrian.siew@gmail.com, neetalow@gmail.com, mikosu.stan@gmail.com, daniald88@gmail.com, deelynlui@gmail.com, jaccuasg@gmail.com ",
-      "exclude_prefixes" : ["CHARITY", "ELITE SPECTATOR", "HYROX ADAPTIVE"]
+      "exclude_prefixes" : ["CHARITY", "HYROX ADAPTIVE"]
    }
   ],
   
@@ -101,7 +100,7 @@
       "url": "https://hyrox.com/event/hyrox-jakarta/",
       "status_file": "jakarta_june_26_status.json",
       "email_to": "happychildhood@yahoo.com",
-      "exclude_prefixes" : ["CHARITY", "ELITE SPECTATOR", "SPECTATOR", "Spectator", "HYROX ADAPTIVE"]
+      "exclude_prefixes" : ["CHARITY", "ELITE SPECTATOR", "HYROX ADAPTIVE"]
     }
   ]
 }
