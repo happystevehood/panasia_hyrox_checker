@@ -1,24 +1,7 @@
 {
   "matrix_email_to": "happychildhood@yahoo.com, dennisoh@gmail.com, deelynlui@gmail.com",
   "sites": [
-    {
-      "name": "Bangkok Aug '26",
-      "priority": "low",
-      "site_type": "hyrox_event_page_india",
-      "url": "https://thailand.hyrox.com/event/hyrox-bangkok-season-26-27-3fhlh8",
-      "status_file": "bangkok_aug_26_status.json",
-      "email_to": "happychildhood@yahoo.com, GyTaRAnGeL@gmail.com",
-      "exclude_prefixes" : ["CHARITY", "HYROX ADAPTIVE", "RECOMMENDED", "Station 9 - The Official Afterparty"]
-    },   {
-      "name": "Shenzen Aug '26",
-      "priority": "low",
-      "site_type": "hyrox_event_page_india",
-      "url": "https://china.hyrox.com/event/hyrox-shenzhen-season-26-27-alvprr",
-      "status_file": "shenzen_aug_26_status.json",
-      "email_to": "happychildhood@yahoo.com",
-      "exclude_prefixes" : ["CHARITY", "HYROX ADAPTIVE"]
-    },
-    {
+     {
       "name": "Perth Aug '26",
       "priority": "low",
       "site_type": "hyrox_event_page_india",
