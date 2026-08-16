@@ -4,19 +4,19 @@
     "details": [
       {
         "name": "SPECTATOR | Friday",
-        "status": "Sold out"
+        "status": "Sold Out"
       },
       {
         "name": "SPECTATOR | Saturday",
-        "status": "Sold out"
+        "status": "Sold Out"
       },
       {
         "name": "SPECTATOR | Sunday",
-        "status": "Available"
+        "status": "Sold Out"
       },
       {
         "name": "SPECTATOR | Thursday",
-        "status": "Available"
+        "status": "Sold Out"
       }
     ]
   }
