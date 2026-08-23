@@ -89,6 +89,10 @@
       {
         "name": "SPECTATOR | Sunday",
         "status": "Sold out"
+      },
+      {
+        "name": "TIMING CHIP REPLACEMENT",
+        "status": "Available"
       }
     ]
   }
