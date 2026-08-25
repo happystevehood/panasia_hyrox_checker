@@ -80,14 +80,18 @@
       },
       {
         "name": "SPECTATOR | Friday",
-        "status": "Sold out"
+        "status": "Sold Out"
       },
       {
         "name": "SPECTATOR | Saturday",
-        "status": "Sold out"
+        "status": "Sold Out"
       },
       {
         "name": "SPECTATOR | Sunday",
+        "status": "Sold out"
+      },
+      {
+        "name": "TIMING CHIP REPLACEMENT",
         "status": "Available"
       }
     ]

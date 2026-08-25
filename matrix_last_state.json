@@ -23,7 +23,7 @@
     "HYROX DOUBLES WOMEN": true,
     "HYROX DOUBLES MIXED": false,
     "HYROX DOUBLES MEN": false,
-    "HYROX WOMENS RELAY": true,
+    "HYROX WOMENS RELAY": false,
     "HYROX MENS RELAY": false,
     "HYROX MIXED RELAY": true
   },
@@ -79,7 +79,7 @@
     "HYROX DOUBLES WOMEN": false,
     "HYROX DOUBLES MIXED": false,
     "HYROX DOUBLES MEN": false,
-    "HYROX WOMENS RELAY": true,
+    "HYROX WOMENS RELAY": false,
     "HYROX MENS RELAY": false,
     "HYROX MIXED RELAY": false
   },
