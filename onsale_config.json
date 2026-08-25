@@ -1,5 +1,4 @@
 [
-
   {
     "name": "Shanghai Oct '26",
     "priority": "low",
@@ -24,7 +23,7 @@
   {
     "name": "Hong Kong Jan '26",
     "priority": "low",
-    "on_sale": false,
+    "on_sale": true,
     "url": "https://hyrox.com/event/hyrox-hong-kong/",
     "email_to": "happychildhood@yahoo.com"
   },
@@ -98,11 +97,6 @@
     "url": "https://hyrox.com/event/puma-hyrox-world-championships-hong-kong/",
     "email_to": "happychildhood@yahoo.com"
   },
-
-
-
-
-
   {
     "name": "Abu Dhabi '26",
     "priority": "low",
