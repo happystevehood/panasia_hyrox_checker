@@ -1,15 +1,6 @@
 {
   "matrix_email_to": "happychildhood@yahoo.com, dennisoh@gmail.com, deelynlui@gmail.com",
   "sites": [
-     {
-      "name": "Perth Aug '26",
-      "priority": "low",
-      "site_type": "hyrox_event_page_india",
-      "url": "https://australia.hyrox.com/event/hyrox-perth-season-26-27-puy2kq",
-      "status_file": "perth_aug_26_status.json",
-      "email_to": "happychildhood@yahoo.com",
-      "exclude_prefixes" : ["CHARITY", "HYROX ADAPTIVE"]
-    },
     {
       "name": "Beijing Sep '26",
       "priority": "medium",
