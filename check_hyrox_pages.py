@@ -630,11 +630,14 @@ def execute_checkout_scraping(driver, checkout_url, site_config):
     all_tickets = []
     sale_ended_elements = driver.find_elements(By.CLASS_NAME, "fallback-box")
     sale_ended_flag = False
-    if sale_ended_elements:
-         for box in sale_ended_elements:
-             if box.is_displayed() and "sale has ended" in box.text.lower():
-                 sale_ended_flag = True
-                 break
+    
+    for box in sale_ended_elements:
+        # Using innerText is more reliable for nested spans in modern web apps
+        box_text = box.get_attribute('innerText').lower()
+        
+        if "sale has ended" in box_text or "sale is planned" in box_text:
+            sale_ended_flag = True
+            break
 
     if sale_ended_flag:
         print("  > Detected 'Sale has ended'. Marking all tickets as Sold Out.")

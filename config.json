@@ -12,7 +12,7 @@
     },
     {
       "name": "Mumbai Sep '26",
-      "priority": "high",
+      "priority": "low",
       "site_type": "hyrox_event_page_india",
       "url": "https://india.hyrox.co.in/event/hyrox-mumbai-season-26-27-ze9qhw",
       "status_file": "mumbai_sep_26_status.json",
@@ -66,11 +66,11 @@
    },
    {
       "name": "Hong Kong Jan '27",
-      "priority": "high",
+      "priority": "low",
       "site_type": "hyrox_event_page_india",
       "url": "https://hk.hyrox.com/event/hyrox-hong-kong-season-26-27-s7u9ly",
       "status_file": "hong_kong_jan_27_status.json",
-      "email_to": "happychildhood@yahoo.com.com",
+      "email_to": "happychildhood@yahoo.com",
       "exclude_prefixes" : ["CHARITY", "HYROX ADAPTIVE"]
    }
   ],
