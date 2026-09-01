@@ -57,7 +57,7 @@
     },
     {
       "name": "Kuala Lumpur Dec '26",
-      "priority": "high",
+      "priority": "highest",
       "site_type": "hyrox_event_page_india",
       "url": "https://malaysia.hyrox.com/event/hyrox-airasia-kuala-lumpur-season-26-27-gjo5z9",
       "status_file": "kuala_lumpur_dec_26_status.json",

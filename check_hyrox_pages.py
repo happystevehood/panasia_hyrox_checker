@@ -990,7 +990,7 @@ def email_matrix():
     #send_email(sub, body, rcpt, mail_user, mail_pass, MATRIX_OUTPUT_FILE)
 
 # --- MAIN ---
-def main(headless=True, target_priority=None): # Added target_priority argument):
+def main(headless=True, target_priority=None):
     mail_user = os.getenv('MAIL_USERNAME'); mail_pass = os.getenv('MAIL_PASSWORD')
     change = False
     
@@ -1002,9 +1002,12 @@ def main(headless=True, target_priority=None): # Added target_priority argument)
         os_updated = False
         for s in on_sale_sites:
             
-            # --- MINIMAL CHANGE: Filter by priority ---
-            if target_priority and s.get('priority', 'low').lower() != target_priority.lower():
-                continue
+            # --- UPDATED PRIORITY LOGIC ---
+            site_prio = s.get('priority', 'low').lower()
+            if target_priority:
+                # Skip ONLY if it's not the target priority AND it's not 'highest'
+                if site_prio != target_priority.lower() and site_prio != 'highest':
+                    continue
             
             try:
                 res = process_on_sale_site(s, driver)
@@ -1027,9 +1030,12 @@ def main(headless=True, target_priority=None): # Added target_priority argument)
         
         for s in sites:
             
-            # --- MINIMAL CHANGE: Filter by priority ---
-            if target_priority and s.get('priority', 'low').lower() != target_priority.lower():
-                continue
+            # --- UPDATED PRIORITY LOGIC ---
+            site_prio = s.get('priority', 'low').lower()
+            if target_priority:
+                # Skip ONLY if it's not the target priority AND it's not 'highest'
+                if site_prio != target_priority.lower() and site_prio != 'highest':
+                    continue
             
             try:
                 res = process_ticket_details_site(s, driver)
@@ -1055,7 +1061,7 @@ if __name__ == "__main__":
     print(f"System Arguments received: {sys.argv}")
     is_headless = "--visible" not in sys.argv
     
-    # --- MINIMAL CHANGE: Parse priority argument ---
+    # Parse priority argument
     priority_val = None
     if "--priority" in sys.argv:
         idx = sys.argv.index("--priority")
