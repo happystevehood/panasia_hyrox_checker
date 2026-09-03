@@ -75,7 +75,7 @@
    },
    {
       "name": "Hong Kong Jan '27",
-      "priority": "low",
+      "priority": "high",
       "site_type": "hyrox_event_page_india",
       "url": "https://hk.hyrox.com/event/hyrox-hong-kong-season-26-27-s7u9ly",
       "status_file": "hong_kong_jan_27_status.json",
