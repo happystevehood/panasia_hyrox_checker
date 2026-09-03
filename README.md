@@ -9,7 +9,7 @@ To run python script only in VS code on my windows machine with miniconda
 >C:\Users\Steph\miniconda3\Scripts\activate.bat base
 >python check_hyrox_pages.py
 
-To check low priority, other priorityies available  medium and high
+To check low priority, other priorityies available  medium, high. Note 'highest' priority will always run if --priority is selected
 >python check_hyrox_pages.py --priority low
 
 For debugging cand be helpful to see what chromium browser sees
