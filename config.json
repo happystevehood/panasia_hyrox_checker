@@ -20,6 +20,15 @@
       "exclude_prefixes" : ["CHARITY", "HYROX ADAPTIVE"]
     },
     {
+      "name": "Shanghai Oct '26",
+      "priority": "medium",
+      "site_type": "hyrox_event_page_india",
+      "url": "https://china.hyrox.com/event/hyrox-shanghai-season-26-27-itfsos",
+      "status_file": "shanghai_oct_26_status.json",
+      "email_to": "happychildhood@yahoo.com",
+      "exclude_prefixes" : ["CHARITY", "HYROX ADAPTIVE"]
+    },
+    {
       "name": "Seoul Nov '26",
       "priority": "low",
       "site_type": "hyrox_event_page_india",
