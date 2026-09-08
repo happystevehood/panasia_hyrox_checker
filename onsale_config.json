@@ -37,7 +37,7 @@
   {
     "name": "Osaka Jan '27",
     "priority": "low",
-    "on_sale": false,
+    "on_sale": true,
     "url": "https://hyrox.com/event/byd-hyrox-osaka/",
     "email_to": "happychildhood@yahoo.com"
   },
