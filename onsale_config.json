@@ -1,9 +1,9 @@
 [
-  {
-    "name": "Shanghai Oct '26",
+    {
+    "name": "Abu Dhabi Oct '26",
     "priority": "low",
-    "on_sale": true,
-    "url": "https://hyrox.com/event/hyrox-shanghai-1031/",
+    "on_sale": false,
+    "url": "https://hyrox.com/event/hyrox-abu-dhabi/",
     "email_to": "happychildhood@yahoo.com"
   },
   {
@@ -21,24 +21,10 @@
     "email_to": "happychildhood@yahoo.com"
   },
   {
-    "name": "Hong Kong Jan '26",
-    "priority": "low",
-    "on_sale": true,
-    "url": "https://hyrox.com/event/hyrox-hong-kong/",
-    "email_to": "happychildhood@yahoo.com"
-  },
-  {
     "name": "Noida Jan '27",
     "priority": "low",
     "on_sale": false,
     "url": "https://hyrox.com/event/hyrox-noida/",
-    "email_to": "happychildhood@yahoo.com"
-  },
-  {
-    "name": "Osaka Jan '27",
-    "priority": "low",
-    "on_sale": true,
-    "url": "https://hyrox.com/event/byd-hyrox-osaka/",
     "email_to": "happychildhood@yahoo.com"
   },
   {
@@ -95,13 +81,6 @@
     "priority": "low",
     "on_sale": false,
     "url": "https://hyrox.com/event/puma-hyrox-world-championships-hong-kong/",
-    "email_to": "happychildhood@yahoo.com"
-  },
-  {
-    "name": "Abu Dhabi '26",
-    "priority": "low",
-    "on_sale": false,
-    "url": "https://hyrox.com/event/hyrox-abu-dhabi/",
     "email_to": "happychildhood@yahoo.com"
   }
 ]
