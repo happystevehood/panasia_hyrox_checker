@@ -1,0 +1,135 @@
+{
+  "General": {
+    "found": true,
+    "details": [
+      {
+        "name": "HYROX DOUBLES MEN | FRIDAY",
+        "status": "Sold out"
+      },
+      {
+        "name": "HYROX DOUBLES MEN | MONDAY",
+        "status": "Sold out"
+      },
+      {
+        "name": "HYROX DOUBLES MEN | SUNDAY",
+        "status": "Sold out"
+      },
+      {
+        "name": "HYROX DOUBLES MEN | THURSDAY",
+        "status": "Sold out"
+      },
+      {
+        "name": "HYROX DOUBLES MIXED | FRIDAY",
+        "status": "Sold out"
+      },
+      {
+        "name": "HYROX DOUBLES MIXED | MONDAY",
+        "status": "Sold out"
+      },
+      {
+        "name": "HYROX DOUBLES MIXED | SATURDAY",
+        "status": "Sold out"
+      },
+      {
+        "name": "HYROX DOUBLES MIXED | THURSDAY",
+        "status": "Sold out"
+      },
+      {
+        "name": "HYROX DOUBLES WOMEN | FRIDAY",
+        "status": "Sold out"
+      },
+      {
+        "name": "HYROX DOUBLES WOMEN | MONDAY",
+        "status": "Sold out"
+      },
+      {
+        "name": "HYROX DOUBLES WOMEN | SUNDAY",
+        "status": "Sold out"
+      },
+      {
+        "name": "HYROX DOUBLES WOMEN | THURSDAY",
+        "status": "Sold out"
+      },
+      {
+        "name": "HYROX MEN | FRIDAY",
+        "status": "Sold out"
+      },
+      {
+        "name": "HYROX MEN | MONDAY",
+        "status": "Sold out"
+      },
+      {
+        "name": "HYROX MEN | SATURDAY",
+        "status": "Sold out"
+      },
+      {
+        "name": "HYROX MEN | THURSDAY",
+        "status": "Sold out"
+      },
+      {
+        "name": "HYROX MENS RELAY | FRIDAY",
+        "status": "Sold out"
+      },
+      {
+        "name": "HYROX MIXED RELAY | FRIDAY",
+        "status": "Sold out"
+      },
+      {
+        "name": "HYROX PRO DOUBLES MEN | SATURDAY",
+        "status": "Sold out"
+      },
+      {
+        "name": "HYROX PRO DOUBLES WOMEN | SATURDAY",
+        "status": "Sold out"
+      },
+      {
+        "name": "HYROX PRO MEN | FRIDAY",
+        "status": "Sold out"
+      },
+      {
+        "name": "HYROX PRO WOMEN | FRIDAY",
+        "status": "Sold out"
+      },
+      {
+        "name": "HYROX WOMEN | FRIDAY",
+        "status": "Sold out"
+      },
+      {
+        "name": "HYROX WOMEN | MONDAY",
+        "status": "Sold out"
+      },
+      {
+        "name": "HYROX WOMEN | SUNDAY",
+        "status": "Sold out"
+      },
+      {
+        "name": "HYROX WOMEN | THURSDAY",
+        "status": "Sold out"
+      },
+      {
+        "name": "HYROX WOMENS RELAY | FRIDAY",
+        "status": "Sold out"
+      },
+      {
+        "name": "SPECTATOR | FRIDAY",
+        "status": "Available"
+      },
+      {
+        "name": "SPECTATOR | MONDAY",
+        "status": "Available"
+      },
+      {
+        "name": "SPECTATOR | SATURDAY",
+        "status": "Available"
+      },
+      {
+        "name": "SPECTATOR | SUNDAY",
+        "status": "Available"
+      },
+      {
+        "name": "SPECTATOR | THURSDAY",
+        "status": "Available"
+      }
+    ]
+  }
+}
