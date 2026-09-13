@@ -2,15 +2,6 @@
   "matrix_email_to": "happychildhood@yahoo.com, dennisoh@gmail.com, deelynlui@gmail.com",
   "sites": [
     {
-      "name": "Beijing Sep '26",
-      "priority": "medium",
-      "site_type": "hyrox_event_page_india",
-      "url": "https://china.hyrox.com/event/hyrox-beijing-season-26-27-7e3efj",
-      "status_file": "beijing_sep_26_status.json",
-      "email_to": "happychildhood@yahoo.com",
-      "exclude_prefixes" : ["CHARITY",  "HYROX ADAPTIVE"]
-    },
-    {
       "name": "Mumbai Sep '26",
       "priority": "low",
       "site_type": "hyrox_event_page_india",
