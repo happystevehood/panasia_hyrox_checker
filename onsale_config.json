@@ -30,7 +30,7 @@
   {
     "name": "Auckland Feb '27",
     "priority": "low",
-    "on_sale": false,
+    "on_sale": true,
     "url": "https://hyrox.com/event/hyrox-auckland/",
     "email_to": "happychildhood@yahoo.com"
   },
