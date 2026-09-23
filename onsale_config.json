@@ -1,12 +1,5 @@
 [
   {
-    "name": "Abu Dhabi Oct '26",
-    "priority": "low",
-    "on_sale": true,
-    "url": "https://hyrox.com/event/hyrox-abu-dhabi/",
-    "email_to": "happychildhood@yahoo.com"
-  },
-  {
     "name": "Guangzhou Nov '26",
     "priority": "low",
     "on_sale": false,
@@ -28,25 +21,18 @@
     "email_to": "happychildhood@yahoo.com"
   },
   {
-    "name": "Auckland Feb '27",
-    "priority": "low",
-    "on_sale": true,
-    "url": "https://hyrox.com/event/hyrox-auckland/",
-    "email_to": "happychildhood@yahoo.com"
-  },
-  {
     "name": "Bangkok Feb '27",
     "priority": "low",
     "on_sale": false,
     "url": "https://hyrox.com/event/hyrox-bangkok/",
-    "email_to": "happychildhood@yahoo.com"
+    "email_to": "happychildhood@yahoo.com, Wearethenutritionproject@gmail.com"
   },
   {
     "name": "Taipei Mar '27",
     "priority": "low",
     "on_sale": false,
     "url": "https://hyrox.com/event/hyrox-taipei/",
-    "email_to": "happychildhood@yahoo.com"
+    "email_to": "happychildhood@yahoo.com, Wearethenutritionproject@gmail.com"
   },
   {
     "name": "Brisbane Mar '27",

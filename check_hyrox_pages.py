@@ -25,6 +25,7 @@ ON_SALE_CONFIG = "onsale_config.json"
 MATRIX_STATE_FILE = "matrix_last_state.json"
 MATRIX_CHANGES_FILE = "matrix_intermediate_changes.json" # NEW: Stores changes between matrix runs
 MATRIX_OUTPUT_FILE = "availability_matrix.png"
+LOG_OUTPUT_FILE = "log_output_file.json"
 
 # Global Matrix Categories (Used for logging changes mapping)
 DISPLAY_CATEGORIES = [
@@ -147,13 +148,42 @@ def reset_driver_state(driver):
     except:
         pass
 
+
+def log_overall_change(site_name, changed_tickets, changed_statuses):
+    """
+    Appends a new line containing the JSON record to the log file.
+    Fast and safe for high-frequency or long-term logging.
+    """
+    if not changed_tickets:
+        return
+
+    # Ensure changed_tickets is JSON-serializable (e.g., if passed as a set)
+    tickets_list = list(changed_tickets) if isinstance(changed_tickets, (set, tuple)) else changed_tickets
+
+    log_entry = {
+        "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+        "site_name": site_name,
+        "changed_tickets": tickets_list,
+        "changed_statuses": changed_statuses
+    }
+
+    try:
+        with open(LOG_OUTPUT_FILE, 'a') as f:
+            f.write(json.dumps(log_entry) + '\n')
+        print(f"  > [Log] Appended update for {site_name}")
+    except Exception as e:
+        print(f"  ! [Log] Failed to append overall change: {e}")
+
 # --- NEW: INTERMEDIATE CHANGE LOGGING ---
-def log_intermediate_changes(site_name, changed_tickets):
+def log_intermediate_changes(site_name, changed_tickets, changed_statuses):
     """
     Records categories that changed into a persistent file.
     This allows the Matrix to show an 'X' even if status flipped back.
     """
     if not changed_tickets: return
+    
+    # ---  Log overall change history ---
+    log_overall_change(site_name, changed_tickets, changed_statuses)
 
     # Load existing log
     try:
@@ -189,6 +219,7 @@ def log_intermediate_changes(site_name, changed_tickets):
         except Exception as e:
             print(f"  ! Failed to save intermediate changes: {e}")
 
+
 # --- HTML GENERATOR ---
 def generate_diff_html(site_config, prev_status, curr_status):
     url = site_config['url']
@@ -217,6 +248,7 @@ def generate_diff_html(site_config, prev_status, curr_status):
     
     changes_found = False
     changed_ticket_names = [] # List to track specifically what changed for logging
+    changed_ticket_statuses = []
     
     for t_name in all_ticket_names:
         p_status = prev_map.get(t_name, "N/A")
@@ -232,6 +264,7 @@ def generate_diff_html(site_config, prev_status, curr_status):
         if c_status != p_status:
             changes_found = True
             changed_ticket_names.append(t_name)
+            changed_ticket_statuses.append(c_status)
             
             if c_status.lower() == "available":
                 row_style = "background-color: #d4edda;"
@@ -262,7 +295,7 @@ def generate_diff_html(site_config, prev_status, curr_status):
     """.format(datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
     
     # Return tuple: (HTML, List of changed names)
-    return (html, changed_ticket_names) if changes_found else (None, [])
+    return (html, changed_ticket_names, changed_ticket_statuses) if changes_found else (None, [], [])
 
 # --- COOKIE HANDLING ---
 def handle_cookies(driver):
@@ -584,9 +617,9 @@ def _process_hyrox_event_page_china(site_config, driver):
         except: previous_status = {}
 
         if previous_status != current_status:
-            html_body, changed_tickets = generate_diff_html(site_config, previous_status, current_status)
+            html_body, changed_tickets, changed_ticket_statuses = generate_diff_html(site_config, previous_status, current_status)
             if changed_tickets:
-                log_intermediate_changes(site_config['name'], changed_tickets)
+                log_intermediate_changes(site_config['name'], changed_tickets, changed_ticket_statuses)
             if html_body:
                 with open(status_file, 'w', encoding='utf-8') as f: 
                     json.dump(current_status, f, indent=2, ensure_ascii=False)
@@ -674,12 +707,12 @@ def execute_checkout_scraping(driver, checkout_url, site_config):
 
     if previous_status != current_status and current_status["General"]["found"]:
         # Generate HTML and get list of changed items
-        html_body, changed_tickets = generate_diff_html(site_config, previous_status, current_status)
+        html_body, changed_tickets, changed_ticket_statuses = generate_diff_html(site_config, previous_status, current_status)
         
         # Log changes for the persistent matrix
         if changed_tickets:
-            log_intermediate_changes(site_config['name'], changed_tickets)
-        
+            log_intermediate_changes(site_config['name'], changed_tickets, changed_ticket_statuses)
+
         if html_body:
             print(f"  > CHANGE DETECTED!")
             with open(status_file, 'w', encoding='utf-8') as f: 

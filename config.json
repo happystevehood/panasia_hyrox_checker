@@ -25,7 +25,7 @@
       "site_type": "hyrox_event_page_india",
       "url": "https://singapore.hyrox.com/event/hyrox-singapore-ii-season-26-27-j5w6t2",
       "status_file": "singapore_nov_26_status.json",
-      "email_to": "happychildhood@yahoo.com, yiingls@gmail.com, pengjoon@gmail.com, timothytjahja8@gmail.com, neetalow@gmail.com, mikosu.stan@gmail.com, riaelagoreyes@gmail.com, abundancelau@gmail.com, dr.izzathayazi@gmail.com, Wearethenutritionproject@gmail.com,mastersee010420@gmail.com",
+      "email_to": "happychildhood@yahoo.com, yiingls@gmail.com, pengjoon@gmail.com, timothytjahja8@gmail.com, neetalow@gmail.com, mikosu.stan@gmail.com, riaelagoreyes@gmail.com, abundancelau@gmail.com, dr.izzathayazi@gmail.com, mastersee010420@gmail.com",
       "exclude_prefixes" : ["CHARITY", "HYROX ADAPTIVE"]
     },
     {
@@ -69,7 +69,7 @@
       "priority": "low",
       "site_type": "hyrox_event_page_india",
       "url": "https://japan.hyrox.com/event/hyrox-osaka-season-26-27-km7hfs",
-      "status_file": "osaka_jan_27_status.json",
+      "status_file": "osaka_jan_27_status.json, Wearethenutritionproject@gmail.com",
       "email_to": "happychildhood@yahoo.com",
       "exclude_prefixes" : ["CHARITY", "HYROX ADAPTIVE"]
    },
@@ -79,7 +79,7 @@
       "site_type": "hyrox_event_page_india",
       "url": "https://newzealand.hyrox.com/event/hyrox-auckland-season-26-27-i0bvn6",
       "status_file": "auckland_feb_27_status.json",
-      "email_to": "happychildhood@yahoo.com",
+      "email_to": "happychildhood@yahoo.com, Wearethenutritionproject@gmail.com",
       "exclude_prefixes" : ["CHARITY", "HYROX ADAPTIVE"]
    } 
   ],
