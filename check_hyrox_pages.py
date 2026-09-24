@@ -706,6 +706,11 @@ def execute_checkout_scraping(driver, checkout_url, site_config):
             print("  > No tickets found (All categories excluded).")
 
     if previous_status != current_status and current_status["General"]["found"]:
+        
+        #DEBUG: Print previous and current status for comparison
+        print(f"  > Previous Status: {previous_status.get('General', {}).get('details', [])}")
+        print(f"  > Current Status: {current_status.get('General', {}).get('details', [])}")
+        
         # Generate HTML and get list of changed items
         html_body, changed_tickets, changed_ticket_statuses = generate_diff_html(site_config, previous_status, current_status)
         

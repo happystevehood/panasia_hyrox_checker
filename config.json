@@ -57,7 +57,7 @@
    },
    {
       "name": "Hong Kong Jan '27",
-      "priority": "medium",
+      "priority": "low",
       "site_type": "hyrox_event_page_india",
       "url": "https://hk.hyrox.com/event/hyrox-hong-kong-season-26-27-s7u9ly",
       "status_file": "hong_kong_jan_27_status.json",
@@ -66,7 +66,7 @@
    },
    {
       "name": "Osaka Jan '27",
-      "priority": "low",
+      "priority": "medium",
       "site_type": "hyrox_event_page_india",
       "url": "https://japan.hyrox.com/event/hyrox-osaka-season-26-27-km7hfs",
       "status_file": "osaka_jan_27_status.json",
@@ -75,7 +75,7 @@
    },
    {
       "name": "Auckland Feb '27",
-      "priority": "low",
+      "priority": "medium",
       "site_type": "hyrox_event_page_india",
       "url": "https://newzealand.hyrox.com/event/hyrox-auckland-season-26-27-i0bvn6",
       "status_file": "auckland_feb_27_status.json",
