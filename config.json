@@ -69,7 +69,7 @@
       "priority": "low",
       "site_type": "hyrox_event_page_india",
       "url": "https://japan.hyrox.com/event/hyrox-osaka-season-26-27-km7hfs",
-      "status_file": "osaka_jan_27_status.json, Wearethenutritionproject@gmail.com",
+      "status_file": "osaka_jan_27_status.json",
       "email_to": "happychildhood@yahoo.com",
       "exclude_prefixes" : ["CHARITY", "HYROX ADAPTIVE"]
    },
