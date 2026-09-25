@@ -3,7 +3,7 @@
   "sites": [
     {
       "name": "Shanghai Oct '26",
-      "priority": "high",
+      "priority": "low",
       "site_type": "hyrox_event_page_india",
       "url": "https://china.hyrox.com/event/hyrox-shanghai-season-26-27-itfsos",
       "status_file": "shanghai_oct_26_status.json",
@@ -70,7 +70,7 @@
       "site_type": "hyrox_event_page_india",
       "url": "https://japan.hyrox.com/event/hyrox-osaka-season-26-27-km7hfs",
       "status_file": "osaka_jan_27_status.json",
-      "email_to": "happychildhood@yahoo.com",
+      "email_to": "happychildhood@yahoo.com, Wearethenutritionproject@gmail.com",
       "exclude_prefixes" : ["CHARITY", "HYROX ADAPTIVE"]
    },
    {
@@ -82,17 +82,5 @@
       "email_to": "happychildhood@yahoo.com, Wearethenutritionproject@gmail.com",
       "exclude_prefixes" : ["CHARITY", "HYROX ADAPTIVE"]
    } 
-  ],
-  
-  "future_sites": [
-    {
-      "name": "Jakarta June '26",
-      "priority": "high",
-      "site_type": "hyrox_event_page",
-      "url": "https://hyrox.com/event/hyrox-jakarta/",
-      "status_file": "jakarta_june_26_status.json",
-      "email_to": "happychildhood@yahoo.com",
-      "exclude_prefixes" : ["CHARITY", "ELITE SPECTATOR", "HYROX ADAPTIVE"]
-    }
   ]
 }
