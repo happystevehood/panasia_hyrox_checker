@@ -81,6 +81,15 @@
       "status_file": "auckland_feb_27_status.json",
       "email_to": "happychildhood@yahoo.com, Wearethenutritionproject@gmail.com",
       "exclude_prefixes" : ["CHARITY", "HYROX ADAPTIVE"]
+   },
+   {
+      "name": "Bangkok Feb '27",
+      "priority": "medium",
+      "site_type": "hyrox_event_page_india",
+      "url": "https://thailand.hyrox.com/event/hyrox-bangkok-season-26-27-mphguo",
+      "status_file": "bangkok_feb_27_status.json",
+      "email_to": "happychildhood@yahoo.com",
+      "exclude_prefixes" : ["CHARITY", "HYROX ADAPTIVE"]
    } 
   ]
 }
