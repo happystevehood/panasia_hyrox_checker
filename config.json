@@ -29,6 +29,15 @@
       "exclude_prefixes" : ["CHARITY", "HYROX ADAPTIVE"]
     },
     {
+      "name": "Gujurat Nov '26",
+      "priority": "high",
+      "site_type": "hyrox_event_page_india",
+      "url": "https://india.hyrox.co.in/event/hyrox-gujarat-season-26-27-8yjjhs",
+      "status_file": "gujarat_nov_26_status.json",
+      "email_to": "happychildhood@yahoo.com, ",
+      "exclude_prefixes" : ["CHARITY", "HYROX ADAPTIVE"]
+    },
+    {
       "name": "Sanya Dec '26",
       "priority": "low",
       "site_type": "hyrox_event_page_india",
