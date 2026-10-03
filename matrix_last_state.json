@@ -21,7 +21,7 @@
     "HYROX PRO DOUBLES WOMEN": false,
     "HYROX PRO DOUBLES MEN": false,
     "HYROX DOUBLES WOMEN": false,
-    "HYROX DOUBLES MIXED": false,
+    "HYROX DOUBLES MIXED": true,
     "HYROX DOUBLES MEN": false,
     "HYROX WOMENS RELAY": false,
     "HYROX MENS RELAY": false,
@@ -30,7 +30,7 @@
   "Singapore Nov '26": {
     "HYROX PRO WOMEN": false,
     "HYROX PRO MEN": false,
-    "HYROX WOMEN": false,
+    "HYROX WOMEN": true,
     "HYROX MEN": false,
     "HYROX PRO DOUBLES WOMEN": false,
     "HYROX PRO DOUBLES MEN": false,
