@@ -93,7 +93,7 @@
    },
    {
       "name": "Bangkok Feb '27",
-      "priority": "medium",
+      "priority": "low",
       "site_type": "hyrox_event_page_india",
       "url": "https://thailand.hyrox.com/event/hyrox-bangkok-season-26-27-mphguo",
       "status_file": "bangkok_feb_27_status.json",
