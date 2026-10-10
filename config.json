@@ -30,7 +30,7 @@
     },
     {
       "name": "Gujurat Nov '26",
-      "priority": "high",
+      "priority": "low",
       "site_type": "hyrox_event_page_india",
       "url": "https://india.hyrox.co.in/event/hyrox-gujarat-season-26-27-8yjjhs",
       "status_file": "gujarat_nov_26_status.json",
