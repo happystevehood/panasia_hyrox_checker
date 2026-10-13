@@ -6,7 +6,8 @@
   ],
   "Melbourne Dec '26": [
     "HYROX WOMEN",
-    "HYROX DOUBLES WOMEN"
+    "HYROX DOUBLES WOMEN",
+    "HYROX WOMENS RELAY"
   ],
   "Seoul Nov '26": [
     "HYROX DOUBLES WOMEN"
@@ -21,5 +22,12 @@
   "Kuala Lumpur Dec '26": [
     "HYROX WOMENS RELAY",
     "HYROX MENS RELAY"
+  ],
+  "Osaka Jan '27": [
+    "HYROX MENS RELAY",
+    "HYROX WOMENS RELAY"
+  ],
+  "Auckland Feb '27": [
+    "HYROX PRO WOMEN"
   ]
 }
