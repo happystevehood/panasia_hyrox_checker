@@ -7,13 +7,6 @@
     "email_to": "happychildhood@yahoo.com, yauchinyew@gmail.com"
   },
   {
-    "name": "Gujarat Nov '26",
-    "priority": "low",
-    "on_sale": true,
-    "url": "https://hyrox.com/event/hyrox-gujarat/",
-    "email_to": "happychildhood@yahoo.com"
-  },
-  {
     "name": "Noida Jan '27",
     "priority": "low",
     "on_sale": false,
@@ -21,13 +14,12 @@
     "email_to": "happychildhood@yahoo.com"
   },
   {
-    "name": "Bangkok Feb '27",
+    "name": "Hanoi Mar '27",
     "priority": "low",
-    "on_sale": true,
-    "url": "https://hyrox.com/event/hyrox-bangkok/",
-    "email_to": "happychildhood@yahoo.com, Wearethenutritionproject@gmail.com"
-  },
-  {
+    "on_sale": false,
+    "url": "https://hyrox.com/event/hyrox-hanoi/",
+    "email_to": "happychildhood@yahoo.com"
+  },  {
     "name": "Taipei Mar '27",
     "priority": "low",
     "on_sale": false,

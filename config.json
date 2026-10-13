@@ -38,6 +38,15 @@
       "exclude_prefixes" : ["CHARITY", "HYROX ADAPTIVE"]
     },
     {
+      "name": "Singapore YoungStars Nov '26",
+      "priority": "low",
+      "site_type": "hyrox_event_page_india",
+      "url": "https://singapore.hyrox.com/event/hyrox-youngstars-singapore-season-26-27-zvuyyw",
+      "status_file": "singapore_ys_nov_26_status.json",
+      "email_to": "happychildhood@yahoo.com",
+      "exclude_prefixes" : ["CHARITY", "HYROX ADAPTIVE"]
+    },
+    {
       "name": "Sanya Dec '26",
       "priority": "low",
       "site_type": "hyrox_event_page_india",
