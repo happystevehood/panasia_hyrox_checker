@@ -19,17 +19,18 @@
     "on_sale": false,
     "url": "https://hyrox.com/event/hyrox-hanoi/",
     "email_to": "happychildhood@yahoo.com"
-  },  {
+  },
+  {
     "name": "Taipei Mar '27",
     "priority": "low",
-    "on_sale": false,
+    "on_sale": true,
     "url": "https://hyrox.com/event/hyrox-taipei/",
     "email_to": "happychildhood@yahoo.com, Wearethenutritionproject@gmail.com"
   },
   {
     "name": "Brisbane Mar '27",
     "priority": "low",
-    "on_sale": false,
+    "on_sale": true,
     "url": "https://hyrox.com/event/hyrox-brisbane/",
     "email_to": "happychildhood@yahoo.com"
   },
