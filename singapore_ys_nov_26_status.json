@@ -1,0 +1,47 @@
+{
+  "General": {
+    "found": true,
+    "details": [
+      {
+        "name": "Spectator I Saturday",
+        "status": "Available"
+      },
+      {
+        "name": "Spectator I Sunday",
+        "status": "Available"
+      },
+      {
+        "name": "YOUNGSTARS BOYS (10-11 Years) | Saturday",
+        "status": "Available"
+      },
+      {
+        "name": "YOUNGSTARS BOYS (12-13 Years) | Sunday",
+        "status": "Available"
+      },
+      {
+        "name": "YOUNGSTARS BOYS (14-15 Years) | Sunday",
+        "status": "Available"
+      },
+      {
+        "name": "YOUNGSTARS BOYS (8-9 Years) | Saturday",
+        "status": "Available"
+      },
+      {
+        "name": "YOUNGSTARS GIRLS (10-11 Years) | Saturday",
+        "status": "Available"
+      },
+      {
+        "name": "YOUNGSTARS GIRLS (12-13 Years) | Sunday",
+        "status": "Available"
+      },
+      {
+        "name": "YOUNGSTARS GIRLS (14-15 Years) | Sunday",
+        "status": "Available"
+      },
+      {
+        "name": "YOUNGSTARS GIRLS (8-9 Years) | Saturday",
+        "status": "Available"
+      }
+    ]
+  }
+}
