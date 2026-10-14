@@ -21,20 +21,6 @@
     "email_to": "happychildhood@yahoo.com"
   },
   {
-    "name": "Taipei Mar '27",
-    "priority": "low",
-    "on_sale": true,
-    "url": "https://hyrox.com/event/hyrox-taipei/",
-    "email_to": "happychildhood@yahoo.com, Wearethenutritionproject@gmail.com"
-  },
-  {
-    "name": "Brisbane Mar '27",
-    "priority": "low",
-    "on_sale": true,
-    "url": "https://hyrox.com/event/hyrox-brisbane/",
-    "email_to": "happychildhood@yahoo.com"
-  },
-  {
     "name": "Nagoya Apr '27",
     "priority": "low",
     "on_sale": false,

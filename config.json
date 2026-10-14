@@ -101,6 +101,26 @@
       "email_to": "happychildhood@yahoo.com",
       "exclude_prefixes" : ["CHARITY", "HYROX ADAPTIVE"]
    }
+   ,
+   {
+      "name": "Taipei Mar '27",
+      "priority": "low",
+      "site_type": "hyrox_event_page_india",
+      "url": "https://tw.hyrox.com/event/hyrox-taipei-season-26-27-30s7hj",
+      "status_file": "taipe_mar_27_status.json",
+      "email_to": "happychildhood@yahoo.com",
+      "exclude_prefixes" : ["CHARITY", "HYROX ADAPTIVE"]
+   }
+   ,
+   {
+      "name": "Brisbane Mar '27",
+      "priority": "low",
+      "site_type": "hyrox_event_page_india",
+      "url": "https://australia.hyrox.com/event/hyrox-brisbane-season-26-27-ym1h1r",
+      "status_file": "brisbane_mar_27_status.json",
+      "email_to": "happychildhood@yahoo.com",
+      "exclude_prefixes" : ["CHARITY", "HYROX ADAPTIVE"]
+   }
   ],
   "holding_sites": [
     {
