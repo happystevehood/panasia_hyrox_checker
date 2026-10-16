@@ -7,7 +7,8 @@
     "HYROX PRO MEN",
     "HYROX DOUBLES MIXED",
     "HYROX DOUBLES MEN",
-    "HYROX DOUBLES WOMEN"
+    "HYROX DOUBLES WOMEN",
+    "HYROX MIXED RELAY"
   ],
   "Brisbane Mar '27": [
     "HYROX PRO WOMEN",
@@ -22,5 +23,8 @@
     "HYROX WOMEN",
     "HYROX MENS RELAY",
     "HYROX DOUBLES MIXED"
+  ],
+  "Bangkok Feb '27": [
+    "HYROX WOMEN"
   ]
 }
