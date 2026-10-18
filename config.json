@@ -16,7 +16,7 @@
       "site_type": "hyrox_event_page_india",
       "url": "https://korea.hyrox.com/event/hyrox-seoul-season-26-27-vthaza",
       "status_file": "seoul_nov_26_status.json",
-      "email_to": "happychildhood@yahoo.com",
+      "email_to": "happychildhood@yahoo.com, Faeztaj21196@gmail.com",
       "exclude_prefixes" : ["CHARITY", "HYROX ADAPTIVE"]
     },
     {
@@ -25,7 +25,7 @@
       "site_type": "hyrox_event_page_india",
       "url": "https://singapore.hyrox.com/event/hyrox-singapore-ii-season-26-27-j5w6t2",
       "status_file": "singapore_nov_26_status.json",
-      "email_to": "happychildhood@yahoo.com, yiingls@gmail.com, pengjoon@gmail.com, timothytjahja8@gmail.com, neetalow@gmail.com, mikosu.stan@gmail.com, riaelagoreyes@gmail.com, abundancelau@gmail.com, dr.izzathayazi@gmail.com, mastersee010420@gmail.com",
+      "email_to": "happychildhood@yahoo.com, yiingls@gmail.com, pengjoon@gmail.com, timothytjahja8@gmail.com, neetalow@gmail.com, mikosu.stan@gmail.com, riaelagoreyes@gmail.com, abundancelau@gmail.com, dr.izzathayazi@gmail.com, mastersee010420@gmail.com, Faeztaj21196@gmail.com",
       "exclude_prefixes" : ["CHARITY", "HYROX ADAPTIVE"]
     },
     {
@@ -34,7 +34,7 @@
       "site_type": "hyrox_event_page_india",
       "url": "https://india.hyrox.co.in/event/hyrox-gujarat-season-26-27-8yjjhs",
       "status_file": "gujarat_nov_26_status.json",
-      "email_to": "happychildhood@yahoo.com, ",
+      "email_to": "happychildhood@yahoo.com",
       "exclude_prefixes" : ["CHARITY", "HYROX ADAPTIVE"]
     },
 
@@ -53,7 +53,7 @@
       "site_type": "hyrox_event_page_india",
       "url": "https://australia.hyrox.com/event/hyrox-melbourne-season-26-27-zdo7te",
       "status_file": "melbourne_dec_26_status.json",
-      "email_to": "happychildhood@yahoo.com, Delithramohan@gmail.com",
+      "email_to": "happychildhood@yahoo.com, Delithramohan@gmail.com, Faeztaj21196@gmail.com",
       "exclude_prefixes" : ["CHARITY", "HYROX ADAPTIVE"]
     },
     {
@@ -62,7 +62,7 @@
       "site_type": "hyrox_event_page_india",
       "url": "https://malaysia.hyrox.com/event/hyrox-airasia-kuala-lumpur-season-26-27-gjo5z9",
       "status_file": "kuala_lumpur_dec_26_status.json",
-      "email_to": "happychildhood@yahoo.com, mastersee010420@gmail.com, jasmine250597@gmail.com, rupschen@gmail.com, Lauracheah55@gmail.com, Yauchinyew@gmail.com, alvinchew1988@gmail.com, dennisoh@gmail.com, Cecelia.ho@gmail.com, Adrian.siew@gmail.com, neetalow@gmail.com, mikosu.stan@gmail.com, daniald88@gmail.com, deelynlui@gmail.com, jaccuasg@gmail.com, erin.khalil@yahoo.com, rboarotto@gmail.com, yichen14yao@gmail.com, timothytjahja8@gmail.com, kevianda@icloud.com, Ernest.khaw@gmail.com",
+      "email_to": "happychildhood@yahoo.com, mastersee010420@gmail.com, jasmine250597@gmail.com, rupschen@gmail.com, Lauracheah55@gmail.com, Yauchinyew@gmail.com, alvinchew1988@gmail.com, dennisoh@gmail.com, Cecelia.ho@gmail.com, Adrian.siew@gmail.com, neetalow@gmail.com, mikosu.stan@gmail.com, daniald88@gmail.com, deelynlui@gmail.com, jaccuasg@gmail.com, erin.khalil@yahoo.com, rboarotto@gmail.com, yichen14yao@gmail.com, timothytjahja8@gmail.com, kevianda@icloud.com, Ernest.khaw@gmail.com, Faeztaj21196@gmail.com",
       "exclude_prefixes" : ["CHARITY", "HYROX ADAPTIVE"]
    },
    {
