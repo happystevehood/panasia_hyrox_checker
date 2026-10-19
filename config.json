@@ -2,17 +2,8 @@
   "matrix_email_to": "happychildhood@yahoo.com, dennisoh@gmail.com, deelynlui@gmail.com",
   "sites": [
     {
-      "name": "Shanghai Oct '26",
-      "priority": "high",
-      "site_type": "hyrox_event_page_india",
-      "url": "https://china.hyrox.com/event/hyrox-shanghai-season-26-27-itfsos",
-      "status_file": "shanghai_oct_26_status.json",
-      "email_to": "happychildhood@yahoo.com, yauchinyew@gmail.com, dennisoh@gmail.com, deelynlui@gmail.com",
-      "exclude_prefixes" : ["CHARITY", "HYROX ADAPTIVE"]
-    },
-    {
       "name": "Seoul Nov '26",
-      "priority": "low",
+      "priority": "medium",
       "site_type": "hyrox_event_page_india",
       "url": "https://korea.hyrox.com/event/hyrox-seoul-season-26-27-vthaza",
       "status_file": "seoul_nov_26_status.json",
@@ -37,7 +28,6 @@
       "email_to": "happychildhood@yahoo.com",
       "exclude_prefixes" : ["CHARITY", "HYROX ADAPTIVE"]
     },
-
     {
       "name": "Sanya Dec '26",
       "priority": "low",
@@ -123,6 +113,15 @@
    }
   ],
   "holding_sites": [
+    {
+      "name": "Shanghai Oct '26",
+      "priority": "high",
+      "site_type": "hyrox_event_page_india",
+      "url": "https://china.hyrox.com/event/hyrox-shanghai-season-26-27-itfsos",
+      "status_file": "shanghai_oct_26_status.json",
+      "email_to": "happychildhood@yahoo.com, yauchinyew@gmail.com, dennisoh@gmail.com, deelynlui@gmail.com",
+      "exclude_prefixes" : ["CHARITY", "HYROX ADAPTIVE"]
+    },
     {
       "name": "Singapore YS Nov '26",
       "priority": "low",
