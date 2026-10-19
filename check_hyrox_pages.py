@@ -466,6 +466,10 @@ def traverse_menu(driver, exclude_prefixes, depth=0):
 
     # Deduplicate
     unique = {t['name']: t for t in found_tickets}.values()
+    
+    if depth > 0:
+        print(f"    [Depth {depth}] : Found {len(found_tickets)} tickets.")
+
     return list(unique)
 
 def execute_checkout_scraping(driver, checkout_url, site_config):
@@ -528,6 +532,7 @@ def execute_checkout_scraping(driver, checkout_url, site_config):
         prev_details = previous_status.get("General", {}).get("details", [])
         for prev_t in prev_details:
             if prev_t['name'] not in current_names:
+                print(f"  >adding missing ticket '{prev_t['name']}' back as Sold Out.")
                 # Add it back to the list but mark as Sold Out
                 sold_out_t = prev_t.copy()
                 sold_out_t['status'] = 'Sold Out'
