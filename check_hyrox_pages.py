@@ -467,9 +467,9 @@ def traverse_menu(driver, exclude_prefixes, depth=0):
     # Deduplicate
     unique = {t['name']: t for t in found_tickets}.values()
     
-    if depth > 0:
-        print(f"    [Depth {depth}] : Found {len(found_tickets)} tickets.")
-
+    if depth == 1 or depth == 2 or depth == 3:
+        print(f"    [Depth {depth}] : Found {list(unique)}.")
+        
     return list(unique)
 
 def execute_checkout_scraping(driver, checkout_url, site_config):
