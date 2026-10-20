@@ -467,8 +467,8 @@ def traverse_menu(driver, exclude_prefixes, depth=0):
     # Deduplicate
     unique = {t['name']: t for t in found_tickets}.values()
     
-    if depth == 1 or depth == 2 or depth == 3:
-        print(f"    [Depth {depth}] : Found {list(unique)}.")
+    #if depth == 1 or depth == 2 or depth == 3:
+    #    print(f"    [Depth {depth}] : Found {list(unique)}.")
         
     return list(unique)
 
@@ -714,8 +714,15 @@ def generate_availability_matrix():
             for t in tickets:
                 if t.get("status") == "Available":
                     norm_name = _normalize_for_matrix(t.get("name", ""))
+                    #print(f"  > {site['name']}: {norm_name}")
+                    
+                    #if norm_name contains the string "CORPORATE" exlude it from the matrix
+                    # otherwise HYROX MENS CORPORATE RELAY included as part of HYROX MEN
+                    if "CORPORATE" in norm_name: continue
+                    
                     for cat in MATCHING_CATEGORIES:
                         if _normalize_for_matrix(cat) in norm_name:
+                            print(f"  > {site['name']}: {norm_name} - Matches category: {cat}")
                             curr_matrix[site['name']][cat] = True
                             break
         except: pass
