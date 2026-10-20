@@ -460,3 +460,5 @@
 {"timestamp": "2026-10-20 11:23:26", "site_name": "Singapore Nov '26", "changed_tickets": ["HYROX DOUBLES MIXED | Thursday"], "changed_statuses": ["Sold out"]}
 {"timestamp": "2026-10-20 11:53:26", "site_name": "Singapore Nov '26", "changed_tickets": ["HYROX DOUBLES MIXED | Thursday", "HYROX MEN | Thursday", "HYROX WOMEN | Sunday"], "changed_statuses": ["Available", "Available", "Sold out"]}
 {"timestamp": "2026-10-20 11:55:18", "site_name": "Kuala Lumpur Dec '26", "changed_tickets": ["HYROX MEN | Thursday"], "changed_statuses": ["Available"]}
+{"timestamp": "2026-10-20 12:10:26", "site_name": "Melbourne Dec '26", "changed_tickets": ["HYROX WOMEN | Thursday"], "changed_statuses": ["Sold out"]}
+{"timestamp": "2026-10-20 12:12:16", "site_name": "Kuala Lumpur Dec '26", "changed_tickets": ["HYROX MEN | Thursday"], "changed_statuses": ["Sold out"]}
