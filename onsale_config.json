@@ -16,7 +16,7 @@
   {
     "name": "Hanoi Mar '27",
     "priority": "low",
-    "on_sale": false,
+    "on_sale": true,
     "url": "https://hyrox.com/event/hyrox-hanoi/",
     "email_to": "happychildhood@yahoo.com"
   },
