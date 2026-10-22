@@ -44,8 +44,8 @@
   "Sanya Dec '26": {
     "HYROX PRO WOMEN": false,
     "HYROX PRO MEN": false,
-    "HYROX WOMEN": true,
-    "HYROX MEN": true,
+    "HYROX WOMEN": false,
+    "HYROX MEN": false,
     "HYROX PRO DOUBLES WOMEN": true,
     "HYROX PRO DOUBLES MEN": false,
     "HYROX DOUBLES WOMEN": true,
@@ -56,9 +56,9 @@
     "HYROX MIXED RELAY": false
   },
   "Melbourne Dec '26": {
-    "HYROX PRO WOMEN": true,
+    "HYROX PRO WOMEN": false,
     "HYROX PRO MEN": false,
-    "HYROX WOMEN": true,
+    "HYROX WOMEN": false,
     "HYROX MEN": false,
     "HYROX PRO DOUBLES WOMEN": false,
     "HYROX PRO DOUBLES MEN": false,
@@ -93,8 +93,8 @@
     "HYROX DOUBLES WOMEN": true,
     "HYROX DOUBLES MIXED": false,
     "HYROX DOUBLES MEN": false,
-    "HYROX WOMENS RELAY": false,
-    "HYROX MENS RELAY": false,
+    "HYROX WOMENS RELAY": true,
+    "HYROX MENS RELAY": true,
     "HYROX MIXED RELAY": false
   },
   "Osaka Jan '27": {
@@ -114,7 +114,7 @@
   "Auckland Feb '27": {
     "HYROX PRO WOMEN": false,
     "HYROX PRO MEN": false,
-    "HYROX WOMEN": true,
+    "HYROX WOMEN": false,
     "HYROX MEN": true,
     "HYROX PRO DOUBLES WOMEN": true,
     "HYROX PRO DOUBLES MEN": true,
@@ -137,6 +137,20 @@
     "HYROX DOUBLES MEN": true,
     "HYROX WOMENS RELAY": false,
     "HYROX MENS RELAY": false,
+    "HYROX MIXED RELAY": true
+  },
+  "Hanoi Mar '27": {
+    "HYROX PRO WOMEN": true,
+    "HYROX PRO MEN": true,
+    "HYROX WOMEN": false,
+    "HYROX MEN": true,
+    "HYROX PRO DOUBLES WOMEN": true,
+    "HYROX PRO DOUBLES MEN": true,
+    "HYROX DOUBLES WOMEN": true,
+    "HYROX DOUBLES MIXED": true,
+    "HYROX DOUBLES MEN": true,
+    "HYROX WOMENS RELAY": true,
+    "HYROX MENS RELAY": true,
     "HYROX MIXED RELAY": true
   },
   "Taipei Mar '27": {
