@@ -90,9 +90,16 @@
       "status_file": "bangkok_feb_27_status.json",
       "email_to": "happychildhood@yahoo.com",
       "exclude_prefixes" : ["CHARITY", "HYROX ADAPTIVE"]
-   }
-   ,
+   },
    {
+      "name": "Hanoi Mar '27",
+      "priority": "low",
+      "site_type": "hyrox_event_page_india",
+      "url": "https://vietnam.hyrox.com/event/hyrox-hanoi-season-26-27-31sau9",
+      "status_file": "hanoi_mar_27_status.json",
+      "email_to": "happychildhood@yahoo.com",
+      "exclude_prefixes" : ["CHARITY", "HYROX ADAPTIVE"]
+   },   {
       "name": "Taipei Mar '27",
       "priority": "low",
       "site_type": "hyrox_event_page_india",
