@@ -8,7 +8,7 @@
       "url": "https://korea.hyrox.com/event/hyrox-seoul-season-26-27-vthaza",
       "status_file": "seoul_nov_26_status.json",
       "email_to": "happychildhood@yahoo.com",
-      "exclude_prefixes" : ["CHARITY", "HYROX ADAPTIVE"]
+      "exclude_prefixes" : ["CHARITY"]
     },
     {
       "name": "Singapore Nov '26",
@@ -26,7 +26,7 @@
       "url": "https://india.hyrox.co.in/event/hyrox-gujarat-season-26-27-8yjjhs",
       "status_file": "gujarat_nov_26_status.json",
       "email_to": "happychildhood@yahoo.com",
-      "exclude_prefixes" : ["CHARITY", "HYROX ADAPTIVE"]
+      "exclude_prefixes" : ["CHARITY"]
     },
     {
       "name": "Sanya Dec '26",
@@ -35,7 +35,7 @@
       "url": "https://china.hyrox.com/event/hyrox-sanya-season-26-27-yart1h",
       "status_file": "sanya_dec_26_status.json",
       "email_to": "happychildhood@yahoo.com",
-      "exclude_prefixes" : ["CHARITY", "HYROX ADAPTIVE"]
+      "exclude_prefixes" : ["CHARITY"]
     },
     {
       "name": "Melbourne Dec '26",
@@ -89,7 +89,7 @@
       "url": "https://thailand.hyrox.com/event/hyrox-bangkok-season-26-27-mphguo",
       "status_file": "bangkok_feb_27_status.json",
       "email_to": "happychildhood@yahoo.com",
-      "exclude_prefixes" : ["CHARITY", "HYROX ADAPTIVE"]
+      "exclude_prefixes" : ["CHARITY"]
    },
    {
       "name": "Hanoi Mar '27",
@@ -98,7 +98,7 @@
       "url": "https://vietnam.hyrox.com/event/hyrox-hanoi-season-26-27-31sau9",
       "status_file": "hanoi_mar_27_status.json",
       "email_to": "happychildhood@yahoo.com",
-      "exclude_prefixes" : ["CHARITY", "HYROX ADAPTIVE"]
+      "exclude_prefixes" : ["CHARITY"]
    },   
    {
       "name": "Taipei Mar '27",
@@ -107,7 +107,7 @@
       "url": "https://tw.hyrox.com/event/hyrox-taipei-season-26-27-30s7hj",
       "status_file": "taipe_mar_27_status.json",
       "email_to": "happychildhood@yahoo.com",
-      "exclude_prefixes" : ["CHARITY", "HYROX ADAPTIVE"]
+      "exclude_prefixes" : ["CHARITY"]
    },
    {
       "name": "Brisbane Mar '27",
@@ -116,7 +116,7 @@
       "url": "https://australia.hyrox.com/event/hyrox-brisbane-season-26-27-ym1h1r",
       "status_file": "brisbane_mar_27_status.json",
       "email_to": "happychildhood@yahoo.com",
-      "exclude_prefixes" : ["CHARITY", "HYROX ADAPTIVE"]
+      "exclude_prefixes" : ["CHARITY"]
    }
   ],
   "holding_sites": [

@@ -719,6 +719,7 @@ def generate_availability_matrix():
                     #if norm_name contains the string "CORPORATE" exlude it from the matrix
                     # otherwise HYROX MENS CORPORATE RELAY included as part of HYROX MEN
                     if "CORPORATE" in norm_name: continue
+                    if "ADAPTIVE" in norm_name: continue
                     
                     for cat in MATCHING_CATEGORIES:
                         if _normalize_for_matrix(cat) in norm_name:
