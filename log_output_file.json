@@ -625,3 +625,4 @@
 {"timestamp": "2026-10-26 04:23:20", "site_name": "Singapore Nov '26", "changed_tickets": ["HYROX WOMEN | Friday"], "changed_statuses": ["Available"]}
 {"timestamp": "2026-10-26 04:53:16", "site_name": "Singapore Nov '26", "changed_tickets": ["HYROX MEN | Thursday"], "changed_statuses": ["Available"]}
 {"timestamp": "2026-10-26 05:23:16", "site_name": "Singapore Nov '26", "changed_tickets": ["HYROX MEN | Saturday", "HYROX MEN | Thursday"], "changed_statuses": ["Available", "Sold out"]}
+{"timestamp": "2026-10-26 05:53:29", "site_name": "Singapore Nov '26", "changed_tickets": ["HYROX MEN | Saturday", "HYROX MEN | Thursday"], "changed_statuses": ["Sold out", "Available"]}
