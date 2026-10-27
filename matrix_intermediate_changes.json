@@ -10,7 +10,9 @@
   ],
   "Sanya Dec '26": [
     "HYROX MENS RELAY",
-    "HYROX PRO DOUBLES MEN"
+    "HYROX PRO DOUBLES MEN",
+    "HYROX PRO WOMEN",
+    "HYROX WOMEN"
   ],
   "Bangkok Feb '27": [
     "HYROX WOMEN"
@@ -24,5 +26,8 @@
   ],
   "Brisbane Mar '27": [
     "HYROX DOUBLES MEN"
+  ],
+  "Taipei Mar '27": [
+    "HYROX PRO DOUBLES MEN"
   ]
 }
