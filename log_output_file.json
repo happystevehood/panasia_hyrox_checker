@@ -710,3 +710,4 @@
 {"timestamp": "2026-10-28 16:13:50", "site_name": "Osaka Jan '27", "changed_tickets": ["HYROX ADAPTIVE MEN | SATURDAY"], "changed_statuses": ["Available"]}
 {"timestamp": "2026-10-28 18:08:32", "site_name": "Melbourne Dec '26", "changed_tickets": ["HYROX WOMEN | Sunday"], "changed_statuses": ["Sold out"]}
 {"timestamp": "2026-10-28 20:08:32", "site_name": "Melbourne Dec '26", "changed_tickets": ["HYROX WOMEN | Thursday"], "changed_statuses": ["Sold out"]}
+{"timestamp": "2026-10-28 22:08:23", "site_name": "Melbourne Dec '26", "changed_tickets": ["HYROX ADAPTIVE MEN | Thursday", "HYROX WOMEN | Sunday"], "changed_statuses": ["Sold out", "Available"]}
