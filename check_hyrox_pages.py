@@ -650,19 +650,34 @@ def process_on_sale_site(site_config, driver):
     
     print(f"\n--- Checking On Sale: {name} ---")
     try:
+        #reset_driver_state(driver)
+        #driver.switch_to.default_content()
         driver.get(url)
         handle_cookies(driver)
         
+        #need to to avoid 429 too many requests error
+        #<center><h1>429 too many requests</h1></center>
+        time.sleep(3)
+                
         src = driver.page_source.lower()
+        print(f"  > Page source length: {len(src)}")
+        #print(f"  > {src}")
         if "buy tickets" in src or "register now" in src or "get tickets" in src:
             print("  > ON SALE DETECTED!")
             site_config['on_sale'] = True
             return {"change_detected": True, "site_config": site_config}
+        else:
+            print("  > Not on sale yet.")
+        
+        #need to fool driver for next time, to avoie 429 too many requests error
+        #<center><h1>429 too many requests</h1></center>
+        #driver.execute_script("window.stop();")
+        
     except TimeoutException:
         print(f"  ! Timeout loading {name}. Skipping...")
     except Exception as e: 
         print(f"  ! Error checking OS {name}: {e}")
-    
+        
     return {"change_detected": False}
 
 # --- MAIN ROUTER ---

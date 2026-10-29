@@ -14,13 +14,6 @@
     "email_to": "happychildhood@yahoo.com"
   },
   {
-    "name": "Hanoi Mar '27",
-    "priority": "low",
-    "on_sale": true,
-    "url": "https://hyrox.com/event/hyrox-hanoi/",
-    "email_to": "happychildhood@yahoo.com"
-  },
-  {
     "name": "Nagoya Apr '27",
     "priority": "low",
     "on_sale": false,
@@ -28,17 +21,17 @@
     "email_to": "happychildhood@yahoo.com"
   },
   {
-    "name": "Bengaluru May '27",
-    "priority": "low",
-    "on_sale": false,
-    "url": "https://hyrox.com/event/hyrox-bengaluru/",
-    "email_to": "happychildhood@yahoo.com"
-  },
-  {
     "name": "Incheon May '27",
     "priority": "low",
     "on_sale": false,
     "url": "https://hyrox.com/event/hyrox-incheon/",
+    "email_to": "happychildhood@yahoo.com"
+  },
+  {
+    "name": "Bengaluru May '27",
+    "priority": "low",
+    "on_sale": false,
+    "url": "https://hyrox.com/event/hyrox-bengaluru/",
     "email_to": "happychildhood@yahoo.com"
   },
   {
