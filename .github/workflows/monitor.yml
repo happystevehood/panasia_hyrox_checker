@@ -35,7 +35,7 @@ jobs:
       - name: Setup Chrome
         uses: browser-actions/setup-chrome@v1
       - name: Install Python dependencies
-        run: pip install selenium Pillow pytz
+        run: pip install selenium Pillow pytz curl_cffi
       
       - name: Run Python Selenium script
         id: run_script

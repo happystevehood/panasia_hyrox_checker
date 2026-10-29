@@ -22,7 +22,7 @@ jobs:
           python-version: '3.10'
 
       - name: Install Python dependencies
-        run: pip install selenium Pillow pytz
+        run: pip install selenium Pillow pytz curl_cffi
 
       - name: Generate Matrix Image (with change detection)
         id: generate_matrix
