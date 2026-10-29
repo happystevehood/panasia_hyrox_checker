@@ -16,7 +16,7 @@
   {
     "name": "Nagoya Apr '27",
     "priority": "low",
-    "on_sale": false,
+    "on_sale": true,
     "url": "https://hyrox.com/event/hyrox-nagoya/",
     "email_to": "happychildhood@yahoo.com"
   },
