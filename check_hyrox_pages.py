@@ -19,6 +19,9 @@ from PIL import Image, ImageDraw, ImageFont
 from datetime import datetime
 import pytz
 
+from typing import Any
+from curl_cffi import requests
+
 # Configuration file names
 TICKET_DETAILS_CONFIG = "config.json"
 ON_SALE_CONFIG = "onsale_config.json"
@@ -643,41 +646,41 @@ def _process_hyrox_event_page_india(site_config, driver):
         return {"change_detected": False}
 
 # --- ON SALE CHECKER ---
-def process_on_sale_site(site_config, driver):
-    name = site_config['name']
-    url = site_config['url']
-    if site_config.get('on_sale'): return {"change_detected": False}
-    
+SALE_KEYWORDS = ("buy tickets", "register now", "get tickets")
+
+def process_on_sale_site(site_config: dict[str, Any], driver: Any = None) -> dict[str, Any]:
+    name = site_config["name"]
+    url = site_config["url"]
+
+    if site_config.get("on_sale"):
+        return {"change_detected": False}
+
     print(f"\n--- Checking On Sale: {name} ---")
     try:
-        #reset_driver_state(driver)
-        #driver.switch_to.default_content()
-        driver.get(url)
-        handle_cookies(driver)
-        
-        #need to to avoid 429 too many requests error
-        #<center><h1>429 too many requests</h1></center>
-        time.sleep(3)
-                
-        src = driver.page_source.lower()
+        # Impersonate latest desktop Chrome TLS and HTTP/2 fingerprint
+        response = requests.get(url, impersonate="chrome124", timeout=15)
+
+        if response.status_code == 429:
+            print("  ! Rate limited (429).")
+            return {"change_detected": False, "blocked": True}
+
+        src = response.text.lower()
         print(f"  > Page source length: {len(src)}")
-        #print(f"  > {src}")
-        if "buy tickets" in src or "register now" in src or "get tickets" in src:
+
+        if "challenges.cloudflare.com" in src and "turnstile" in src:
+            print("  ! Cloudflare challenge served.")
+            return {"change_detected": False, "blocked": True}
+
+        if any(keyword in src for keyword in SALE_KEYWORDS):
             print("  > ON SALE DETECTED!")
-            site_config['on_sale'] = True
+            site_config["on_sale"] = True
             return {"change_detected": True, "site_config": site_config}
-        else:
-            print("  > Not on sale yet.")
-        
-        #need to fool driver for next time, to avoie 429 too many requests error
-        #<center><h1>429 too many requests</h1></center>
-        #driver.execute_script("window.stop();")
-        
-    except TimeoutException:
-        print(f"  ! Timeout loading {name}. Skipping...")
-    except Exception as e: 
+
+        print("  > Not on sale yet.")
+
+    except Exception as e:
         print(f"  ! Error checking OS {name}: {e}")
-        
+
     return {"change_detected": False}
 
 # --- MAIN ROUTER ---
