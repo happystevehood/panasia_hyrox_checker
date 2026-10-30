@@ -739,3 +739,4 @@
 {"timestamp": "2026-10-30 08:08:31", "site_name": "Melbourne Dec '26", "changed_tickets": ["HYROX DOUBLES MIXED | Wednesday"], "changed_statuses": ["Sold out"]}
 {"timestamp": "2026-10-30 08:49:51", "site_name": "Brisbane Mar '27", "changed_tickets": ["HYROX DOUBLES MEN | Sunday", "HYROX MEN | Thursday"], "changed_statuses": ["Available", "Sold out"]}
 {"timestamp": "2026-10-30 08:51:41", "site_name": "Nagoya Apr '27", "changed_tickets": ["HYROX ADAPTIVE MEN | Saturday"], "changed_statuses": ["Sold out"]}
+{"timestamp": "2026-10-30 12:08:40", "site_name": "Melbourne Dec '26", "changed_tickets": ["HYROX WOMEN | Sunday"], "changed_statuses": ["Sold out"]}
