@@ -724,6 +724,12 @@ def generate_availability_matrix():
 
     for site in sites:
         try:
+            
+            if "YS" in site['name']:
+                print(f"  > Skipping {site['name']} for matrix (YS site).")
+                continue
+            
+            print(f"  > Processing {site['name']} for matrix...")
             with open(site['status_file'], 'r') as f: data = json.load(f)
             tickets = []
             for k, v in data.items():

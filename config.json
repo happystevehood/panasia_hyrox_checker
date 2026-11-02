@@ -11,12 +11,30 @@
       "exclude_prefixes" : ["CHARITY"]
     },
     {
+      "name": "Guangzhou Nov '26",
+      "priority": "low",
+      "site_type": "hyrox_event_page_india",
+      "url": "https://china.hyrox.com/event/hyrox-guangzhou-season-26-27-copy-gl23ww",
+      "status_file": "guangzhou_nov_26_status.json",
+      "email_to": "happychildhood@yahoo.com",
+      "exclude_prefixes" : ["CHARITY"]
+    },
+    {
       "name": "Singapore Nov '26",
       "priority": "high",
       "site_type": "hyrox_event_page_india",
       "url": "https://singapore.hyrox.com/event/hyrox-singapore-ii-season-26-27-j5w6t2",
       "status_file": "singapore_nov_26_status.json",
       "email_to": "happychildhood@yahoo.com, yiingls@gmail.com, pengjoon@gmail.com, timothytjahja8@gmail.com, neetalow@gmail.com, mikosu.stan@gmail.com, riaelagoreyes@gmail.com, abundancelau@gmail.com, dr.izzathayazi@gmail.com, mastersee010420@gmail.com",
+      "exclude_prefixes" : ["CHARITY"]
+    },
+    {
+      "name": "Singapore YS Nov '26",
+      "priority": "low",
+      "site_type": "hyrox_event_page_india",
+      "url": "https://singapore.hyrox.com/event/hyrox-youngstars-singapore-season-26-27-zvuyyw",
+      "status_file": "singapore_ys_nov_26_status.json",
+      "email_to": "happychildhood@yahoo.com",
       "exclude_prefixes" : ["CHARITY"]
     },
     {
@@ -52,7 +70,7 @@
       "site_type": "hyrox_event_page_india",
       "url": "https://malaysia.hyrox.com/event/hyrox-airasia-kuala-lumpur-season-26-27-gjo5z9",
       "status_file": "kuala_lumpur_dec_26_status.json",
-      "email_to": "happychildhood@yahoo.com, mastersee010420@gmail.com, jasmine250597@gmail.com, rupschen@gmail.com, Lauracheah55@gmail.com, Yauchinyew@gmail.com, alvinchew1988@gmail.com, dennisoh@gmail.com, Cecelia.ho@gmail.com, Adrian.siew@gmail.com, neetalow@gmail.com, mikosu.stan@gmail.com, daniald88@gmail.com, deelynlui@gmail.com, jaccuasg@gmail.com, erin.khalil@yahoo.com, rboarotto@gmail.com, yichen14yao@gmail.com, timothytjahja8@gmail.com, kevianda@icloud.com",
+      "email_to": "happychildhood@yahoo.com, mastersee010420@gmail.com, jasmine250597@gmail.com, rupschen@gmail.com, Lauracheah55@gmail.com, Yauchinyew@gmail.com, alvinchew1988@gmail.com, dennisoh@gmail.com, Cecelia.ho@gmail.com, Adrian.siew@gmail.com, neetalow@gmail.com, mikosu.stan@gmail.com, daniald88@gmail.com, deelynlui@gmail.com, jaccuasg@gmail.com, erin.khalil@yahoo.com, rboarotto@gmail.com, yichen14yao@gmail.com, timothytjahja8@gmail.com, kevianda@icloud.com, eranhusni2011@gmail.com",
       "exclude_prefixes" : ["CHARITY"]
    },
    {
@@ -62,6 +80,15 @@
       "url": "https://hk.hyrox.com/event/hyrox-hong-kong-season-26-27-s7u9ly",
       "status_file": "hong_kong_jan_27_status.json",
       "email_to": "happychildhood@yahoo.com, eranhusni2011@gmail.com",
+      "exclude_prefixes" : ["CHARITY"]
+   },
+   {
+      "name": "Hong Kong YS Jan '27",
+      "priority": "low",
+      "site_type": "hyrox_event_page_india",
+      "url": "https://hk.hyrox.com/event/hyrox-youngstars-hong-kong-season-26-27-3ccz7p",
+      "status_file": "hong_kong_ys_jan_27_status.json",
+      "email_to": "happychildhood@yahoo.com",
       "exclude_prefixes" : ["CHARITY"]
    },
    {
@@ -136,16 +163,7 @@
       "url": "https://china.hyrox.com/event/hyrox-shanghai-season-26-27-itfsos",
       "status_file": "shanghai_oct_26_status.json",
       "email_to": "happychildhood@yahoo.com, yauchinyew@gmail.com, dennisoh@gmail.com, deelynlui@gmail.com",
-      "exclude_prefixes" : ["CHARITY", "HYROX ADAPTIVE"]
-    },
-    {
-      "name": "Singapore YS Nov '26",
-      "priority": "low",
-      "site_type": "hyrox_event_page_india",
-      "url": "https://singapore.hyrox.com/event/hyrox-youngstars-singapore-season-26-27-zvuyyw",
-      "status_file": "singapore_ys_nov_26_status.json",
-      "email_to": "happychildhood@yahoo.com",
-      "exclude_prefixes" : ["CHARITY", "HYROX ADAPTIVE"]
+      "exclude_prefixes" : ["CHARITY"]
     }
   ]
 }
