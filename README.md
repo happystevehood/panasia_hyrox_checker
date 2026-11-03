@@ -18,6 +18,9 @@ For debugging cand be helpful to see what chromium browser sees
 To create a summary availability matrix do the following:
 >python check_hyrox_pages.py --matrix
 
+To create a summary availability from the logs...
+>python check_hyrox_pages.py --create_log_visual
+
 but also need to setup secret email/password environment variables etc....
 >set  MAIL_USERNAME=
 >set  MAIL_PASSWORD=

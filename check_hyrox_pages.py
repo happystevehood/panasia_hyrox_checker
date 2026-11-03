@@ -720,15 +720,15 @@ def generate_availability_matrix():
     except: intermediate_changes = {}
 
     site_names = [s['name'] for s in sites]
+    
+    #if the partial string "YS" in site_names, remove that site from the list of site_names
+    site_names = [s for s in site_names if "YS" not in s]
+    
     curr_matrix = {n: {c: False for c in DISPLAY_CATEGORIES} for n in site_names}
 
     for site in sites:
         try:
-            
-            if "YS" in site['name']:
-                print(f"  > Skipping {site['name']} for matrix (YS site).")
-                continue
-            
+           
             print(f"  > Processing {site['name']} for matrix...")
             with open(site['status_file'], 'r') as f: data = json.load(f)
             tickets = []
@@ -823,6 +823,82 @@ def generate_availability_matrix():
     except: pass
     
     set_github_output('matrix_changed', 'true') # Always upload artifact
+
+#this function is for visualizing the log data
+# not run from a bot as of yet.
+def create_log_visual():
+    import json
+    import pandas as pd
+    import plotly.express as px
+
+    # 1. Load and parse the log file
+    records = []
+    with open("log_output_file.json", "r") as f:
+        for line in f:
+            line = line.strip()
+            if not line:
+                continue
+            entry = json.loads(line)
+            ts = pd.to_datetime(entry["timestamp"])
+            site = entry["site_name"]
+
+            # Filter strictly for Singapore Nov '26 in October 2026
+            #if site != "Singapore Nov '26":
+            if site != "Kuala Lumpur Dec '26":
+                continue
+            if not (pd.Timestamp("2026-10-01") <= ts <= pd.Timestamp("2026-10-31 23:59:59")):
+                continue
+
+            for ticket, status in zip(entry["changed_tickets"], entry["changed_statuses"]):
+                # Exclude Adaptive categories
+                if "ADAPTIVE" in ticket.upper():
+                    continue
+
+                norm_status = "Available" if status.strip().lower() == "available" else "Sold out"
+                records.append({
+                    "timestamp": ts,
+                    # Using zero-padded day format: "Oct 01", "Oct 02", etc.
+                    "date_label": ts.strftime("Oct %d"),
+                    "ticket": ticket.replace("HYROX ", ""), # Clean category name
+                    "status": norm_status
+                })
+
+    df = pd.DataFrame(records)
+
+    # 2. Count flips per ticket per date
+    pivot_flips = df.groupby(["ticket", "date_label"]).size().reset_index(name="flips")
+
+    # 3. Create the matrix
+    heatmap_data = pivot_flips.pivot(index="ticket", columns="date_label", values="flips").fillna(0)
+
+    # 4. Sort the columns (x-axis) in strictly alphabetical order
+    alphabetical_columns = sorted(list(heatmap_data.columns))
+    heatmap_data = heatmap_data.reindex(columns=alphabetical_columns)
+
+    # 5. Generate Heatmap
+    fig = px.imshow(
+        heatmap_data,
+        labels=dict(x="Date (Alphabetical Order)", y="Division / Ticket", color="Status Flips"),
+        x=heatmap_data.columns,
+        y=heatmap_data.index,
+        color_continuous_scale="Reds",
+        #title="<b>Singapore Nov '26: Ticket Volatility Heatmap (October 2026)</b><br><sup>X-axis sorted in alphabetical order</sup>",
+        title="<b>Kuala Lumpur Dec '26: Ticket Volatility Heatmap (October 2026)</b><br><sup>X-axis sorted in alphabetical order</sup>",
+        text_auto=True
+    )
+
+    fig.update_layout(
+        height=520,
+        xaxis_title="Date (Alphabetical Order)",
+        yaxis_title="",
+        xaxis=dict(categoryorder="array", categoryarray=alphabetical_columns),
+        font=dict(family="Arial", size=12),
+        template="plotly_white",
+        coloraxis_colorbar=dict(title="Changes")
+    )
+
+    fig.show()
+    # fig.write_html("singapore_alphabetical_x.html")
 
 def email_matrix():
     mail_user = os.getenv('MAIL_USERNAME'); mail_pass = os.getenv('MAIL_PASSWORD')
@@ -939,5 +1015,7 @@ if __name__ == "__main__":
         generate_availability_matrix()
     elif "--email-matrix" in sys.argv: 
         email_matrix()
+    elif "--create_log_visual" in sys.argv: 
+        create_log_visual()
     else: 
         main(headless=is_headless, target_priority=priority_val)
