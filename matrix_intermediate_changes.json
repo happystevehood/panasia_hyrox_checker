@@ -23,7 +23,12 @@
     "HYROX PRO DOUBLES MEN"
   ],
   "Guangzhou Nov '26": [
-    "HYROX MEN"
+    "HYROX MEN",
+    "HYROX DOUBLES MEN",
+    "HYROX PRO MEN",
+    "HYROX PRO DOUBLES MEN",
+    "HYROX MENS RELAY",
+    "HYROX PRO DOUBLES WOMEN"
   ],
   "Nagoya Apr '27": [
     "HYROX WOMEN",
@@ -34,7 +39,8 @@
     "HYROX DOUBLES MIXED"
   ],
   "Seoul Nov '26": [
-    "HYROX DOUBLES MEN"
+    "HYROX DOUBLES MEN",
+    "HYROX DOUBLES WOMEN"
   ],
   "Bangkok Feb '27": [
     "HYROX DOUBLES MIXED"
