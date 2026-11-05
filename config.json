@@ -61,7 +61,7 @@
       "site_type": "hyrox_event_page_india",
       "url": "https://australia.hyrox.com/event/hyrox-melbourne-season-26-27-zdo7te",
       "status_file": "melbourne_dec_26_status.json",
-      "email_to": "happychildhood@yahoo.com, Delithramohan@gmail.com",
+      "email_to": "Delithramohan@gmail.com",
       "exclude_prefixes" : ["CHARITY"]
     },
     {
@@ -142,7 +142,7 @@
       "site_type": "hyrox_event_page_india",
       "url": "https://australia.hyrox.com/event/hyrox-brisbane-season-26-27-ym1h1r",
       "status_file": "brisbane_mar_27_status.json",
-      "email_to": "happychildhood@yahoo.com",
+      "email_to": "",
       "exclude_prefixes" : ["CHARITY"]
    },
    {
