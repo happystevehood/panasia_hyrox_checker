@@ -907,6 +907,9 @@ def email_matrix():
         with open(TICKET_DETAILS_CONFIG, 'r') as f: rcpt = json.load(f).get("matrix_email_to")
     except: return
     
+    #if rcpt is "" or rcpt is None or rcpt is empty, return
+    if not rcpt: return
+    
     # Define time and 'now' locally so it's recognized
     mst = pytz.timezone('Asia/Kuala_Lumpur')
     now_dt = datetime.now(mst) 
