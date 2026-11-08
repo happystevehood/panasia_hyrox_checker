@@ -4,7 +4,8 @@
     "HYROX DOUBLES MIXED"
   ],
   "Melbourne Dec '26": [
-    "HYROX DOUBLES MIXED"
+    "HYROX DOUBLES MIXED",
+    "HYROX DOUBLES WOMEN"
   ],
   "Singapore Nov '26": [
     "HYROX WOMEN"
@@ -14,5 +15,11 @@
   ],
   "Hong Kong Jan '27": [
     "HYROX DOUBLES WOMEN"
+  ],
+  "Guangzhou Nov '26": [
+    "HYROX WOMEN",
+    "HYROX DOUBLES MEN",
+    "HYROX PRO WOMEN",
+    "HYROX PRO DOUBLES MEN"
   ]
 }
