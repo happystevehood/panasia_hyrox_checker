@@ -1,6 +1,8 @@
 {
   "Guangzhou Nov '26": [
-    "HYROX DOUBLES MEN"
+    "HYROX DOUBLES MEN",
+    "HYROX PRO DOUBLES MEN",
+    "HYROX MENS RELAY"
   ],
   "Melbourne Dec '26": [
     "HYROX DOUBLES MIXED",
@@ -8,5 +10,8 @@
   ],
   "Brisbane Mar '27": [
     "HYROX DOUBLES MEN"
+  ],
+  "Bangkok Feb '27": [
+    "HYROX PRO DOUBLES MEN"
   ]
 }
