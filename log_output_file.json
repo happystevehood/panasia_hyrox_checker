@@ -892,3 +892,6 @@
 {"timestamp": "2026-11-09 08:38:25", "site_name": "Seoul Nov '26", "changed_tickets": ["HYROX ADAPTIVE WOMEN | Sunday"], "changed_statuses": ["Available"]}
 {"timestamp": "2026-11-09 08:45:46", "site_name": "Melbourne Dec '26", "changed_tickets": ["HYROX DOUBLES WOMEN | Friday", "HYROX DOUBLES WOMEN | Thursday", "HYROX MEN | Saturday"], "changed_statuses": ["Available", "Available", "Available"]}
 {"timestamp": "2026-11-09 08:55:59", "site_name": "Brisbane Mar '27", "changed_tickets": ["HYROX DOUBLES MEN | Thursday", "HYROX DOUBLES WOMEN | Thursday"], "changed_statuses": ["Sold out", "Available"]}
+{"timestamp": "2026-11-09 12:45:42", "site_name": "Melbourne Dec '26", "changed_tickets": ["HYROX DOUBLES MEN | Thursday", "HYROX DOUBLES WOMEN | Friday", "HYROX DOUBLES WOMEN | Thursday", "HYROX MEN | Saturday"], "changed_statuses": ["Available", "Sold out", "Sold out", "Sold out"]}
+{"timestamp": "2026-11-09 12:50:26", "site_name": "Bangkok Feb '27", "changed_tickets": ["HYROX PRO DOUBLES MEN | Saturday"], "changed_statuses": ["Sold out"]}
+{"timestamp": "2026-11-09 12:55:53", "site_name": "Brisbane Mar '27", "changed_tickets": ["HYROX DOUBLES WOMEN | Thursday"], "changed_statuses": ["Sold out"]}
