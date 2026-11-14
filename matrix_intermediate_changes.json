@@ -4,7 +4,8 @@
     "HYROX DOUBLES MIXED",
     "HYROX PRO DOUBLES MEN",
     "HYROX DOUBLES WOMEN",
-    "HYROX WOMENS RELAY"
+    "HYROX WOMENS RELAY",
+    "HYROX PRO WOMEN"
   ],
   "Kuala Lumpur Dec '26": [
     "HYROX PRO DOUBLES WOMEN"
@@ -13,6 +14,12 @@
     "HYROX WOMEN"
   ],
   "Singapore Nov '26": [
+    "HYROX WOMEN"
+  ],
+  "Bangkok Feb '27": [
+    "HYROX PRO DOUBLES MEN"
+  ],
+  "Brisbane Mar '27": [
     "HYROX WOMEN"
   ]
 }
