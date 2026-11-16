@@ -2,15 +2,6 @@
   "matrix_email_to": "happychildhood@yahoo.com, dennisoh@gmail.com, deelynlui@gmail.com,rboarotto@gmail.com",
   "sites": [
     {
-      "name": "Seoul Nov '26",
-      "priority": "low",
-      "site_type": "hyrox_event_page_india",
-      "url": "https://korea.hyrox.com/event/hyrox-seoul-season-26-27-vthaza",
-      "status_file": "seoul_nov_26_status.json",
-      "email_to": "happychildhood@yahoo.com",
-      "exclude_prefixes" : ["CHARITY"]
-    },
-    {
       "name": "Guangzhou Nov '26",
       "priority": "low",
       "site_type": "hyrox_event_page_india",
@@ -70,7 +61,7 @@
       "site_type": "hyrox_event_page_india",
       "url": "https://malaysia.hyrox.com/event/hyrox-airasia-kuala-lumpur-season-26-27-gjo5z9",
       "status_file": "kuala_lumpur_dec_26_status.json",
-      "email_to": "happychildhood@yahoo.com, mastersee010420@gmail.com, jasmine250597@gmail.com, rupschen@gmail.com, Lauracheah55@gmail.com, Yauchinyew@gmail.com, alvinchew1988@gmail.com, dennisoh@gmail.com, Cecelia.ho@gmail.com, Adrian.siew@gmail.com, neetalow@gmail.com, mikosu.stan@gmail.com, deelynlui@gmail.com, jaccuasg@gmail.com, erin.khalil@yahoo.com, yichen14yao@gmail.com, timothytjahja8@gmail.com, eranhusni2011@gmail.com",
+      "email_to": "happychildhood@yahoo.com, mastersee010420@gmail.com, jasmine250597@gmail.com, rupschen@gmail.com, Lauracheah55@gmail.com, Yauchinyew@gmail.com, alvinchew1988@gmail.com, dennisoh@gmail.com, Cecelia.ho@gmail.com, Adrian.siew@gmail.com, neetalow@gmail.com, mikosu.stan@gmail.com, deelynlui@gmail.com, jaccuasg@gmail.com, erin.khalil@yahoo.com, yichen14yao@gmail.com, timothytjahja8@gmail.com, eranhusni2011@gmail.com, balqisquudsia@gmail.com",
       "exclude_prefixes" : ["CHARITY"]
    },
    {
@@ -162,7 +153,7 @@
       "site_type": "hyrox_event_page_india",
       "url": "https://china.hyrox.com/event/hyrox-shanghai-season-26-27-itfsos",
       "status_file": "shanghai_oct_26_status.json",
-      "email_to": "happychildhood@yahoo.com, yauchinyew@gmail.com, dennisoh@gmail.com, deelynlui@gmail.com",
+      "email_to": "happychildhood@yahoo.com",
       "exclude_prefixes" : ["CHARITY"]
     }
   ]
