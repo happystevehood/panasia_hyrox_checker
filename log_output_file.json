@@ -1030,3 +1030,5 @@
 {"timestamp": "2026-11-20 01:49:49", "site_name": "Melbourne Dec '26", "changed_tickets": ["HYROX DOUBLES MIXED | Wednesday"], "changed_statuses": ["Sold out"]}
 {"timestamp": "2026-11-20 01:53:28", "site_name": "Hong Kong Jan '27", "changed_tickets": ["HYROX WOMEN | Thursday"], "changed_statuses": ["Available"]}
 {"timestamp": "2026-11-20 02:00:06", "site_name": "Bangkok Feb '27", "changed_tickets": ["HYROX WOMEN | Sunday"], "changed_statuses": ["Sold out"]}
+{"timestamp": "2026-11-20 04:08:36", "site_name": "Kuala Lumpur Dec '26", "changed_tickets": ["HYROX PRO DOUBLES WOMEN | Saturday"], "changed_statuses": ["Available"]}
+{"timestamp": "2026-11-20 04:10:27", "site_name": "Hong Kong Jan '27", "changed_tickets": ["HYROX DOUBLES MEN | Sunday"], "changed_statuses": ["Sold out"]}
