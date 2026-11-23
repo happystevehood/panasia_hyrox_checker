@@ -2,15 +2,6 @@
   "matrix_email_to": "happychildhood@yahoo.com, dennisoh@gmail.com, deelynlui@gmail.com,rboarotto@gmail.com",
   "sites": [
     {
-      "name": "Guangzhou Nov '26",
-      "priority": "low",
-      "site_type": "hyrox_event_page_india",
-      "url": "https://china.hyrox.com/event/hyrox-guangzhou-season-26-27-copy-gl23ww",
-      "status_file": "guangzhou_nov_26_status.json",
-      "email_to": "happychildhood@yahoo.com",
-      "exclude_prefixes" : ["CHARITY"]
-    },
-    {
       "name": "Singapore Nov '26",
       "priority": "high",
       "site_type": "hyrox_event_page_india",
