@@ -1069,3 +1069,4 @@
 {"timestamp": "2026-11-23 04:12:00", "site_name": "Osaka Jan '27", "changed_tickets": ["HYROX ADAPTIVE MEN | MONDAY"], "changed_statuses": ["Sold out"]}
 {"timestamp": "2026-11-23 04:42:10", "site_name": "Melbourne Dec '26", "changed_tickets": ["HYROX DOUBLES MIXED | Wednesday", "HYROX DOUBLES WOMEN | Wednesday", "HYROX WOMEN | Sunday", "HYROX WOMEN | Wednesday"], "changed_statuses": ["Available", "Available", "Available", "Available"]}
 {"timestamp": "2026-11-23 05:53:51", "site_name": "Kuala Lumpur Dec '26", "changed_tickets": ["HYROX PRO WOMEN | Friday"], "changed_statuses": ["Sold out"]}
+{"timestamp": "2026-11-23 06:12:05", "site_name": "Osaka Jan '27", "changed_tickets": ["HYROX ADAPTIVE MEN | MONDAY"], "changed_statuses": ["Available"]}
