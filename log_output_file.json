@@ -1085,3 +1085,6 @@
 {"timestamp": "2026-11-24 04:10:30", "site_name": "Hong Kong Jan '27", "changed_tickets": ["HYROX WOMEN | Thursday"], "changed_statuses": ["Available"]}
 {"timestamp": "2026-11-24 04:52:17", "site_name": "Brisbane Mar '27", "changed_tickets": ["HYROX WOMEN | Sunday"], "changed_statuses": ["Available"]}
 {"timestamp": "2026-11-24 06:10:09", "site_name": "Hong Kong Jan '27", "changed_tickets": ["HYROX WOMEN | Thursday"], "changed_statuses": ["Sold out"]}
+{"timestamp": "2026-11-24 08:40:08", "site_name": "Sanya Dec '26", "changed_tickets": ["HYROX DOUBLES MEN | Sunday", "HYROX MENS RELAY | Saturday", "HYROX MIXED RELAY | Saturday", "HYROX WOMENS RELAY | Saturday"], "changed_statuses": ["Sold out", "Sold out", "Sold out", "Sold out"]}
+{"timestamp": "2026-11-24 08:42:00", "site_name": "Melbourne Dec '26", "changed_tickets": ["HYROX PRO WOMEN | Friday", "HYROX WOMEN | Wednesday"], "changed_statuses": ["Sold out", "Sold out"]}
+{"timestamp": "2026-11-24 08:52:15", "site_name": "Brisbane Mar '27", "changed_tickets": ["HYROX WOMEN | Sunday"], "changed_statuses": ["Sold out"]}
