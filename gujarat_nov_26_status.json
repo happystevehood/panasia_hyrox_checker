@@ -4,7 +4,7 @@
     "details": [
       {
         "name": "HYROX ADAPTIVE MEN | Friday",
-        "status": "Available"
+        "status": "Sold Out"
       },
       {
         "name": "HYROX ADAPTIVE WOMEN | Saturday",
@@ -20,7 +20,7 @@
       },
       {
         "name": "HYROX DOUBLES MIXED | Friday",
-        "status": "Available"
+        "status": "Sold Out"
       },
       {
         "name": "HYROX DOUBLES MIXED | Thursday",
@@ -36,7 +36,7 @@
       },
       {
         "name": "HYROX MEN | Friday",
-        "status": "Sold out"
+        "status": "Sold Out"
       },
       {
         "name": "HYROX MEN | Thursday",
@@ -60,11 +60,11 @@
       },
       {
         "name": "HYROX PRO MEN | Friday",
-        "status": "Available"
+        "status": "Sold Out"
       },
       {
         "name": "HYROX PRO WOMEN | Friday",
-        "status": "Available"
+        "status": "Sold Out"
       },
       {
         "name": "HYROX WOMEN | Saturday",
