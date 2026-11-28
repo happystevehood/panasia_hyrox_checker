@@ -128,7 +128,7 @@
       },
       {
         "name": "SPECTATOR | Friday",
-        "status": "Available"
+        "status": "Sold Out"
       },
       {
         "name": "SPECTATOR | Saturday",
@@ -140,7 +140,7 @@
       },
       {
         "name": "SPECTATOR | Thursday",
-        "status": "Available"
+        "status": "Sold Out"
       }
     ]
   }

@@ -1,18 +1,12 @@
 {
-  "Hong Kong Jan '27": [
+  "Gujurat Nov '26": [
+    "HYROX PRO DOUBLES WOMEN",
+    "HYROX MIXED RELAY",
     "HYROX WOMEN",
-    "HYROX DOUBLES MIXED"
-  ],
-  "Melbourne Dec '26": [
-    "HYROX WOMEN"
-  ],
-  "Auckland Feb '27": [
-    "HYROX MEN"
-  ],
-  "Brisbane Mar '27": [
-    "HYROX WOMEN"
-  ],
-  "Bangkok Feb '27": [
-    "HYROX DOUBLES MEN"
+    "HYROX PRO DOUBLES MEN",
+    "HYROX DOUBLES WOMEN",
+    "HYROX MENS RELAY",
+    "HYROX DOUBLES MEN",
+    "HYROX WOMENS RELAY"
   ]
 }
