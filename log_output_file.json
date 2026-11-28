@@ -1136,3 +1136,5 @@
 {"timestamp": "2026-11-28 08:49:41", "site_name": "Brisbane Mar '27", "changed_tickets": ["HYROX DOUBLES MEN | Thursday"], "changed_statuses": ["Sold out"]}
 {"timestamp": "2026-11-28 10:10:20", "site_name": "Hong Kong Jan '27", "changed_tickets": ["HYROX WOMEN | Thursday"], "changed_statuses": ["Sold out"]}
 {"timestamp": "2026-11-28 12:21:58", "site_name": "Singapore Nov '26", "changed_tickets": ["SPECTATOR | Saturday"], "changed_statuses": ["Sold Out"]}
+{"timestamp": "2026-11-28 12:37:16", "site_name": "Singapore YS Nov '26", "changed_tickets": ["FREE U12 CHILD SPECTATOR | Saturday", "Spectator I Saturday"], "changed_statuses": ["Sold Out", "Sold Out"]}
+{"timestamp": "2026-11-28 12:39:54", "site_name": "Melbourne Dec '26", "changed_tickets": ["HYROX DOUBLES MEN | Thursday", "HYROX DOUBLES MIXED | Saturday"], "changed_statuses": ["Available", "Sold out"]}
