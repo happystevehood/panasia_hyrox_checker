@@ -2,33 +2,6 @@
   "matrix_email_to": "happychildhood@yahoo.com, dennisoh@gmail.com, deelynlui@gmail.com,rboarotto@gmail.com",
   "sites": [
     {
-      "name": "Singapore Nov '26",
-      "priority": "high",
-      "site_type": "hyrox_event_page_india",
-      "url": "https://singapore.hyrox.com/event/hyrox-singapore-ii-season-26-27-j5w6t2",
-      "status_file": "singapore_nov_26_status.json",
-      "email_to": "happychildhood@yahoo.com, yiingls@gmail.com, pengjoon@gmail.com, timothytjahja8@gmail.com, neetalow@gmail.com, mikosu.stan@gmail.com, riaelagoreyes@gmail.com, abundancelau@gmail.com, dr.izzathayazi@gmail.com, mastersee010420@gmail.com",
-      "exclude_prefixes" : ["CHARITY"]
-    },
-    {
-      "name": "Singapore YS Nov '26",
-      "priority": "low",
-      "site_type": "hyrox_event_page_india",
-      "url": "https://singapore.hyrox.com/event/hyrox-youngstars-singapore-season-26-27-zvuyyw",
-      "status_file": "singapore_ys_nov_26_status.json",
-      "email_to": "happychildhood@yahoo.com",
-      "exclude_prefixes" : ["CHARITY"]
-    },
-    {
-      "name": "Gujurat Nov '26",
-      "priority": "low",
-      "site_type": "hyrox_event_page_india",
-      "url": "https://india.hyrox.co.in/event/hyrox-gujarat-season-26-27-8yjjhs",
-      "status_file": "gujarat_nov_26_status.json",
-      "email_to": "happychildhood@yahoo.com",
-      "exclude_prefixes" : ["CHARITY"]
-    },
-    {
       "name": "Sanya Dec '26",
       "priority": "low",
       "site_type": "hyrox_event_page_india",
